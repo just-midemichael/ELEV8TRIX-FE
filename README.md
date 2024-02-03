@@ -9,9 +9,9 @@ Website for elev8trix, The Project
 ***
 
 ## About This Project
----
+
 ### 1. Project Title
-`ELEV8TRIX`
+ELEV8TRIX
 
 ### 2. Project Description
 ``` ```
@@ -24,15 +24,15 @@ Website for elev8trix, The Project
 
 ### 5. Collaborator / Team Members
  
-```|NAME|GITHUB|EMAIL ADDRESS|
+|NAME|GITHUB|EMAIL ADDRESS|
 |----------|----------|--------------------|
 |Olumide Ojo|just-midemichael|olumide.m.ojo@gmail.com|
-```
+
 
 ***
 
 ## Techonologies ![tools]
----
+
 |S/N|NAME|USE|
 |---|---------------|--------------------------------------|
 |1|VITE|For Hot Module Replacement (HMR)|
@@ -54,8 +54,8 @@ Website for elev8trix, The Project
 ***
 
 ## Semantic Commit Messages
----
-> `Format: <type>(<scope>): <subject>`
+
+> Format: <type>(<scope>): <subject>
 
 ### Example
 
