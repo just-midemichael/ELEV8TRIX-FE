@@ -35,13 +35,13 @@ This is official repository for elev8trix
 
 |S/N|NAME|USE|
 |---|---------------|--------------------------------------|
-|1.|VITE|For Hot Module Replacement (HMR)|
+|1.|Vite|For hot module replacement (HMR)|
 |2.|Axios| |
 |3.|Tailwind Css| |
-|4.|SCSS| |
+|4.|Scss/Sass| |
 |5.|Redux| |
 |6.|Context API| |
-|7.|TYPESCRIPT| |
+|7.|Typescript| |
 |8.|Prettier| |
 |9.|Linter| |
 |10.|Material UI| |
@@ -59,7 +59,8 @@ This is official repository for elev8trix
 
 #### Example
 
-```feat: add hat wobble
+```
+feat: add hat wobble
 ^--^  ^------------^
 |     |
 |     +-> Summary in present tense.
