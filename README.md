@@ -8,27 +8,25 @@ This is official repository for elev8trix
 ###### [Elev8trix.com] (https://github.com/Elev8trix-hub/elev8trix-landing-page "_visit elev8trix_")
 
 
-
 # About This Project
 
 ### 1. Project Title
-ELEV8TRIX
+> ELEV8TRIX
 
 ### 2. Project Description
-``` ```
+> ``` ```
 
 ### 3. How to Install and Run the Project
-``` ```
+> ``` ```
 
 ### 4. How to Use Project
-``` ```
+> ``` ```
 
 ### 5. Collaborator / Team Members
  
 |NAME|GITHUB|EMAIL ADDRESS|
 |----------|----------|--------------------|
 |Olumide Ojo|just-midemichael|olumide.m.ojo@gmail.com|
-
 
 ***
 
