@@ -11,19 +11,19 @@ This is official repository for elev8trix
 
 ### About this project
 
-#### 1. Project Title
+##### 1. Project Title
 > ELEV8TRIX
 
-#### 2. Project Description
+##### 2. Project Description
 > ``` ```
 
-#### 3. How to Install and Run the Project
+##### 3. How to Install and Run the Project
 > ``` ```
 
-#### 4. How to Use Project
+##### 4. How to Use Project
 > ``` ```
 
-#### 5. Collaborator / Team Members
+##### 5. Collaborator / Team Members
  
 |NAME|GITHUB|EMAIL ADDRESS|
 |----------|----------|--------------------|
@@ -78,7 +78,6 @@ feat: add hat wobble
 * `test:` (adding missing tests, refactoring tests; no production code change)
 * `chore:` (updating grunt tasks etc; no production code change)
 
-![plane]
 
 ***
 
