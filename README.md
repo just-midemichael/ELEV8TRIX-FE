@@ -72,6 +72,7 @@ feat: add hat wobble
 
 > More Examples:
 
+* `build:` (update dependency)
 * `feat:` (new feature for the user, not a new feature for build script)
 * `fix:` (bug fix for the user, not a fix to a build script)
 * `docs:` (changes to the documentation)
@@ -79,6 +80,10 @@ feat: add hat wobble
 * `refactor:` (refactoring production code, eg. renaming a variable)
 * `test:` (adding missing tests, refactoring tests; no production code change)
 * `chore:` (updating grunt tasks etc; no production code change)
+* `perf:` (A code change that improves performance)
+* `revert:` (Revert something)
+* `test:` (Adding missing tests or correcting existing tests)
+
 
 
 ***
