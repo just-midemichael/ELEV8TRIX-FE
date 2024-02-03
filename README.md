@@ -1,12 +1,12 @@
 # ELEV8TRIX
-Website for elev8trix, The Project
+This is official repository for elev8trix
 
 [![GitHub Super-Linter](https://github.com/Elev8trix-hub/elev8trix-landing-page/actions/workflows/linter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
 ---
-## Development site
-[![Elev8trix.com] (https://github.com/Elev8trix-hub/elev8trix-landing-page"_visit elev8trix_")] 
 
-**
+#### Development site
+[Elev8trix.com] (https://github.com/Elev8trix-hub/elev8trix-landing-page "_visit elev8trix_")
+---
 
 ## About This Project
 
@@ -90,7 +90,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
----
+
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
