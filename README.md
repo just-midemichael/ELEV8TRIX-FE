@@ -9,7 +9,7 @@ This is official repository for elev8trix
 
 ***
 
-## About this project
+### About this project
 
 #### 1. Project Title
 > ELEV8TRIX
@@ -35,21 +35,21 @@ This is official repository for elev8trix
 
 |S/N|NAME|USE|
 |---|---------------|--------------------------------------|
-|1|VITE|For Hot Module Replacement (HMR)|
-|2|Axios| |
-|3|Tailwind Css| |
-|4|SCSS| |
-|5|Redux| |
-|6|Context API| |
-|7|TYPESCRIPT| |
-|8|Prettier| |
-|9|Linter| |
-|10|Material UI| |
-|11|Formik| |
-|12|Yup| |
-|13|React Router DOM| |
-|14|React Icons| |
-|15|Yarn| |
+|1.|VITE|For Hot Module Replacement (HMR)|
+|2.|Axios| |
+|3.|Tailwind Css| |
+|4.|SCSS| |
+|5.|Redux| |
+|6.|Context API| |
+|7.|TYPESCRIPT| |
+|8.|Prettier| |
+|9.|Linter| |
+|10.|Material UI| |
+|11.|Formik| |
+|12.|Yup| |
+|13.|React Router DOM| |
+|14.|React Icons| |
+|15.|Yarn| |
 
 ***
 
