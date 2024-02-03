@@ -5,8 +5,10 @@ This is official repository for elev8trix
 ---
 
 #### Development site
-###### [Elev8trix.com] (https://github.com/Elev8trix-hub/elev8trix-landing-page "_visit elev8trix_")
+###### [Elev8trix.com] (https://github.com/Elev8trix-hub/elev8trix-landing-page "_Not Available_)
 
+#### Production site
+###### [Elev8trix.com] (https://github.com/Elev8trix-hub/elev8trix-landing-page "_Not Available_")
 ***
 
 ### About this project
