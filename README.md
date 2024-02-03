@@ -1,4 +1,4 @@
-# ELEV8TRIX
+## ELEV8TRIX
 This is official repository for elev8trix
 
 [![GitHub Super-Linter](https://github.com/Elev8trix-hub/elev8trix-landing-page/actions/workflows/linter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
@@ -8,21 +8,21 @@ This is official repository for elev8trix
 ###### [Elev8trix.com] (https://github.com/Elev8trix-hub/elev8trix-landing-page "_visit elev8trix_")
 
 
-# About This Project
+## About This Project
 
-### 1. Project Title
+#### 1. Project Title
 > ELEV8TRIX
 
-### 2. Project Description
+#### 2. Project Description
 > ``` ```
 
-### 3. How to Install and Run the Project
+#### 3. How to Install and Run the Project
 > ``` ```
 
-### 4. How to Use Project
+#### 4. How to Use Project
 > ``` ```
 
-### 5. Collaborator / Team Members
+#### 5. Collaborator / Team Members
  
 |NAME|GITHUB|EMAIL ADDRESS|
 |----------|----------|--------------------|
@@ -30,7 +30,7 @@ This is official repository for elev8trix
 
 ***
 
-## Techonologies ![tools]
+### Techonologies ![tools]
 
 |S/N|NAME|USE|
 |---|---------------|--------------------------------------|
@@ -52,11 +52,11 @@ This is official repository for elev8trix
 
 ***
 
-## Semantic Commit Messages
+### Semantic Commit Messages
 
 > Format: <type>(<scope>): <subject>
 
-### Example
+#### Example
 
 ```feat: add hat wobble
 ^--^  ^------------^
@@ -80,7 +80,7 @@ This is official repository for elev8trix
 
 ***
 
-## React + TypeScript + Vite
+### React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -90,7 +90,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-## Expanding the ESLint configuration
+### Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
