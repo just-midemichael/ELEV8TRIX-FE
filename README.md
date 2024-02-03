@@ -4,9 +4,9 @@ Website for elev8trix, The Project
 [![GitHub Super-Linter](https://github.com/Elev8trix-hub/elev8trix-landing-page/actions/workflows/linter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
 ---
 ## Development site
-[Elev8trix.com] (https://  "_visit elev8trix_") 
-![smile]
-***
+[![Elev8trix.com] (https://github.com/Elev8trix-hub/elev8trix-landing-page"_visit elev8trix_")] 
+
+**
 
 ## About This Project
 
