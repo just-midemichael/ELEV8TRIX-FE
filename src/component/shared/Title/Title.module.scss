@@ -1,0 +1,97 @@
+.h1 {
+  font-size: 4.5rem;
+  font-weight: inherit;
+  color: inherit;
+  text-align: inherit;
+}
+
+.h2 {
+  font-size: 3.5rem;
+  font-weight: inherit;
+  color: inherit;
+  text-align: inherit;
+}
+
+.h3 {
+  font-size: 3rem;
+  font-weight: inherit;
+  color: inherit;
+  text-align: inherit;
+}
+
+.h4 {
+  font-size: 2.5rem;
+  font-weight: inherit;
+  color: inherit;
+  text-align: inherit;
+}
+
+.h5 {
+  font-size: 2rem;
+  font-weight: inherit;
+  color: inherit;
+  text-align: inherit;
+}
+
+.h6 {
+  font-size: 1.5rem;
+  font-weight: inherit;
+  color: inherit;
+  text-align: inherit;
+}
+
+.h7 {
+  font-size: 1.3rem;
+  font-weight: inherit;
+  color: inherit;
+  text-align: inherit;
+}
+
+.h8 {
+  font-size: 1.2rem;
+  font-weight: inherit;
+  color: inherit;
+  text-align: inherit;
+}
+
+@media (max-width: 800px) {
+  .h1 {
+    font-size: 3.5rem;
+  }
+  .h2 {
+    font-size: 2.4rem;
+  }
+  .h3 {
+    font-size: 2.2rem;
+  }
+  .h4 {
+    font-size: 2rem;
+  }
+  .h5 {
+    font-size: 1.8rem;
+  }
+  .h6 {
+    font-size: 1.6rem;
+  }
+  .h7 {
+    font-size: 1.4rem;
+  }
+  .h8 {
+    font-size: 1.1rem;
+  }
+}
+
+@supports ((text-stroke: 1px white) or (-webkit-text-stroke: 1px white)) {
+  .H1,
+  .H2,
+  .H3,
+  .H4,
+  .H5,
+  .H6,
+  .H7,
+  .H8 {
+    color: inherit;
+    -webkit-text-stroke: inherit;
+    text-shadow: none;
+  }
+}
