@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export const NavBar = () => {
   const activeStyle = ({ isActive }: { isActive: boolean }) => {
     return {
-      color: isActive ? "red" : ""
+      color: isActive ? "black" : ""
     };
   };
   return (
@@ -18,18 +18,18 @@ export const NavBar = () => {
         Home
       </NavLink>
       <NavLink
-        to={"/financial-litracy"}
+        to={"/courses"}
         className={styles.list}
         style={activeStyle}
-        onClick={() => (window.location.href = "/financial-litracy")}
+        onClick={() => (window.location.href = "/courses")}
       >
         Courses
       </NavLink>
       <NavLink
-        to={"/faqs"}
+        to={"/about"}
         className={styles.list}
         style={activeStyle}
-        onClick={() => (window.location.href = "/faqs")}
+        onClick={() => (window.location.href = "/about")}
       >
         About
       </NavLink>
