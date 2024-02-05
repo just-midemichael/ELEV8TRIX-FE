@@ -21,7 +21,7 @@ $HeaderZindex: 20;
   overflow: hidden;
   box-sizing: border-box;
   padding: 10px 10%;
-  // position: fixed;
+  position: fixed;
   background-color: $BackgroundColor;
   z-index: $HeaderZindex;
 }
