@@ -1,3 +1,4 @@
+import Logo from "../../component/logo/Logo";
 import { SocialMedia } from "../../component/socialMedia/SocialMedia";
 import styles from "./Footer.module.scss";
 
@@ -7,12 +8,13 @@ const Footer = () => {
       <div className={styles.footerWrapper}>
         <div className={styles.contentContainer}>
           <div className={styles.assetContainer}>
-            <div className={styles.logoContainer}>Logo</div>
+            <div className={styles.logoContainer}>
+              <Logo link="#" />
+            </div>
             <div className={styles.descriptionContainer}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repudiandae perspiciatis voluptate consectetur nam qui in incidunt
-              quos tenetur, maiores expedita ad aperiam non fuga, numquam esse
-              iure iste labore odio?
+              quos tenetur,
             </div>
             <div className={styles.socialContainer}>
               <SocialMedia />
