@@ -1,3 +1,4 @@
+import { SocialMedia } from "../../component/socialMedia/SocialMedia";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
@@ -13,7 +14,9 @@ const Footer = () => {
               quos tenetur, maiores expedita ad aperiam non fuga, numquam esse
               iure iste labore odio?
             </div>
-            <div className={styles.socialContainer}>Social Media</div>
+            <div className={styles.socialContainer}>
+              <SocialMedia />
+            </div>
           </div>
           <div className={styles.linkWrapper}>
             <div className={styles.linksContainer}>
