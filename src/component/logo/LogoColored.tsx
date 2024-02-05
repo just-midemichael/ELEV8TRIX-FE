@@ -2,7 +2,7 @@ import styles from "./Logo.module.scss";
 import logo from "/elev8trix-logo-colored.svg";
 
 type logoProps = {
-  link?: string;
+  link: string;
   style?: React.CSSProperties;
 };
 

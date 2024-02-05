@@ -21,12 +21,13 @@ $HeaderZindex: 20;
   overflow: hidden;
   box-sizing: border-box;
   padding: 10px 10%;
-  position: fixed;
+  // position: fixed;
   background-color: $BackgroundColor;
   z-index: $HeaderZindex;
 }
 
 .hamburgerBox,
+.signinBox,
 .logoBox,
 .navbarBox {
   // border: 2px solid navy;
@@ -40,6 +41,10 @@ $HeaderZindex: 20;
 .hamburgerBox {
   max-width: 60px;
   display: none;
+}
+
+.signinBox {
+  max-width: 150px;
 }
 
 .logoBox {
@@ -61,7 +66,7 @@ $HeaderZindex: 20;
   position: fixed;
   overflow-x: hidden;
   bottom: 0;
-  z-index: 19;
+  z-index: 20;
 }
 
 @media (max-width: 1000px) {
@@ -71,6 +76,10 @@ $HeaderZindex: 20;
   }
   .hamburgerBox {
     display: flex;
+  }
+
+  .signinBox {
+    display: none;
   }
 
   .logoBox {

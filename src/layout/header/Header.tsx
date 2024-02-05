@@ -5,6 +5,7 @@ import { NavBar } from "../../component/navbar/NavBar";
 import LogoColored from "../../component/logo/LogoColored";
 import { HamburgerComp } from "../../component/hamburgerButton/Hamburger";
 import { HamburgerMenu } from "../../component/hamburgerMenu/HamburgerMenu";
+import ColoredButton from "../../component/shared/button/coloredButton/ColoredButton";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -60,16 +61,18 @@ const Header = () => {
     <>
       <div className={styles.headerContainer}>
         <div className={styles.logoBox}>
-          <LogoColored />
+          <LogoColored link="" />
         </div>
         <div className={styles.navbarBox}>
           <NavBar />
+        </div>
+        <div className={styles.signinBox}>
+          <ColoredButton text={"Sign In"} link={""} />
         </div>
         <div className={styles.hamburgerBox}>
           <HamburgerComp handleClick={handleMenuDisplay} value={isValue} />
         </div>
       </div>
-
       <div className={styles.hamburgerMenuBox} id={styles[`${display}`]}>
         <HamburgerMenu />
       </div>
