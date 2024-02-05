@@ -1,0 +1,21 @@
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   border: 2px solid white;
+  width: fit-content;
+  height: fit-content;
+  padding: 6px 0;
+  overflow: hidden;
+}
+
+.logoLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  width: 224;
+  height: 46;
+  cursor: pointer;
+}
