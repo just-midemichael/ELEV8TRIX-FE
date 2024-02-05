@@ -1,0 +1,36 @@
+//Color
+$MenuBackgroundColor: rgb(252, 250, 250);
+$linkColor: rgb(34, 31, 31);
+$BorderColor: rgba(128, 128, 128, 0.27);
+
+.menuContainer {
+  padding: 100px 5%;
+  height: 400px;
+  width: 100%;
+  background-color: $MenuBackgroundColor;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.list {
+  text-decoration: none;
+  list-style: none;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2px 4px;
+  cursor: pointer;
+  color: $linkColor;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 1px solid $BorderColor;
+  transition: ease-in-out;
+}
+
+.list:hover {
+  transition: ease-in-out;
+  color: rgb(69, 68, 68);
+}
