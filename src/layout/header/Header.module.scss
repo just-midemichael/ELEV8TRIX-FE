@@ -1,0 +1,89 @@
+//Height
+$DesktopHeight: 90px;
+$TabletHeight: 70px;
+$MobileHeight: 60px;
+$MiniMobileHeight: 50px;
+
+//Color
+$BackgroundColor: white;
+$MenuBackgroundColor: rgba(9, 8, 8, 0.325);
+
+//Z-Index
+$HeaderZindex: 20;
+
+.headerContainer {
+  // border: 2px solid green;
+  display: flex;
+  justify-content: space-between;
+  height: $DesktopHeight;
+  width: 100%;
+  min-width: 200px;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 10px 10%;
+  position: fixed;
+  background-color: $BackgroundColor;
+  z-index: $HeaderZindex;
+}
+
+.hamburgerBox,
+.logoBox,
+.navbarBox {
+  // border: 2px solid navy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hamburgerBox {
+  max-width: 60px;
+  display: none;
+}
+
+.logoBox {
+  max-width: 300px;
+  justify-content: flex-start;
+}
+
+.navbarBox {
+  width: 100%;
+}
+
+.hamburgerMenuBox,
+#hideMenu,
+#showMenu {
+  width: 100%;
+  height: 100%;
+  background-color: $MenuBackgroundColor;
+  display: none;
+  position: fixed;
+  overflow-x: hidden;
+  bottom: 0;
+  z-index: 19;
+}
+
+@media (max-width: 1000px) {
+  .headerContainer {
+    height: $TabletHeight;
+    padding: 10px 5%;
+  }
+  .hamburgerBox {
+    display: flex;
+  }
+
+  .logoBox {
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+
+  .navbarBox {
+    display: none;
+  }
+
+  .hamburgerMenuBox,
+  #showMenu {
+    display: block;
+  }
+}
