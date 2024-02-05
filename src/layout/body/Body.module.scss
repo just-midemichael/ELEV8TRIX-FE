@@ -1,0 +1,27 @@
+//Height
+$DesktopHeight: 90px;
+$TabletHeight: 70px;
+$MobileHeight: 60px;
+$MiniMobileHeight: 50px;
+
+//Color
+$BackgroundColor: rgb(248, 248, 248);
+
+.bodyContainer {
+  height: fit-content;
+  min-height: 600px;
+  width: 100%;
+  min-width: 200px;
+  // border: 2px solid red;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 90px 0;
+  padding-top: $DesktopHeight;
+  background-color: $BackgroundColor;
+}
+
+@media (max-width: 1000px) {
+  .bodyContainer {
+    padding: 70px 0;
+  }
+}
