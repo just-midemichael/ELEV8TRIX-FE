@@ -15,8 +15,11 @@ export const SocialMedia = () => {
           cursor="pointer"
           sx={{
             "&:hover": { color: "#FF0000" },
-            width: "16px",
-            height: "16px"
+            width: "22px",
+            height: "22px",
+            backgroundColor: "rgba(128, 128, 128, 0.212);",
+            borderRadius: "100%",
+            padding: "3px"
           }}
         />
       </Link>
@@ -26,8 +29,11 @@ export const SocialMedia = () => {
           cursor="pointer"
           sx={{
             "&:hover": { color: "#1DA1F2" },
-            width: "16px",
-            height: "16px"
+            width: "22px",
+            height: "22px",
+            backgroundColor: "rgba(128, 128, 128, 0.212);",
+            borderRadius: "100%",
+            padding: "3px"
           }}
         />
       </Link>
@@ -37,8 +43,11 @@ export const SocialMedia = () => {
           cursor="pointer"
           sx={{
             "&:hover": { color: "#962fbf" },
-            width: "16px",
-            height: "16px"
+            width: "22px",
+            height: "22px",
+            backgroundColor: "rgba(128, 128, 128, 0.212);",
+            borderRadius: "100%",
+            padding: "3px"
           }}
         />
       </Link>
@@ -48,8 +57,11 @@ export const SocialMedia = () => {
           cursor="pointer"
           sx={{
             "&:hover": { color: "#0077B5" },
-            width: "16px",
-            height: "16px"
+            width: "22px",
+            height: "22px",
+            backgroundColor: "rgba(128, 128, 128, 0.212);",
+            borderRadius: "100%",
+            padding: "3px"
           }}
         />
       </Link>
@@ -59,8 +71,11 @@ export const SocialMedia = () => {
           cursor="pointer"
           sx={{
             "&:hover": { color: "#0866FF" },
-            width: "16px",
-            height: "16px"
+            width: "22px",
+            height: "22px",
+            backgroundColor: "rgba(128, 128, 128, 0.212);",
+            borderRadius: "100%",
+            padding: "3px"
           }}
         />
       </Link>
@@ -70,8 +85,11 @@ export const SocialMedia = () => {
           cursor="pointer"
           sx={{
             "&:hover": { color: "#25d366" },
-            width: "16px",
-            height: "16px"
+            width: "22px",
+            height: "22px",
+            backgroundColor: "rgba(128, 128, 128, 0.212);",
+            borderRadius: "100%",
+            padding: "3px"
           }}
         />
       </Link>
