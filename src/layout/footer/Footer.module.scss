@@ -77,7 +77,7 @@ $boldWeight: 800;
 }
 
 .assetContainer {
-  width: 80%;
+  width: 70%;
 }
 
 .linkWrapper {
@@ -150,11 +150,11 @@ $boldWeight: 800;
 }
 
 .logoContainer {
-  height: 25%;
+  height: 35%;
 }
 
 .descriptionContainer {
-  height: 45%;
+  height: 35%;
   font-size: $smallFont;
   text-align: left;
 }
@@ -197,7 +197,7 @@ $boldWeight: 800;
   .linksContainer,
   .supportContainer {
     min-height: 250px;
-    max-width: 300px;
+    max-width: 250px;
   }
 }
 
@@ -213,9 +213,11 @@ $boldWeight: 800;
 @media (max-width: 450px) {
   .linkWrapper {
     flex-direction: column;
+    padding-bottom: 30px;
   }
   .linksContainer,
   .supportContainer {
     min-width: 100%;
+    min-height: fit-content;
   }
 }
