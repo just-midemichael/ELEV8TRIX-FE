@@ -9,7 +9,7 @@ $backgroundColor: white;
 $menuBackgroundColor: rgba(9, 8, 8, 0.325);
 
 // Z-Index
-$headerZindex: 20;
+$headerZindex: 30;
 
 .headerContainer {
   // border: 2px solid green;
@@ -21,7 +21,7 @@ $headerZindex: 20;
   overflow: hidden;
   box-sizing: border-box;
   padding: 10px 10%;
-  // position: fixed;
+  position: relative;
   background-color: $backgroundColor;
   z-index: $headerZindex;
 }
@@ -61,9 +61,9 @@ $headerZindex: 20;
 #showMenu {
   width: 100%;
   height: 100%;
-  background-color: $menuBackgroundColor;
+  background-color: $backgroundColor;
   display: none;
-  position: fixed;
+  position: absolute;
   overflow-x: hidden;
   bottom: 0;
   z-index: 20;
