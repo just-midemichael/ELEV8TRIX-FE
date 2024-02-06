@@ -3,7 +3,7 @@ import { lazy } from "react";
 import React from "react";
 import Home from "../page/Home";
 import Dashboard from "../admin/scenes/dashboard/index";
-import UserManegement from "../admin/scenes/userManagement/UserMangement";
+import UserManegement from "../admin/scenes/userManagement/UserManagement";
 import Team from "../admin/scenes/team/Team";
 import AdminSetting from "../admin/scenes/setting/index";
 import CourseManagement from "../admin/scenes/courseManagement/CourseManagement";
