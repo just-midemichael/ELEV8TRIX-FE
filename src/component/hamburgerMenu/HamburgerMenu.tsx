@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export const HamburgerMenu = () => {
   const activeStyle = ({ isActive }: { isActive: boolean }) => {
     return {
-      color: isActive ? "red" : ""
+      color: isActive ? "black" : ""
     };
   };
 

@@ -1,29 +1,29 @@
 //Height
-$DesktopHeight: 90px;
-$TabletHeight: 70px;
-$MobileHeight: 60px;
-$MiniMobileHeight: 50px;
+$desktopHeight: 90px;
+$tabletHeight: 70px;
+$mobileHeight: 60px;
+$miniMobileHeight: 50px;
 
 //Color
-$BackgroundColor: white;
-$MenuBackgroundColor: rgba(9, 8, 8, 0.325);
+$backgroundColor: white;
+$menuBackgroundColor: rgba(9, 8, 8, 0.325);
 
 //Z-Index
-$HeaderZindex: 20;
+$headerZindex: 20;
 
 .headerContainer {
   // border: 2px solid green;
   display: flex;
   justify-content: space-between;
-  height: $DesktopHeight;
+  height: $desktopHeight;
   width: 100%;
   min-width: 200px;
   overflow: hidden;
   box-sizing: border-box;
   padding: 10px 10%;
   // position: fixed;
-  background-color: $BackgroundColor;
-  z-index: $HeaderZindex;
+  background-color: $backgroundColor;
+  z-index: $headerZindex;
 }
 
 .hamburgerBox,
@@ -61,7 +61,7 @@ $HeaderZindex: 20;
 #showMenu {
   width: 100%;
   height: 100%;
-  background-color: $MenuBackgroundColor;
+  background-color: $menuBackgroundColor;
   display: none;
   position: fixed;
   overflow-x: hidden;
@@ -71,7 +71,7 @@ $HeaderZindex: 20;
 
 @media (max-width: 1000px) {
   .headerContainer {
-    height: $TabletHeight;
+    height: $tabletHeight;
     padding: 10px 5%;
   }
   .hamburgerBox {
