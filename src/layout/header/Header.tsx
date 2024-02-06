@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import styles from "./Header.module.scss";
 import { NavBar } from "../../component/navbar/NavBar";
 import LogoColored from "../../component/logo/LogoColored";
