@@ -35,19 +35,19 @@ This is official repository for elev8trix
 - Functions should follow camel casing e.g `addFiles`, class names should follow pascal casing e.g `AddFiles`
 - Commit messages should carry their appropiate flag e.g feat, fix, chore etc. Here is a sample commit command `git commit -m "feat: added input components"`
 
-To install project dependencies
+###### To install project dependencies
 
 ```bash
     yarn or yarn install
 ```
 
-To start the development server
+###### To start the development server
 
 ```bash
 yarn dev
 ```
 
-To auto remove linting errors use
+###### To auto remove linting errors use
 
 ```bash
 yarn lint:fix
