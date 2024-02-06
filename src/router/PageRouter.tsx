@@ -14,7 +14,9 @@ const LazyAbout = lazy(() => import("../page/About"));
 const LazyContact = lazy(() => import("../page/Contact"));
 const LazyPageNotFound = lazy(() => import("../page/PageNoteFound"));
 const LazyAdmin = lazy(() => import("../admin/Admin"));
+const LazyAdminLogin = lazy(() => import("../admin/Login"));
 const LazyUser = lazy(() => import("../user/User"));
+const LazyUserLogin = lazy(() => import("../user/Login"));
 
 const PageRouter = () => {
   return (
@@ -52,6 +54,22 @@ const PageRouter = () => {
           </React.Suspense>
         }
       />
+      <Route
+        path="/admin_login"
+        element={
+          <React.Suspense>
+            <LazyAdminLogin />
+          </React.Suspense>
+        }
+      />
+      <Route
+        path="/login"
+        element={
+          <React.Suspense>
+            <LazyUserLogin />
+          </React.Suspense>
+        }
+      />
 
       <Route
         path="/admin"
@@ -61,7 +79,7 @@ const PageRouter = () => {
           </React.Suspense>
         }
       >
-        <Route index element={<UserManegement />} />
+        <Route index element={<Dashboard />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="course_management" element={<CourseManagement />} />
         <Route path="user_management" element={<UserManegement />} />

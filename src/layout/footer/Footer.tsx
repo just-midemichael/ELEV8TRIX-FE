@@ -9,7 +9,7 @@ const Footer = () => {
         <div className={styles.contentContainer}>
           <div className={styles.assetContainer}>
             <div className={styles.logoContainer}>
-              <Logo link="#" />
+              <Logo link="/" />
             </div>
             <div className={styles.descriptionContainer}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

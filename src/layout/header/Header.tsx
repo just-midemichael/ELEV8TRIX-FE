@@ -61,13 +61,13 @@ const Header = () => {
     <>
       <div className={styles.headerContainer}>
         <div className={styles.logoBox}>
-          <LogoColored link="" />
+          <LogoColored link="/" />
         </div>
         <div className={styles.navbarBox}>
           <NavBar />
         </div>
         <div className={styles.signinBox}>
-          <ColoredButton text={"Sign In"} link={""} />
+          <ColoredButton text={"Sign In"} link={"/user"} />
         </div>
         <div className={styles.hamburgerBox}>
           <HamburgerComp handleClick={handleMenuDisplay} value={isValue} />
