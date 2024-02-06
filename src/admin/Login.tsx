@@ -5,7 +5,7 @@ const Login = () => {
   const loginContainer: CSSProperties = {
     width: "100%",
     height: "100%",
-    zIndex: 20,
+    zIndex: 50,
     position: "fixed",
     bottom: "0",
     top: "0",
