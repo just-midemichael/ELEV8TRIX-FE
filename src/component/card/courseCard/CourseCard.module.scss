@@ -1,0 +1,112 @@
+// Color
+$colorOne: #3149a1;
+$colorTwo: black;
+
+.textFocalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.authorBox,
+.descriptionBox,
+.reviewBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 4px 16px;
+}
+
+.authorBox {
+  height: 35%;
+  gap: 6px;
+}
+.authorAvatar,
+.authorName {
+  width: 100%;
+  height: 32px;
+  overflow: hidden;
+}
+.authorAvatar {
+  max-width: 32px;
+  border-radius: 100%;
+  background-color: gray;
+}
+.authorName {
+  color: $colorOne;
+  text-align: left;
+  padding: 2px 0;
+  width: fit-content;
+}
+.name,
+.profession {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-clamp: 1;
+}
+.name {
+  font-size: 0.65rem;
+  font-weight: 900;
+  height: 14px;
+}
+.profession {
+  font-size: 0.55rem;
+  font-weight: 500;
+}
+
+.descriptionBox {
+  height: 40%;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+.title,
+.description {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  color: $colorTwo;
+  text-align: left;
+  box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 900;
+  height: 40px;
+  white-space: nowrap;
+}
+.description {
+  font-size: 0.65rem;
+  font-weight: 600;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  height: 50px;
+}
+
+.reviewBox {
+  height: 25%;
+  gap: 2px;
+}
+
+.star,
+.value {
+  color: #119ee3;
+  font-size: 0.55rem;
+  height: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
