@@ -5,7 +5,6 @@ import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 
 type cardProps = {
   thumbNail: string;
-  avatar: string;
   mentorName: string;
   profession: string;
   description: string;
