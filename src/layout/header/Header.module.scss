@@ -62,11 +62,13 @@ $headerZindex: 30;
   width: 100%;
   height: 100%;
   background-color: $backgroundColor;
-  display: none;
+  display: flex;
   position: absolute;
   overflow-x: hidden;
   bottom: 0;
   z-index: 20;
+  transform: translateX(-100%);
+  transition: 800ms;
 }
 
 @media (max-width: 1000px) {
@@ -93,6 +95,7 @@ $headerZindex: 30;
 
   .hamburgerMenuBox,
   #showMenu {
-    display: block;
+    transform: translateX(0);
+    transition: 800ms;
   }
 }
