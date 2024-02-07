@@ -25,7 +25,8 @@ const ColoredButton = ({
           border: "none",
           color: "white",
           cursor: "pointer",
-          fontSize: "0.8rem"
+          fontSize: "0.8rem",
+          fontWeight: "600"
         }}
         onClick={onClick}
       >
