@@ -1,0 +1,103 @@
+// Color
+$colorOne: #3149a1;
+$colorTwo: black;
+
+.cardContainer {
+  height: 370px;
+  width: 346px;
+  border: 2px solid $colorOne;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cardWrapper {
+  height: 276px;
+  width: 220px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageBox,
+.textBox,
+.buttonBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageBox {
+  min-height: 55%;
+  padding: 10px 20px 4px 20px;
+}
+
+.textBox {
+  flex-direction: column;
+  padding: 2px;
+  gap: 4px;
+}
+
+.buttonBox {
+  height: fit-content;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  max-width: 150px;
+  min-height: 140px;
+  background-color: grey;
+}
+
+.textTitle,
+.textDescription {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.textTitle {
+  font-weight: 900;
+  font-size: 1rem;
+  height: 26px;
+  white-space: nowrap;
+}
+
+.textDescription {
+  font-weight: 400;
+  font-size: 0.85rem;
+  height: 42px;
+  align-items: flex-start;
+  text-wrap: wrap;
+}
+
+.button {
+  font-weight: 500 !important;
+  font-size: 0.7rem !important;
+  height: 36px !important;
+  width: 112px !important;
+}
+
+@media (max-width: 700px) {
+  .cardContainer {
+    width: 300px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 450px) {
+  .cardContainer {
+    width: 250px;
+  }
+}
