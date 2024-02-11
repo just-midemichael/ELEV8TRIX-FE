@@ -70,7 +70,8 @@ export const descriptionBox: CSSProperties = {
 
 export const searchBox: CSSProperties = {
   width: "100%",
-  height: "20%",
+  height: "fit-content",
+  minHeight: "20%",
   padding: "10px",
   display: "flex",
   justifyContent: "flex-start",

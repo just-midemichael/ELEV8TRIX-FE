@@ -36,18 +36,20 @@ const MainHero = () => {
           </div>
           <div style={searchBox}>
             <div className={styles.searchWrapper}>
-              <Input
-                className={styles.searchInput}
-                type={""}
-                placeholder={"Click here to search for courses"}
-                name={""}
-                value={input}
-              />
-              <WhiteButton
-                className={styles.searchButton}
-                text={"search"}
-                link={"/courses"}
-              />
+              <form className={styles.searchWrapper}>
+                <Input
+                  className={styles.searchInput}
+                  type={"input"}
+                  placeholder={"Click here to search for courses"}
+                  name={"search box"}
+                  value={input}
+                />
+                <WhiteButton
+                  className={styles.searchButton}
+                  text={"search"}
+                  link={"/courses"}
+                />
+              </form>
             </div>
           </div>
         </div>

@@ -19,19 +19,19 @@ $searchInputBg: #def4ff;
   overflow: hidden;
   display: flex;
   height: fit-content;
-  width: 100%;
+  width: 100% !important;
   max-width: 492px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   color: black;
+  flex-wrap: nowrap;
 }
 
 .searchInput {
   background-color: $searchInputBg !important;
   white-space: nowrap;
   text-align: left;
-  box-orient: vertical;
   text-overflow: ellipsis;
   font-size: 0.9rem;
   max-width: 338px !important;
@@ -45,7 +45,7 @@ $searchInputBg: #def4ff;
   max-width: 153px !important;
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1130px) {
   .bannerContainer {
     gap: 10px !important;
     border-radius: 40px !important;
@@ -64,9 +64,10 @@ $searchInputBg: #def4ff;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 920px) {
   .bannerContainer {
     padding-top: 50px !important;
+    max-width: 600px !important;
   }
   .textFocalWraper {
     height: fit-content !important;
