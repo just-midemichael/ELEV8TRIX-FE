@@ -1,5 +1,22 @@
+import { CSSProperties } from "react";
+import MainHero from "../component/hero/MainHero";
+
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <section style={heroSection}>
+        <MainHero />
+      </section>
+    </div>
+  );
 };
 
 export default Home;
+
+const heroSection: CSSProperties = {
+  padding: "50px 5%",
+  width: "100%",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center"
+};
