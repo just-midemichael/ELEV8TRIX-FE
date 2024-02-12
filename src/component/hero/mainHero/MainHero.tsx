@@ -1,11 +1,11 @@
-import { H5 } from "../shared/Title/H5";
-import { H8 } from "../shared/Title/H8";
+import { H5 } from "../../shared/Title/H5";
+import { H8 } from "../../shared/Title/H8";
 import styles from "./MainHero.module.scss";
 import { useState } from "react";
 import heroImage from "/elev8trixMainHero.png";
 import polygon from "/Polygon.png";
-import Input from "../shared/inputForm/Input";
-import WhiteButton from "../shared/button/whiteButton/WhiteButton";
+import Input from "../../shared/inputForm/Input";
+import WhiteButton from "../../shared/button/whiteButton/WhiteButton";
 import {
   bannerContainer,
   textFocalContainer,

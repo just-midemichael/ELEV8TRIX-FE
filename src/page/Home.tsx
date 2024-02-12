@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import MainHero from "../component/hero/MainHero";
+import MainHero from "../component/hero/mainHero/MainHero";
 
 const Home = () => {
   return (
