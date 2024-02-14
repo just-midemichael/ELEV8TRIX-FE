@@ -37,7 +37,7 @@ export const SocialMedia = () => {
           }}
         />
       </Link>
-      {/*-----------Twitter-------------------*/}
+      {/*-----------Twitter(X)-------------------*/}
       <Link to={""} target="_blank" className={styles.link}>
         <InstagramIcon
           cursor="pointer"
