@@ -1,10 +1,10 @@
 import styles from "./SocialMedia.module.scss";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import XIcon from "@mui/icons-material/X";
 import { Link } from "react-router-dom";
 
 export const SocialMedia = () => {
@@ -14,7 +14,7 @@ export const SocialMedia = () => {
         <YouTubeIcon
           cursor="pointer"
           sx={{
-            "&:hover": { color: "#FF0000" },
+            "&:hover": { color: "white" },
             width: "22px",
             height: "22px",
             backgroundColor: "rgba(128, 128, 128, 0.212);",
@@ -25,10 +25,10 @@ export const SocialMedia = () => {
       </Link>
       {/*--------------Youtube---------------*/}
       <Link to={""} target="_blank" className={styles.link}>
-        <TwitterIcon
+        <XIcon
           cursor="pointer"
           sx={{
-            "&:hover": { color: "#1DA1F2" },
+            "&:hover": { color: "white" },
             width: "22px",
             height: "22px",
             backgroundColor: "rgba(128, 128, 128, 0.212);",
@@ -42,7 +42,7 @@ export const SocialMedia = () => {
         <InstagramIcon
           cursor="pointer"
           sx={{
-            "&:hover": { color: "#962fbf" },
+            "&:hover": { color: "white" },
             width: "22px",
             height: "22px",
             backgroundColor: "rgba(128, 128, 128, 0.212);",
@@ -56,7 +56,7 @@ export const SocialMedia = () => {
         <LinkedInIcon
           cursor="pointer"
           sx={{
-            "&:hover": { color: "#0077B5" },
+            "&:hover": { color: "white" },
             width: "22px",
             height: "22px",
             backgroundColor: "rgba(128, 128, 128, 0.212);",
@@ -70,7 +70,7 @@ export const SocialMedia = () => {
         <FacebookIcon
           cursor="pointer"
           sx={{
-            "&:hover": { color: "#0866FF" },
+            "&:hover": { color: "white" },
             width: "22px",
             height: "22px",
             backgroundColor: "rgba(128, 128, 128, 0.212);",
@@ -84,7 +84,7 @@ export const SocialMedia = () => {
         <WhatsAppIcon
           cursor="pointer"
           sx={{
-            "&:hover": { color: "#25d366" },
+            "&:hover": { color: "white" },
             width: "22px",
             height: "22px",
             backgroundColor: "rgba(128, 128, 128, 0.212);",
