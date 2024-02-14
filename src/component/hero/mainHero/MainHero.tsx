@@ -41,7 +41,7 @@ const MainHero = () => {
                   className={styles.searchInput}
                   type={"input"}
                   placeholder={"Click here to search for courses"}
-                  name={"search box"}
+                  name={"search courses"}
                   value={input}
                 />
                 <WhiteButton

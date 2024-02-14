@@ -2,7 +2,7 @@ import { CSSProperties } from "react";
 import MainHero from "../component/hero/mainHero/MainHero";
 
 // Set the page title
-const pageTitle = () => (document.title = "Home");
+const pageTitle = () => (document.title = "Welcome to Elev8trix");
 pageTitle();
 
 const Home = () => {
