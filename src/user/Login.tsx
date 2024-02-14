@@ -1,6 +1,10 @@
 import { CSSProperties } from "react";
 import ColoredButton from "../component/shared/button/coloredButton/ColoredButton";
 
+// Set the page title
+const pageTitle = () => (document.title = "User Login");
+pageTitle();
+
 const Login = () => {
   const loginContainer: CSSProperties = {
     width: "100%",

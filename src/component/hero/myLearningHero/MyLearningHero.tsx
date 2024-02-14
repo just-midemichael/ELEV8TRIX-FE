@@ -9,6 +9,7 @@ import {
 } from ".";
 
 const MyLearningHero = () => {
+  // Greet User with Date Object
   const greetTime = new Date().getHours();
   const greetUser =
     greetTime >= 12 && greetTime < 18

@@ -1,6 +1,10 @@
 import { CSSProperties } from "react";
 import MainHero from "../component/hero/mainHero/MainHero";
 
+// Set the page title
+const pageTitle = () => (document.title = "Home");
+pageTitle();
+
 const Home = () => {
   return (
     <div>

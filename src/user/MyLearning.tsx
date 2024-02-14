@@ -1,6 +1,10 @@
 import { CSSProperties } from "react";
 import MyLearningHero from "../component/hero/myLearningHero/MyLearningHero";
 
+// Set the page title
+const pageTitle = () => (document.title = "My learning");
+pageTitle();
+
 const MyLearning = () => {
   return (
     <div style={heroSection}>
