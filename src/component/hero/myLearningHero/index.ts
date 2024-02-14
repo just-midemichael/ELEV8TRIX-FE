@@ -45,24 +45,3 @@ export const titleBox: CSSProperties = {
   fontWeight: "900",
   color: "white"
 };
-
-export const descriptionBox: CSSProperties = {
-  width: "100%",
-  height: "fit-content",
-  minHeight: "35%",
-  textAlign: "center",
-  padding: "10px",
-  overflow: "hidden",
-  color: "#119ee3"
-};
-
-export const searchBox: CSSProperties = {
-  width: "100%",
-  height: "fit-content",
-  minHeight: "20%",
-  padding: "10px",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  overflow: "hidden"
-};

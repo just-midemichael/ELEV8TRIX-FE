@@ -14,43 +14,11 @@ $searchInputBg: #def4ff;
   z-index: 2;
 }
 
-.searchWrapper {
-  border-radius: 10px !important;
-  overflow: hidden;
-  display: flex;
-  height: fit-content;
-  width: 100% !important;
-  max-width: 492px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: black;
-  flex-wrap: nowrap;
-}
-
-.searchInput {
-  background-color: $searchInputBg !important;
-  white-space: nowrap;
-  text-align: left;
-  text-overflow: ellipsis;
-  font-size: 0.9rem;
-  max-width: 338px !important;
-  width: 100% !important;
-  border-radius: 10px 0 0 10px !important;
-}
-
-.searchButton {
-  border-radius: 0 10px 10px 0 !important;
-  font-size: 0.9rem !important;
-  max-width: 153px !important;
-}
-
 @media (max-width: 1130px) {
   .bannerContainer {
     gap: 10px !important;
     border-radius: 40px !important;
     height: fit-content !important;
-    max-width: 864px !important;
     min-height: 430px !important;
     padding: 15px 16px !important;
   }
@@ -68,6 +36,7 @@ $searchInputBg: #def4ff;
 
   .textFocalWraper {
     height: fit-content !important;
+    max-width: 600px !important;
   }
   .titleBox,
   .descriptionBox,

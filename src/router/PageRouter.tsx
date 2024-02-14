@@ -17,6 +17,7 @@ const LazyAdmin = lazy(() => import("../admin/Admin"));
 const LazyAdminLogin = lazy(() => import("../admin/Login"));
 const LazyUser = lazy(() => import("../user/User"));
 const LazyUserLogin = lazy(() => import("../user/Login"));
+const LazyLearning = lazy(() => import("../user/MyLearning"));
 
 const PageRouter = () => {
   return (
@@ -91,6 +92,14 @@ const PageRouter = () => {
         element={
           <React.Suspense>
             <LazyUser />
+          </React.Suspense>
+        }
+      />
+      <Route
+        path="/my_learning"
+        element={
+          <React.Suspense>
+            <LazyLearning />
           </React.Suspense>
         }
       />
