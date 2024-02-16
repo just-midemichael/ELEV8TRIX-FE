@@ -10,7 +10,7 @@ export const subscriptionContianer: CSSProperties = {
   justifyContent: "center",
   alignItems: "center",
   overflow: "hidden",
-  padding: "5% 20px"
+  padding: "5% 40px"
 };
 
 export const subscriptionWrapper: CSSProperties = {
