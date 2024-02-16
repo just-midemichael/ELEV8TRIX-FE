@@ -1,0 +1,15 @@
+.subscriptionInput {
+  max-width: 100% !important;
+  border-radius: 10px 0 0 10px !important;
+  font-size: 0.95rem;
+}
+
+.button {
+  border-radius: 0 10px 10px 0 !important;
+}
+
+@media (max-width: 700px) {
+  .polygon {
+    display: none;
+  }
+}

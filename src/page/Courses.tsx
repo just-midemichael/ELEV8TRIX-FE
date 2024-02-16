@@ -1,5 +1,6 @@
 import { CSSProperties } from "react";
 import CourseHero from "../component/hero/courseHero/CourseHero";
+import Subscription from "../component/subscription/Subscription";
 
 // Set the page title
 const pageTitle = () => (document.title = "Courses");
@@ -10,6 +11,9 @@ const Courses = () => {
     <div>
       <section style={heroSection}>
         <CourseHero />
+      </section>
+      <section>
+        <Subscription />
       </section>
     </div>
   );
