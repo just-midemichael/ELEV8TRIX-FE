@@ -13,7 +13,7 @@ const PartnersBanner = () => {
         pauseOnHover={true}
         pauseOnClick={true}
         style={marquee}
-        speed={100}
+        speed={60}
         delay={5}
       >
         <img src={partnersIcon} className={styles.banner} style={banner} />
@@ -45,7 +45,7 @@ const title: CSSProperties = {
   minHeight: "40px",
   display: "flex",
   justifyContent: "center",
-  alignItems: "flex-start",
+  alignItems: "center",
   overflow: "hidden"
 };
 
