@@ -2,6 +2,8 @@ import { CSSProperties } from "react";
 import MainHero from "../component/hero/mainHero/MainHero";
 import Subscription from "../component/subscription/Subscription";
 import PartnersBanner from "../component/partnersBanner/PartnersBanner";
+import Tab from "../component/tab/Tab.tsx";
+import { courseData } from "../component/tab/TabData.tsx";
 
 // Set the page title
 const pageTitle = () => (document.title = "Welcome to Elev8trix");
@@ -15,6 +17,9 @@ const Home = () => {
       </section>
       <section>
         <PartnersBanner />
+      </section>
+      <section style={{ padding: "10px 5%" }}>
+        <Tab tabs={courseData} />
       </section>
       <section>
         <Subscription />
