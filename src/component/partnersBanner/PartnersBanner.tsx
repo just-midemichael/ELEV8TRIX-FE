@@ -50,7 +50,8 @@ const title: CSSProperties = {
 };
 
 const marquee: CSSProperties = {
-  overflow: "hidden"
+  overflow: "hidden",
+  maxWidth: "1100px"
 };
 
 const banner: CSSProperties = {
