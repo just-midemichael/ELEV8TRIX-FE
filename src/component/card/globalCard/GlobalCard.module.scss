@@ -53,7 +53,7 @@ $colorTwo: black;
   height: 100%;
   max-width: 150px;
   min-height: 140px;
-  background-color: grey;
+  background-color: transparent;
 }
 
 .textTitle,
@@ -89,7 +89,20 @@ $colorTwo: black;
   width: 112px !important;
 }
 
+@media (max-width: 1000px) {
+  .cardContainer {
+    width: 300px;
+    height: 320px;
+  }
+}
+
 @media (max-width: 700px) {
+  .cardContainer {
+    width: 240px;
+  }
+}
+
+@media (max-width: 560px) {
   .cardContainer {
     width: 300px;
     height: 320px;
@@ -98,6 +111,6 @@ $colorTwo: black;
 
 @media (max-width: 450px) {
   .cardContainer {
-    width: 250px;
+    width: 240px;
   }
 }

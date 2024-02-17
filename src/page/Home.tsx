@@ -4,6 +4,7 @@ import Subscription from "../component/subscription/Subscription";
 import PartnersBanner from "../component/partnersBanner/PartnersBanner";
 import Tab from "../component/tab/Tab.tsx";
 import { courseData } from "../component/tab/TabData.tsx";
+import CoreValue from "../component/coreValue/CoreValue.tsx";
 
 // Set the page title
 const pageTitle = () => (document.title = "Welcome to Elev8trix");
@@ -21,6 +22,9 @@ const Home = () => {
       <section style={{ padding: "10px 5%" }}>
         <Tab tabs={courseData} />
       </section>
+      <section style={corevalueSection}>
+        <CoreValue />
+      </section>
       <section>
         <Subscription />
       </section>
@@ -36,4 +40,15 @@ const heroSection: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center"
+};
+
+const corevalueSection: CSSProperties = {
+  width: "100%",
+  height: "fit-content",
+  minHeight: "584px",
+  backgroundColor: "white",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "flex-start",
+  padding: "40px 5%"
 };
