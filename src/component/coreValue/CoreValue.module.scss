@@ -1,0 +1,13 @@
+@media (max-width: 900px) {
+  .contentBox {
+    display: grid !important;
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (max-width: 560px) {
+  .contentBox {
+    display: flex !important;
+    flex-direction: column;
+  }
+}
