@@ -5,6 +5,7 @@ import PartnersBanner from "../component/partnersBanner/PartnersBanner";
 import Tab from "../component/tab/Tab.tsx";
 import { courseData } from "../component/tab/TabData.tsx";
 import CoreValue from "../component/coreValue/CoreValue.tsx";
+import Mentor from "../component/mentor/Mentor.tsx";
 
 // Set the page title
 const pageTitle = () => (document.title = "Welcome to Elev8trix");
@@ -24,6 +25,9 @@ const Home = () => {
       </section>
       <section style={corevalueSection}>
         <CoreValue />
+      </section>
+      <section style={mentorSection}>
+        <Mentor />
       </section>
       <section>
         <Subscription />
@@ -51,4 +55,14 @@ const corevalueSection: CSSProperties = {
   justifyContent: "center",
   alignItems: "flex-start",
   padding: "40px 5%"
+};
+
+const mentorSection: CSSProperties = {
+  width: "100%",
+  height: "fit-content",
+  minHeight: "520px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: "50px 5%"
 };
