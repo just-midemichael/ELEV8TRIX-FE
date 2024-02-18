@@ -8,6 +8,7 @@ import { courseData } from "../component/tab/TabData.tsx";
 import CoreValue from "../component/coreValue/CoreValue.tsx";
 import Mentor from "../component/mentor/Mentor.tsx";
 import CloudmasteryCommunity from "../component/community/CloudmasteryCommunity.tsx";
+import Testimony from "../component/testimony/Testimony.tsx";
 
 // Set the page title
 const pageTitle = () => (document.title = "Welcome to Elev8trix");
@@ -33,6 +34,9 @@ const Home = () => {
       </section>
       <section style={communitySection}>
         <CloudmasteryCommunity />
+      </section>
+      <section style={testimonySection}>
+        <Testimony />
       </section>
       <section>
         <Subscription />
@@ -73,5 +77,15 @@ const mentorSection: CSSProperties = {
 };
 
 const communitySection: CSSProperties = {
+  padding: "50px 5%"
+};
+
+const testimonySection: CSSProperties = {
+  height: "fit-content",
+  minHeight: "690px",
+  backgroundColor: "white",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
   padding: "50px 5%"
 };
