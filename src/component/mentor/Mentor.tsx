@@ -95,6 +95,7 @@ const contentBox: CSSProperties = {
   minHeight: "300px",
   display: "flex",
   justifyContent: "flex-start",
+  flexWrap: "wrap",
   alignItems: "center",
   padding: "30px 0",
   overflowY: "hidden",
