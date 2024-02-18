@@ -1,4 +1,7 @@
 @media (max-width: 500px) {
+  .container {
+    padding: 0 !important;
+  }
   .testimonySection {
     padding: 50px 5% !important;
   }
@@ -16,11 +19,5 @@
   }
   .courseSection {
     padding: 10px 5%;
-  }
-}
-
-@media (max-width: 500px) {
-  .container {
-    padding: 0 !important;
   }
 }
