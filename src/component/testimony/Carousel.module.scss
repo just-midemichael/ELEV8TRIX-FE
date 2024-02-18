@@ -1,0 +1,19 @@
+.button {
+  display: none !important;
+}
+
+.carouselWrapper:hover .button {
+  display: none !important;
+}
+
+@media (max-width: 450px) {
+  .detailBox {
+    flex-direction: column !important;
+  }
+  .name {
+    width: 100% !important;
+  }
+  .occupation {
+    width: 100% !important;
+  }
+}
