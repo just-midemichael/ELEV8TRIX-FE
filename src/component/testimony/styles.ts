@@ -1,0 +1,96 @@
+import { CSSProperties } from "react";
+
+export const carouselContainer: CSSProperties = {
+  width: "100%",
+  height: "500px",
+  position: "relative",
+  padding: "20px 0",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  color: "white"
+};
+
+export const carouselWrapper: CSSProperties = {
+  width: "100%",
+  height: "100%",
+  borderRadius: "30px",
+  backgroundColor: "#3149A1",
+  overflow: "hidden",
+  padding: "40px 2%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center"
+};
+
+export const contentBox: CSSProperties = {
+  width: "100%",
+  height: "70%",
+  overflow: "hidden",
+  display: "flex",
+  justifyContent: "flex-start",
+  alignItems: "flex-start",
+  textAlign: "left",
+  padding: "10px",
+  fontSize: "1rem"
+};
+
+export const detailBox: CSSProperties = {
+  width: "100%",
+  height: "fit-content",
+  minHeight: "20%",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center"
+};
+
+export const nameBox: CSSProperties = {
+  width: "30%",
+  minWidth: "200px",
+  height: "100%",
+  display: "flex",
+  justifyContent: "flex-start",
+  alignItems: "center",
+  padding: "10px",
+  fontWeight: 800,
+  fontSize: "0.95rem"
+};
+
+export const occupationBox: CSSProperties = {
+  width: "100%",
+  maxWidth: "100%",
+  height: "100%",
+  display: "flex",
+  justifyContent: "flex-start",
+  alignItems: "center",
+  padding: "10px",
+  fontSize: "0.95rem"
+};
+
+export const buttonLeft: CSSProperties = {
+  position: "absolute",
+  backgroundColor: "transparent",
+  left: "-14px",
+  border: "none",
+  cursor: "pointer"
+};
+
+export const buttonRight: CSSProperties = {
+  position: "absolute",
+  backgroundColor: "transparent",
+  right: "-14px",
+  border: "none",
+  cursor: "pointer"
+};
+
+export const indicatiorBox: CSSProperties = {
+  width: "100%",
+  height: "10%",
+  minHeight: "20px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: 8
+};

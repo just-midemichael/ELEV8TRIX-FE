@@ -2,15 +2,9 @@ import { CSSProperties } from "react";
 import { H5 } from "../shared/Title/H5";
 import Carousel from "./Carousel";
 import polygon from "/smallPolygon.png";
+import { name, content, occupation } from "./Testimonials";
 
 const Testimony = () => {
-  const content = [
-    "Content 1 Lorem ipsum dolor sit amet consectetur. Ut porttitor aliquam laoreet enim. Sapien faucibus nam sagittis tempus suspendisse enim at. Elit aliquam id malesuada feugiat gravida elementum. Facilisis viverra interdum platea lectus. Sit arcu egestas laoreet scelerisque integer. Amet diam libero sit rutrum vitae felis. Vitae mattis interdum justo tortor malesuada. Turpis cursus placerat condimentum consectetur lectus feugiat suspendisse volutpat donec",
-    "Content 2 Lorem ipsum dolor sit amet consectetur. Ut porttitor aliquam laoreet enim. Sapien faucibus nam sagittis tempus suspendisse enim at. Elit aliquam id malesuada feugiat gravida elementum. Facilisis viverra interdum platea lectus. Sit arcu egestas laoreet scelerisque integer. Amet diam libero sit rutrum vitae felis. Vitae mattis interdum justo tortor malesuada. Turpis cursus placerat condimentum consectetur lectus feugiat suspendisse volutpat donec",
-    "Content 3 Lorem ipsum dolor sit amet consectetur. Ut porttitor aliquam laoreet enim. Sapien faucibus nam sagittis tempus suspendisse enim at. Elit aliquam id malesuada feugiat gravida elementum. Facilisis viverra interdum platea lectus. Sit arcu egestas laoreet scelerisque integer. Amet diam libero sit rutrum vitae felis. Vitae mattis interdum justo tortor malesuada. Turpis cursus placerat condimentum consectetur lectus feugiat suspendisse volutpat donec"
-  ];
-  const name = ["Name 1", "Name 2", "Name 3"];
-  const occupation = ["Occupation 1", "Occupation 2", "Occupation 3"];
   return (
     <div style={container}>
       <div style={titleBox}>
