@@ -91,7 +91,7 @@ $searchInputBg: #def4ff;
     border-radius: 36px !important;
   }
   .textFocalContainer {
-    max-width: 426px !important;
+    max-width: 100% !important;
   }
 }
 
@@ -113,6 +113,6 @@ $searchInputBg: #def4ff;
 
 @media (max-width: 700px) {
   .bannerContainer {
-    border-radius: none !important;
+    border-radius: 0 !important;
   }
 }
