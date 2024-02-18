@@ -23,19 +23,19 @@ const Home = () => {
       <section>
         <PartnersBanner />
       </section>
-      <section style={{ padding: "10px 5%" }}>
+      <section className={styles.courseSection} style={courseSection}>
         <Tab tabs={courseData} />
       </section>
-      <section style={corevalueSection}>
+      <section className={styles.corevalueSection} style={corevalueSection}>
         <CoreValue />
       </section>
-      <section style={mentorSection}>
+      <section className={styles.mentorSection} style={mentorSection}>
         <Mentor />
       </section>
-      <section style={communitySection}>
+      <section className={styles.communitySection} style={communitySection}>
         <CloudmasteryCommunity />
       </section>
-      <section style={testimonySection}>
+      <section className={styles.testimonySection} style={testimonySection}>
         <Testimony />
       </section>
       <section>
@@ -48,11 +48,15 @@ const Home = () => {
 export default Home;
 
 const heroSection: CSSProperties = {
-  padding: "50px 5%",
+  padding: "50px 8%",
   width: "100%",
   display: "flex",
   justifyContent: "center",
   alignItems: "center"
+};
+
+const courseSection: CSSProperties = {
+  padding: "10px 8%"
 };
 
 const corevalueSection: CSSProperties = {
@@ -63,7 +67,7 @@ const corevalueSection: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "flex-start",
-  padding: "40px 5%"
+  padding: "40px 8%"
 };
 
 const mentorSection: CSSProperties = {
@@ -73,11 +77,11 @@ const mentorSection: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  padding: "50px 5%"
+  padding: "50px 8%"
 };
 
 const communitySection: CSSProperties = {
-  padding: "50px 5%"
+  padding: "50px 8%"
 };
 
 const testimonySection: CSSProperties = {
@@ -87,5 +91,5 @@ const testimonySection: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  padding: "50px 5%"
+  padding: "50px 8%"
 };
