@@ -1,4 +1,5 @@
 import { CSSProperties } from "react";
+import styles from "../style/home.module.scss";
 import MainHero from "../component/hero/mainHero/MainHero";
 import Subscription from "../component/subscription/Subscription";
 import PartnersBanner from "../component/partnersBanner/PartnersBanner";
@@ -15,7 +16,7 @@ pageTitle();
 const Home = () => {
   return (
     <div>
-      <section style={heroSection}>
+      <section className={styles.container} style={heroSection}>
         <MainHero />
       </section>
       <section>

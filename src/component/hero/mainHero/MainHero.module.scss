@@ -110,3 +110,9 @@ $searchInputBg: #def4ff;
     display: none;
   }
 }
+
+@media (max-width: 500px) {
+  .bannerContainer {
+    border-radius: 0 !important;
+  }
+}
