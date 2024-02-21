@@ -46,26 +46,49 @@ export const detailBox: CSSProperties = {
   alignItems: "center"
 };
 
-export const nameBox: CSSProperties = {
-  width: "30%",
-  minWidth: "200px",
+export const avatarBox: CSSProperties = {
+  width: "100px",
   height: "100%",
   display: "flex",
   justifyContent: "flex-start",
   alignItems: "center",
-  padding: "10px",
+  padding: "10px"
+};
+
+export const avatarStyle: CSSProperties = {
+  width: "64px",
+  height: "64px"
+};
+
+export const textBox: CSSProperties = {
+  width: "100%",
+  maxWidth: "100%",
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "flex-start",
+  padding: "10px"
+};
+
+export const nameBox: CSSProperties = {
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  justifyContent: "flex-start",
+  alignItems: "center",
+  padding: "5px 10px",
   fontWeight: 800,
   fontSize: "0.95rem"
 };
 
 export const occupationBox: CSSProperties = {
   width: "100%",
-  maxWidth: "100%",
   height: "100%",
   display: "flex",
   justifyContent: "flex-start",
   alignItems: "center",
-  padding: "10px",
+  padding: "5px 10px",
   fontSize: "0.95rem"
 };
 
@@ -85,12 +108,12 @@ export const buttonRight: CSSProperties = {
   cursor: "pointer"
 };
 
-export const indicatiorBox: CSSProperties = {
+export const indicatorBox: CSSProperties = {
   width: "100%",
   height: "10%",
   minHeight: "20px",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  gap: 8
+  gap: 6
 };

@@ -8,21 +8,31 @@ import {
   carouselWrapper,
   contentBox,
   detailBox,
+  avatarBox,
+  avatarStyle,
+  textBox,
   nameBox,
   occupationBox,
   buttonRight,
   buttonLeft,
-  indicatiorBox
+  indicatorBox
 } from "./styles";
 
 interface carouselProps {
+  avatar: string[];
   name: string[];
   content: string[];
   occupation: string[];
   interval: number;
 }
 
-const Carousel = ({ name, content, occupation, interval }: carouselProps) => {
+const Carousel = ({
+  avatar,
+  name,
+  content,
+  occupation,
+  interval
+}: carouselProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const goToSlide = (index: number) => {
@@ -46,17 +56,27 @@ const Carousel = ({ name, content, occupation, interval }: carouselProps) => {
   });
 
   return (
-    <div style={carouselContainer}>
+    <div className={styles.carouselContainer} style={carouselContainer}>
       <div className={styles.carouselWrapper} style={carouselWrapper}>
         <div style={contentBox}>
           <H8 title={`" ${content[currentSlide]} "`} />{" "}
         </div>
         <div className={styles.detailBox} style={detailBox}>
-          <div className={styles.name} style={nameBox}>
-            {name[currentSlide]}
+          <div className={styles.avatarBox} style={avatarBox}>
+            <img
+              src={avatar[currentSlide]}
+              className={styles.avatar}
+              alt="avatar"
+              style={avatarStyle}
+            />
           </div>
-          <div className={styles.occupation} style={occupationBox}>
-            {occupation[currentSlide]}
+          <div className={styles.textBox} style={textBox}>
+            <div className={styles.name} style={nameBox}>
+              {name[currentSlide]}
+            </div>
+            <div className={styles.occupation} style={occupationBox}>
+              {occupation[currentSlide]}
+            </div>
           </div>
         </div>
         <button
@@ -88,15 +108,15 @@ const Carousel = ({ name, content, occupation, interval }: carouselProps) => {
           />
         </button>
       </div>
-      <div style={indicatiorBox}>
+      <div style={indicatorBox}>
         {content.map((_, index) => (
           <div
             key={index}
             style={{
               backgroundColor: index === currentSlide ? "black" : "#119ee3",
-              width: "10px",
-              height: "10px",
-              borderRadius: "100%",
+              width: index === currentSlide ? "14px" : "8px",
+              height: "4px",
+              borderRadius: "8px",
               cursor: "pointer"
             }}
             onClick={() => goToSlide(index)}

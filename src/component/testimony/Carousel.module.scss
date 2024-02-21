@@ -7,8 +7,21 @@
 }
 
 @media (max-width: 450px) {
+  .carouselContainer {
+    height: 600px !important;
+  }
+  .carouselWrapper {
+    padding: 10px 2% !important;
+  }
   .detailBox {
-    flex-direction: column !important;
+    flex-direction: row !important;
+  }
+  .avatarBox {
+    width: 70px !important;
+  }
+  .avatar {
+    width: 46px !important;
+    height: 46px !important;
   }
   .name {
     width: 100% !important;

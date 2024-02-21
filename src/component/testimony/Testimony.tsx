@@ -2,7 +2,7 @@ import { CSSProperties } from "react";
 import { H5 } from "../shared/Title/H5";
 import Carousel from "./Carousel";
 import polygon from "/smallPolygon.png";
-import { name, content, occupation } from "./Testimonials";
+import { avatar, name, content, occupation } from "./Testimonials";
 
 const Testimony = () => {
   return (
@@ -12,6 +12,7 @@ const Testimony = () => {
       </div>
       <div style={carouselBox}>
         <Carousel
+          avatar={avatar}
           name={name}
           content={content}
           occupation={occupation}
