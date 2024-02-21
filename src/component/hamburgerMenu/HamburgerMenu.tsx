@@ -1,4 +1,5 @@
 import ColoredButton from "../shared/button/coloredButton/ColoredButton";
+import WhiteButton from "../shared/button/whiteButton/WhiteButton";
 import styles from "./HamurgerMenu.module.scss";
 import { NavLink } from "react-router-dom";
 
@@ -46,7 +47,17 @@ export const HamburgerMenu = () => {
         </NavLink>
       </div>
       <div className={styles.signinBox}>
-        <ColoredButton text={"Sign In"} link={"/user"} target={""} />
+        <ColoredButton
+          text={"Sign up"}
+          link={"/login"}
+          target={""}
+          className={styles.signupButton}
+        />
+        <WhiteButton
+          text={"Log in"}
+          link={"/login"}
+          className={styles.loginButton}
+        />
       </div>
     </div>
   );
