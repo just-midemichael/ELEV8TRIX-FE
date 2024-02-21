@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
 import { H5 } from "../shared/Title/H5";
-import { H7 } from "../shared/Title/H7";
+import { H8 } from "../shared/Title/H8";
 import image1 from "/communityImage1.svg";
 import image2 from "/communityImage2.svg";
 import ellipse from "/communityEllipse.png";
@@ -16,7 +16,7 @@ const CloudmasteryCommunity = () => {
           <H5 title={"Join the Cloud Mastery Community"} style={title} />
         </div>
         <div style={descriptionBox}>
-          <H7
+          <H8
             title={
               "Becoming a cloud master is not just about courses; it's about joining a community of like-minded individuals. Engage in discussions, share insights, and collaborate on projects through our exclusive community platform"
             }
