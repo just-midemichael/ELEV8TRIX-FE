@@ -81,7 +81,8 @@ const mentorSection: CSSProperties = {
 };
 
 const communitySection: CSSProperties = {
-  padding: "50px 7%"
+  padding: "50px 7%",
+  backgroundColor: "#3149A1"
 };
 
 const testimonySection: CSSProperties = {

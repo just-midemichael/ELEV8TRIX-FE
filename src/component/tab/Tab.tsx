@@ -75,7 +75,7 @@ const tabLabl: CSSProperties = {
   display: "flex",
   justifyContent: "flex-start",
   alignItems: "center",
-  borderBottom: "2px solid black",
+  borderBottom: "1px solid silver",
   overflowY: "hidden"
 };
 

@@ -11,11 +11,11 @@ import styles from "./CloudmasteryCommunity.module.scss";
 const CloudmasteryCommunity = () => {
   return (
     <div className={styles.container} style={container}>
-      <div style={textContainer}>
-        <div style={titleBox}>
+      <div className={styles.textContainer} style={textContainer}>
+        <div className={styles.titleBox} style={titleBox}>
           <H5 title={"Join the Cloud Mastery Community"} style={title} />
         </div>
-        <div style={descriptionBox}>
+        <div className={styles.descriptionBox} style={descriptionBox}>
           <H8
             title={
               "Becoming a cloud master is not just about courses; it's about joining a community of like-minded individuals. Engage in discussions, share insights, and collaborate on projects through our exclusive community platform"
@@ -77,7 +77,7 @@ const titleBox: CSSProperties = {
   textAlign: "left",
   overflow: "hidden",
   padding: "8px 0",
-  color: "#3149A1"
+  color: "white"
 };
 
 const descriptionBox: CSSProperties = {
@@ -88,7 +88,8 @@ const descriptionBox: CSSProperties = {
   textAlign: "left",
   fontWeight: "100",
   overflow: "hidden",
-  padding: "8px 0"
+  padding: "8px 0",
+  color: "white"
 };
 
 const title: CSSProperties = {

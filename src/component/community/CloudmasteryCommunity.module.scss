@@ -2,6 +2,17 @@
   .container {
     flex-direction: column;
   }
+  .textContainer {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .titleBox,
+  .descriptionBox {
+    max-width: fit-content !important;
+    width: 100% !important;
+    min-height: fit-content !important;
+  }
 }
 
 @media (max-width: 450px) {
