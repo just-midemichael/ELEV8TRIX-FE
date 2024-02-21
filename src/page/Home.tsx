@@ -17,7 +17,7 @@ pageTitle();
 const Home = () => {
   return (
     <div>
-      <section className={styles.container} style={heroSection}>
+      <section className={styles.heroSection} style={heroSection}>
         <MainHero />
       </section>
       <section>
@@ -48,7 +48,7 @@ const Home = () => {
 export default Home;
 
 const heroSection: CSSProperties = {
-  padding: "50px 8%",
+  padding: "50px 7%",
   width: "100%",
   display: "flex",
   justifyContent: "center",
@@ -56,7 +56,7 @@ const heroSection: CSSProperties = {
 };
 
 const courseSection: CSSProperties = {
-  padding: "10px 8%"
+  padding: "10px 7%"
 };
 
 const corevalueSection: CSSProperties = {
@@ -67,7 +67,7 @@ const corevalueSection: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "flex-start",
-  padding: "40px 8%"
+  padding: "40px 7%"
 };
 
 const mentorSection: CSSProperties = {
@@ -77,11 +77,11 @@ const mentorSection: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  padding: "50px 8%"
+  padding: "50px 7%"
 };
 
 const communitySection: CSSProperties = {
-  padding: "50px 8%"
+  padding: "50px 7%"
 };
 
 const testimonySection: CSSProperties = {
@@ -91,5 +91,5 @@ const testimonySection: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  padding: "50px 8%"
+  padding: "50px 7%"
 };
