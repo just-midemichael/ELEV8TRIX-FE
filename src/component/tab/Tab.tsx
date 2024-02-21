@@ -29,6 +29,7 @@ const Tab = ({ tabs }: TabsProps) => {
       <div style={tabLabl}>
         {tabs.map((tab, index) => (
           <div
+            key={index}
             onClick={() => handleTabClick(index)}
             style={{
               fontSize: "1.1rem",
