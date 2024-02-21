@@ -1,3 +1,10 @@
+@media (max-width: 1000px) {
+  .heroSection {
+    padding: 50px 0;
+    background-color: silver !important;
+  }
+}
+
 @media (max-width: 700px) {
   .container {
     padding: 0 !important;
@@ -16,6 +23,7 @@
   }
   .heroSection {
     padding: 50px 5% !important;
+    background-color: silver !important;
   }
   .courseSection {
     padding: 10px 5%;

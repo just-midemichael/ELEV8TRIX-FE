@@ -4,7 +4,7 @@ $linkColor: #3149a1;
 $linkBorderColor: #3149a1;
 
 .menuContainer {
-  padding: 100px 3%;
+  padding: 100px 5%;
   padding-bottom: 0;
   height: 100%;
   width: 100%;
@@ -62,4 +62,10 @@ $linkBorderColor: #3149a1;
 
 .list:hover {
   background-color: rgba(128, 128, 128, 0.032);
+}
+
+@media (max-width: 700px) {
+  .menuContainer {
+    padding: 100px 2%;
+  }
 }
