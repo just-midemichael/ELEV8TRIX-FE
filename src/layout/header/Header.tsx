@@ -5,6 +5,7 @@ import LogoColored from "../../component/logo/LogoColored";
 import { HamburgerComp } from "../../component/hamburgerButton/Hamburger";
 import { HamburgerMenu } from "../../component/hamburgerMenu/HamburgerMenu";
 import ColoredButton from "../../component/shared/button/coloredButton/ColoredButton";
+import WhiteButton from "../../component/shared/button/whiteButton/WhiteButton";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -66,7 +67,12 @@ const Header = () => {
           <NavBar />
         </div>
         <div className={styles.signinBox}>
-          <ColoredButton text={"Sign In"} link={"/user"} />
+          <WhiteButton
+            text={"Log In"}
+            link={"/login"}
+            className={styles.loginButton}
+          />
+          <ColoredButton text={"Sign Up"} link={"/login"} />
         </div>
         <div className={styles.hamburgerBox}>
           <HamburgerComp handleClick={handleMenuDisplay} value={isValue} />
