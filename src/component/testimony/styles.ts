@@ -16,13 +16,14 @@ export const carouselWrapper: CSSProperties = {
   width: "100%",
   height: "100%",
   borderRadius: "30px",
-  backgroundColor: "#3149A1",
+  backgroundColor: "white",
   overflow: "hidden",
   padding: "40px 2%",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  alignItems: "center"
+  alignItems: "center",
+  boxShadow: "1px 1px 10px silver"
 };
 
 export const contentBox: CSSProperties = {
@@ -34,7 +35,8 @@ export const contentBox: CSSProperties = {
   alignItems: "flex-start",
   textAlign: "left",
   padding: "10px",
-  fontSize: "1rem"
+  fontSize: "1rem",
+  color: "black"
 };
 
 export const detailBox: CSSProperties = {
@@ -79,7 +81,8 @@ export const nameBox: CSSProperties = {
   alignItems: "center",
   padding: "5px 10px",
   fontWeight: 800,
-  fontSize: "0.95rem"
+  fontSize: "0.95rem",
+  color: "#3149A1"
 };
 
 export const occupationBox: CSSProperties = {
@@ -89,7 +92,8 @@ export const occupationBox: CSSProperties = {
   justifyContent: "flex-start",
   alignItems: "center",
   padding: "5px 10px",
-  fontSize: "0.95rem"
+  fontSize: "0.95rem",
+  color: "black"
 };
 
 export const buttonLeft: CSSProperties = {
