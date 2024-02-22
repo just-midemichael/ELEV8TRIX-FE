@@ -113,7 +113,7 @@ const Carousel = ({
           <div
             key={index}
             style={{
-              backgroundColor: index === currentSlide ? "black" : "#119ee3",
+              backgroundColor: index === currentSlide ? "#3149A1" : "silver",
               width: index === currentSlide ? "14px" : "8px",
               height: "4px",
               borderRadius: "8px",
