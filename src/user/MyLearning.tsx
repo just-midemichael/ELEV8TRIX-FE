@@ -1,6 +1,7 @@
 import { CSSProperties } from "react";
 import MyLearningHero from "../component/hero/myLearningHero/MyLearningHero";
 import Subscription from "../component/subscription/Subscription";
+import styles from "../style/MyLearning.module.scss";
 
 // Set the page title
 const pageTitle = () => (document.title = "My learning");
@@ -9,7 +10,7 @@ pageTitle();
 const MyLearning = () => {
   return (
     <div>
-      <section style={heroSection}>
+      <section className={styles.heroSection} style={heroSection}>
         <MyLearningHero />
       </section>
       <section>
