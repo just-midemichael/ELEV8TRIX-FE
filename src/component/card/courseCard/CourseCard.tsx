@@ -40,7 +40,7 @@ const CourseCard = ({
           style={{
             height: "45%",
             width: "100%",
-            backgroundColor: "grey"
+            backgroundColor: "silver"
           }}
         >
           <img src={thumbNail} style={{ width: "100%", height: "100%" }} />

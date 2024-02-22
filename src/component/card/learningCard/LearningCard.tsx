@@ -1,5 +1,6 @@
 import styles from "./LearningCard.module.scss";
 import ColoredButton from "../../shared/button/coloredButton/ColoredButton";
+import { MouseEventHandler } from "react";
 
 type cardProps = {
   thumbNail: string;
@@ -11,6 +12,7 @@ type cardProps = {
   completeLesson: number;
   buttonText: string;
   buttonLink: string;
+  onClick?: MouseEventHandler;
 };
 
 const LearningCard = ({
@@ -22,7 +24,8 @@ const LearningCard = ({
   totalLesson,
   completeLesson,
   buttonText,
-  buttonLink
+  buttonLink,
+  onClick
 }: cardProps) => {
   const x = (completeLesson / totalLesson) * 100;
   const status = x - 100;
@@ -41,7 +44,7 @@ const LearningCard = ({
         style={{
           height: "45%",
           width: "100%",
-          backgroundColor: "grey"
+          backgroundColor: "silver"
         }}
       >
         <img src={thumbNail} style={{ width: "100%", height: "100%" }} />
@@ -81,6 +84,7 @@ const LearningCard = ({
             className={styles.button}
             text={`${buttonText}`}
             link={`${buttonLink}`}
+            onClick={onClick}
           />
         </div>
       </div>
