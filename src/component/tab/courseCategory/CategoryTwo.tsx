@@ -36,7 +36,7 @@ const CategoryTwo = ({ array, className }: categoryProp) => {
           linkTo={`/${link}`}
           onClick={() =>
             setLink(
-              (window.location.href = `/course/${course.title.split(" ").join("_")}`)
+              (window.location.href = `/courses/${course.title.split(" ").join("_")}`)
             )
           }
         />
