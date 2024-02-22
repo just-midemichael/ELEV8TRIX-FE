@@ -3,7 +3,12 @@ import thumbnail2 from "/thumbnail2.png";
 import avatar2 from "/avatar2.png";
 import { CSSProperties } from "react";
 
-const CategoryTwo = () => {
+type categoryProp = {
+  array: number;
+  className?: string;
+};
+
+const CategoryTwo = ({ array, className }: categoryProp) => {
   const courses = {
     thumbnail: `${thumbnail2}`,
     avatar: `${avatar2}`,
@@ -16,8 +21,8 @@ const CategoryTwo = () => {
   };
 
   return (
-    <div style={container}>
-      {new Array(4).fill(courses).map((course, index) => (
+    <div className={className} style={container}>
+      {new Array(array).fill(courses).map((course, index) => (
         <CourseCard
           key={index}
           thumbNail={course.thumbnail}
