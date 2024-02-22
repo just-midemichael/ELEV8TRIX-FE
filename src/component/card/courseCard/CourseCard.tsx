@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import styles from "./CourseCard.module.scss";
 import StarIcon from "@mui/icons-material/Star";
 import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
+import { MouseEventHandler } from "react";
 
 type cardProps = {
+  linkTo: string;
   thumbNail: string;
   avatar: string;
   authorName: string;
@@ -11,21 +13,24 @@ type cardProps = {
   title: string;
   description: string;
   review: string;
+  onClick: MouseEventHandler;
 };
 
 const CourseCard = ({
+  linkTo,
   thumbNail,
   avatar,
   authorName,
   profession,
   title,
   description,
-  review
+  review,
+  onClick
 }: cardProps) => {
   return (
     <Link
-      to={"/course"}
-      onClick={() => (window.location.href = "/course")}
+      to={linkTo}
+      onClick={onClick}
       style={{ color: "grey", textDecoration: "none" }}
     >
       <div

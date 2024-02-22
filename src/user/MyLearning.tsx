@@ -35,6 +35,6 @@ const heroSection: CSSProperties = {
 };
 
 const myCourseSection: CSSProperties = {
-  padding: "10px 7%",
+  padding: "30px 7%",
   backgroundColor: "white"
 };

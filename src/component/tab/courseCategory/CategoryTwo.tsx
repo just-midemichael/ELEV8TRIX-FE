@@ -1,7 +1,7 @@
 import CourseCard from "../../card/courseCard/CourseCard";
 import thumbnail2 from "/thumbnail2.png";
 import avatar2 from "/avatar2.png";
-import { CSSProperties } from "react";
+import { CSSProperties, useState } from "react";
 
 type categoryProp = {
   array: number;
@@ -9,6 +9,7 @@ type categoryProp = {
 };
 
 const CategoryTwo = ({ array, className }: categoryProp) => {
+  const [link, setLink] = useState<string>("courses");
   const courses = {
     thumbnail: `${thumbnail2}`,
     avatar: `${avatar2}`,
@@ -32,6 +33,12 @@ const CategoryTwo = ({ array, className }: categoryProp) => {
           title={course.title}
           description={course.description}
           review={course.review}
+          linkTo={`/${link}`}
+          onClick={() =>
+            setLink(
+              (window.location.href = `/course/${course.title.split(" ").join("_")}`)
+            )
+          }
         />
       ))}
     </div>
