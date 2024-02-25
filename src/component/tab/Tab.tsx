@@ -9,9 +9,11 @@ interface Tabs {
 
 interface TabsProps {
   tabs: Tabs[];
+  className?: string;
+  tabTitle: string;
 }
 
-const Tab = ({ tabs }: TabsProps) => {
+const Tab = ({ tabs, className, tabTitle }: TabsProps) => {
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabClick = (index: number) => {
@@ -20,11 +22,8 @@ const Tab = ({ tabs }: TabsProps) => {
 
   return (
     <div style={tabContaier}>
-      <div style={titleBox}>
-        <H5
-          style={title}
-          title={"Elev8te your carrer with one of these courses"}
-        />
+      <div className={className} style={titleBox}>
+        <H5 style={title} title={tabTitle} />
       </div>
       <div style={tabLabl}>
         {tabs.map((tab, index) => (

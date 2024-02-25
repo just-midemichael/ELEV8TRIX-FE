@@ -16,7 +16,10 @@ const Courses = () => {
         <CourseHero />
       </section>
       <section style={courseSection}>
-        <Tab tabs={courseDataMain} />
+        <Tab
+          tabs={courseDataMain}
+          tabTitle={"Elev8te your carrer with one of these courses"}
+        />
       </section>
       <section>
         <Subscription />

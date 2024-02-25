@@ -1,7 +1,9 @@
 import CourseCard from "../../card/courseCard/CourseCard";
 import thumbnail1 from "/thumbnail1.png";
 import avatar1 from "/avatar1.png";
-import { CSSProperties, useState } from "react";
+import { CSSProperties } from "react";
+import { useLocation } from "react-router-dom";
+import { useGlobalContex } from "../../../utils/ContextApi";
 
 type categoryProp = {
   array: number;
@@ -9,7 +11,10 @@ type categoryProp = {
 };
 
 const CategoryOne = ({ array, className }: categoryProp) => {
-  const [link, setLink] = useState<string>("courses");
+  const courseLink = useGlobalContex();
+
+  const location = useLocation();
+  const redirectPath = location.state?.path || "/";
 
   const courses = {
     thumbnail: `${thumbnail1}`,
@@ -34,10 +39,10 @@ const CategoryOne = ({ array, className }: categoryProp) => {
           title={course.title}
           description={course.description}
           review={course.review}
-          linkTo={`/${link}`}
+          linkTo={`${courseLink.link}` || redirectPath}
           onClick={() =>
-            setLink(
-              (window.location.href = `/courses/${course.title.split(" ").join("_")}`)
+            courseLink.setLink(
+              `${(window.location.href = `/courses/${course.title.split(" ").join("_")}`)}`
             )
           }
         />

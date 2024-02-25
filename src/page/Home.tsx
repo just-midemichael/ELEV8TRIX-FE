@@ -24,7 +24,10 @@ const Home = () => {
         <PartnersBanner />
       </section>
       <section className={styles.courseSection} style={courseSection}>
-        <Tab tabs={courseData} />
+        <Tab
+          tabs={courseData}
+          tabTitle={"Elev8te your carrer with one of these courses"}
+        />
       </section>
       <section className={styles.corevalueSection} style={corevalueSection}>
         <CoreValue />
