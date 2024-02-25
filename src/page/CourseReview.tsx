@@ -1,5 +1,4 @@
 import { CSSProperties } from "react";
-import { useParams } from "react-router-dom";
 import styles from "../style/CourseReview.module.scss";
 import Tab from "../component/tab/Tab";
 import { courseReviewData } from "../component/tab/TabData";
