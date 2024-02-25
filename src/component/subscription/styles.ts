@@ -71,7 +71,8 @@ export const form: CSSProperties = {
 export const polygonStyle: CSSProperties = {
   position: "absolute",
   left: "5%",
-  zIndex: 2
+  zIndex: 2,
+  display: "none"
 };
 
 export const mailStyle: CSSProperties = {

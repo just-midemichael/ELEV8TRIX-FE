@@ -88,7 +88,7 @@ const Carousel = ({
             style={{
               height: "30px",
               width: "30px",
-              color: "black",
+              color: "#3149A1",
               fontWeight: 900
             }}
           />
@@ -102,7 +102,7 @@ const Carousel = ({
             style={{
               height: "30px",
               width: "30px",
-              color: "black",
+              color: "#3149A1",
               fontWeight: 900
             }}
           />

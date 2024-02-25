@@ -3,7 +3,7 @@
 }
 
 .carouselWrapper:hover .button {
-  display: none !important;
+  display: grid !important;
 }
 
 @media (max-width: 450px) {

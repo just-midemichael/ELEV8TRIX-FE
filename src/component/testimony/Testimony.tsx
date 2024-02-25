@@ -63,5 +63,6 @@ const polygonShape: CSSProperties = {
   zIndex: 5,
   width: "130px",
   height: "150px",
-  transform: "translateY(-140%)"
+  transform: "translateY(-140%)",
+  display: "none"
 };
