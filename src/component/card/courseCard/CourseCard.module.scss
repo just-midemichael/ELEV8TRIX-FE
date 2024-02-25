@@ -110,3 +110,17 @@ $colorTwo: black;
   justify-content: flex-start;
   align-items: center;
 }
+
+@media (max-width: 1000px) {
+  .cardContainer {
+    width: 220px !important;
+    height: 260px !important;
+  }
+  .title {
+    font-size: 0.9rem !important;
+  }
+
+  .description {
+    font-size: 0.6rem !important;
+  }
+}

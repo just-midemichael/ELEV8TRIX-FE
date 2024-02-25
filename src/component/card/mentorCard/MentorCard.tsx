@@ -19,6 +19,7 @@ const MentorCard = ({
 }: cardProps) => {
   return (
     <div
+      className={styles.cardContainer}
       style={{
         height: "283px",
         width: "255px",
