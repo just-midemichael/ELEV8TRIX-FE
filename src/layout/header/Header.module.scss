@@ -44,7 +44,7 @@ $headerZindex: 30;
 }
 
 .signinBox {
-  max-width: 400px;
+  max-width: 280px;
   gap: 10px;
   justify-content: flex-end;
 }
@@ -56,8 +56,12 @@ $headerZindex: 30;
   color: black !important;
 }
 
+.signupButton {
+  width: 100px !important;
+}
+
 .logoBox {
-  max-width: 300px;
+  max-width: 240px;
   justify-content: flex-start;
 }
 

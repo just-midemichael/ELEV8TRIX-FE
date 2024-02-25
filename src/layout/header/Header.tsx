@@ -72,7 +72,11 @@ const Header = () => {
             link={"/login"}
             className={styles.loginButton}
           />
-          <ColoredButton text={"Sign Up"} link={"/login"} />
+          <ColoredButton
+            text={"Sign Up"}
+            link={"/login"}
+            className={styles.signupButton}
+          />
         </div>
         <div className={styles.hamburgerBox}>
           <HamburgerComp handleClick={handleMenuDisplay} value={isValue} />
