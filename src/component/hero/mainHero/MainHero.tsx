@@ -25,12 +25,16 @@ const MainHero = () => {
       <div className={styles.textFocalContainer} style={textFocalContainer}>
         <div className={styles.textFocalWraper} style={textFocalWraper}>
           <div style={titleBox}>
-            <H5 title={"Lorem ipsum dolor sit amet consectetur."} />
+            <H5
+              title={
+                "Welcome to the Elev8trix: Where your cloud skills are elevated."
+              }
+            />
           </div>
           <div style={descriptionBox}>
             <H8
               title={
-                "Lorem ipsum dolor sit amet consectetur. Ut porttitor aliquam laoreet enim. Sapien faucibus nam sagittis tempus suspendisse enim at."
+                "Elevating your cloud computing skills from basic to a professional level.Your career focused learning platform."
               }
             />
           </div>

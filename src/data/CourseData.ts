@@ -2,6 +2,10 @@ import thumbnail1 from "/thumbnail1.png";
 import avatar1 from "/avatar1.png";
 import thumbnail2 from "/thumbnail2.png";
 import avatar2 from "/avatar2.png";
+import thumbnail3 from "/thumbnail3.png";
+import avatar3 from "/avatar3.png";
+import thumbnail4 from "/thumbnail4.png";
+import avatar4 from "/avatar4.png";
 
 export const courses = [
   {
@@ -30,8 +34,8 @@ export const courses = [
   },
   {
     id: 3,
-    thumbnail: `${thumbnail1}`,
-    avatar: `${avatar1}`,
+    thumbnail: `${thumbnail3}`,
+    avatar: `${avatar3}`,
     authorName: "Lorem Ipsum 3",
     profession: "Lorem Ipsum 3",
     title: "Lorem ipsum dolor sit amet 3",
@@ -42,8 +46,8 @@ export const courses = [
   },
   {
     id: 4,
-    thumbnail: `${thumbnail2}`,
-    avatar: `${avatar2}`,
+    thumbnail: `${thumbnail4}`,
+    avatar: `${avatar4}`,
     authorName: "Lorem Ipsum 4",
     profession: "Lorem Ipsum 4",
     title: "Lorem ipsum dolor sit amet 4",
@@ -78,8 +82,8 @@ export const courses = [
   },
   {
     id: 7,
-    thumbnail: `${thumbnail1}`,
-    avatar: `${avatar1}`,
+    thumbnail: `${thumbnail3}`,
+    avatar: `${avatar3}`,
     authorName: "Lorem Ipsum 7",
     profession: "Lorem Ipsum 7",
     title: "Lorem ipsum dolor sit amet 7",
@@ -90,8 +94,8 @@ export const courses = [
   },
   {
     id: 8,
-    thumbnail: `${thumbnail2}`,
-    avatar: `${avatar2}`,
+    thumbnail: `${thumbnail4}`,
+    avatar: `${avatar4}`,
     authorName: "Lorem Ipsum 8",
     profession: "Lorem Ipsum 8",
     title: "Lorem ipsum dolor sit amet 8",
