@@ -23,7 +23,7 @@ export const carouselWrapper: CSSProperties = {
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  boxShadow: "1px 1px 20px 2px rgba(192, 192, 192, 0.666)"
+  boxShadow: "1px 1px 10px 2px rgba(192, 192, 192, 0.666)"
 };
 
 export const contentBox: CSSProperties = {

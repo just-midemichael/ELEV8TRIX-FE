@@ -4,6 +4,11 @@
 
 .carouselWrapper:hover .button {
   display: grid !important;
+  box-shadow: 1px 1px 20px 2px rgba(192, 192, 192, 0.666) !important;
+}
+
+.carouselWrapper:hover {
+  box-shadow: 1px 1px 20px 2px rgba(192, 192, 192, 0.666) !important;
 }
 
 @media (max-width: 450px) {
