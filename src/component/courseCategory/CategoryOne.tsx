@@ -1,6 +1,5 @@
 import CourseCard from "../card/courseCard/CourseCard";
 import { CSSProperties, useState } from "react";
-import { useLocation } from "react-router-dom";
 import { courses } from "../../data/CourseData";
 
 type categoryProp = {
@@ -12,14 +11,11 @@ type categoryProp = {
 const CategoryOne = ({ sliceNumOne, sliceNumTwo, className }: categoryProp) => {
   const [link, setLink] = useState("");
 
-  const location = useLocation();
-  const redirectPath = location.state?.path || "/";
-
   return (
     <div className={className} style={container}>
-      {courses.slice(sliceNumOne, sliceNumTwo).map((course, index) => (
+      {courses.slice(sliceNumOne, sliceNumTwo).map((course) => (
         <CourseCard
-          key={index}
+          key={course.id}
           thumbNail={course.thumbnail}
           avatar={course.avatar}
           authorName={course.authorName}
@@ -27,7 +23,7 @@ const CategoryOne = ({ sliceNumOne, sliceNumTwo, className }: categoryProp) => {
           title={course.title}
           description={course.description}
           review={course.review}
-          linkTo={`${link}` || redirectPath}
+          linkTo={`${link}`}
           onClick={() =>
             setLink(
               `${(window.location.href = `/courses/${course.title.split(" ").join("_")}`)}`

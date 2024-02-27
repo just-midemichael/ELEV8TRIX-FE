@@ -3,21 +3,23 @@ import styles from "../style/CourseDetails.module.scss";
 import Tab from "../component/tab/Tab";
 import { courseReviewData } from "../data/TabData";
 import { H8 } from "../component/shared/Title/H8";
+import { courses } from "../data/CourseData";
 import { useParams } from "react-router-dom";
 
 const CourseDetails = () => {
   const { id } = useParams();
+  courses;
 
   return (
     <div className={styles.container} style={container}>
       <main style={mainSection}>
         <section style={previewVideo}>
-          <img src={id} style={{ width: "100%", height: "100%" }} />
+          <img src={""} style={{ width: "100%", height: "100%" }} />
         </section>
         <div>
           <Tab
             tabs={courseReviewData}
-            tabTitle={"Elev8te your carrer with one of these courses"}
+            tabTitle={`${id}`}
             className={styles.tabTitleBox}
           />
         </div>
