@@ -1,7 +1,9 @@
+import { useState } from "react";
 import styles from "./NavBar.module.scss";
 import { NavLink } from "react-router-dom";
 
 export const NavBar = () => {
+  const [user] = useState(false);
   const activeStyle = ({ isActive }: { isActive: boolean }) => {
     return {
       color: isActive ? "black" : ""
@@ -9,14 +11,18 @@ export const NavBar = () => {
   };
   return (
     <div className={styles.navbarContainer}>
-      <NavLink
-        to={"/"}
-        className={styles.list}
-        style={activeStyle}
-        onClick={() => (window.location.href = "/")}
-      >
-        Home
-      </NavLink>
+      {user ? (
+        false
+      ) : (
+        <NavLink
+          to={"/"}
+          className={styles.list}
+          style={activeStyle}
+          onClick={() => (window.location.href = "/")}
+        >
+          Home
+        </NavLink>
+      )}
       <NavLink
         to={"/courses"}
         className={styles.list}
@@ -25,22 +31,42 @@ export const NavBar = () => {
       >
         Courses
       </NavLink>
-      <NavLink
-        to={"/about"}
-        className={styles.list}
-        style={activeStyle}
-        onClick={() => (window.location.href = "/about")}
-      >
-        About
-      </NavLink>
-      <NavLink
-        to={"/contact"}
-        className={styles.list}
-        style={activeStyle}
-        onClick={() => (window.location.href = "/contact")}
-      >
-        Contact
-      </NavLink>
+      {user ? (
+        false
+      ) : (
+        <NavLink
+          to={"/about"}
+          className={styles.list}
+          style={activeStyle}
+          onClick={() => (window.location.href = "/about")}
+        >
+          About Us
+        </NavLink>
+      )}
+      {user ? (
+        false
+      ) : (
+        <NavLink
+          to={"/contact"}
+          className={styles.list}
+          style={activeStyle}
+          onClick={() => (window.location.href = "/contact")}
+        >
+          Contact
+        </NavLink>
+      )}
+      {user ? (
+        <NavLink
+          to={"/my_learning"}
+          className={styles.list}
+          style={activeStyle}
+          onClick={() => (window.location.href = "/my_learning")}
+        >
+          My learning
+        </NavLink>
+      ) : (
+        false
+      )}
     </div>
   );
 };

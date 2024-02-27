@@ -6,8 +6,12 @@ import { HamburgerComp } from "../../component/hamburgerButton/Hamburger";
 import { HamburgerMenu } from "../../component/hamburgerMenu/HamburgerMenu";
 import ColoredButton from "../../component/shared/button/coloredButton/ColoredButton";
 import WhiteButton from "../../component/shared/button/whiteButton/WhiteButton";
+import Cart from "../../component/cart/Cart";
+import UserAvatar from "../../component/userAvatar/UserAvatar";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const [user] = useState(false);
   const [isOpen, setOpen] = useState(false);
   const [overflow, setOverflow] = useState("");
   const [display, SetDisplay] = useState("hideMenu");
@@ -67,16 +71,45 @@ const Header = () => {
           <NavBar />
         </div>
         <div className={styles.signinBox}>
-          <WhiteButton
-            text={"Log In"}
-            link={"/login"}
-            className={styles.loginButton}
-          />
-          <ColoredButton
-            text={"Sign Up"}
-            link={"/login"}
-            className={styles.signupButton}
-          />
+          {user ? (
+            false
+          ) : (
+            <WhiteButton
+              text={"Log In"}
+              link={"/login"}
+              className={styles.loginButton}
+            />
+          )}
+          {user ? (
+            false
+          ) : (
+            <ColoredButton
+              text={"Sign Up"}
+              link={"/login"}
+              className={styles.signupButton}
+            />
+          )}
+          {user ? (
+            <NavLink
+              to={"/cart"}
+              style={{ color: "black" }}
+              onClick={() => (window.location.href = "/cart")}
+            >
+              <Cart />
+            </NavLink>
+          ) : (
+            false
+          )}
+          {user ? (
+            <NavLink
+              to={"/user/my_profile"}
+              onClick={() => (window.location.href = "/user/my_profile")}
+            >
+              <UserAvatar />
+            </NavLink>
+          ) : (
+            false
+          )}
         </div>
         <div className={styles.hamburgerBox}>
           <HamburgerComp handleClick={handleMenuDisplay} value={isValue} />
