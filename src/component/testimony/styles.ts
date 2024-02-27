@@ -80,8 +80,8 @@ export const nameBox: CSSProperties = {
   justifyContent: "flex-start",
   alignItems: "center",
   padding: "5px 10px",
-  fontWeight: 800,
-  fontSize: "0.95rem",
+  fontWeight: 900,
+  fontSize: "1.15rem",
   color: "#3149A1"
 };
 
@@ -92,8 +92,9 @@ export const occupationBox: CSSProperties = {
   justifyContent: "flex-start",
   alignItems: "center",
   padding: "5px 10px",
-  fontSize: "0.95rem",
-  color: "black"
+  fontSize: "1.05rem",
+  color: "black",
+  fontWeight: 500
 };
 
 export const buttonLeft: CSSProperties = {
