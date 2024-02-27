@@ -8,7 +8,7 @@ const Testimony = () => {
   return (
     <div style={container}>
       <div style={titleBox}>
-        <H5 title={"Testimonials"} />
+        <H5 title={"What People are Saying about us"} />
       </div>
       <div style={carouselBox}>
         <Carousel
@@ -44,7 +44,8 @@ const titleBox: CSSProperties = {
   justifyContent: "flex-start",
   alignItems: "center",
   fontWeight: 800,
-  textAlign: "left"
+  textAlign: "left",
+  padding: "30px 0"
 };
 
 const carouselBox: CSSProperties = {
