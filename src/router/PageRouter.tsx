@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { lazy } from "react";
 import React from "react";
-import Home from "../page/Home";
+import Home from "../pages/Home";
 import Dashboard from "../admin/scenes/dashboard/index";
 import UserManegement from "../admin/scenes/userManagement/UserManagement";
 import Team from "../admin/scenes/team/Team";
@@ -9,16 +9,16 @@ import AdminSetting from "../admin/scenes/setting/index";
 import CourseManagement from "../admin/scenes/courseManagement/CourseManagement";
 
 //Lazy Load page for performance optimization
-const LazyCourses = lazy(() => import("../page/Courses"));
-const LazyAbout = lazy(() => import("../page/About"));
-const LazyContact = lazy(() => import("../page/Contact"));
-const LazyPageNotFound = lazy(() => import("../page/PageNoteFound"));
+const LazyCourses = lazy(() => import("../pages/Courses"));
+const LazyAbout = lazy(() => import("../pages/About"));
+const LazyContact = lazy(() => import("../pages/Contact"));
+const LazyPageNotFound = lazy(() => import("../pages/PageNoteFound"));
 const LazyAdmin = lazy(() => import("../admin/Admin"));
 const LazyAdminLogin = lazy(() => import("../admin/Login"));
 const LazyUser = lazy(() => import("../user/User"));
 const LazyUserLogin = lazy(() => import("../user/Login"));
 const LazyLearning = lazy(() => import("../user/MyLearning"));
-const LazyCourseDetails = lazy(() => import("../page/CourseDetails"));
+const LazyCourseDetails = lazy(() => import("../pages/CourseDetails"));
 
 const PageRouter = () => {
   // constant to take constants,variables,method from context api function
