@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import styles from "../style/CourseReview.module.scss";
+import styles from "../style/CourseDetails.module.scss";
 import Tab from "../component/tab/Tab";
 import { courseReviewData } from "../data/TabData";
 import { H8 } from "../component/shared/Title/H8";
