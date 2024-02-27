@@ -5,12 +5,13 @@ $colorTwo: black;
 .cardContainer {
   height: 370px;
   width: 346px;
-  border: 2px solid $colorOne;
+  border: 1px solid $colorOne;
   border-radius: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding: 20px;
 }
 
 .cardWrapper {
@@ -69,7 +70,7 @@ $colorTwo: black;
 
 .textTitle {
   font-weight: 900;
-  font-size: 1rem;
+  font-size: 0.95rem;
   height: 26px;
   white-space: nowrap;
 }
@@ -98,7 +99,7 @@ $colorTwo: black;
 
 @media (max-width: 720px) {
   .cardContainer {
-    width: 240px;
+    width: 256px;
   }
 }
 

@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useState } from "react";
-import { LinkContextProps } from "./type";
+import { ContextProps } from "./type";
 
 // Create Context
-const globalContext = createContext<LinkContextProps>({} as LinkContextProps);
+const globalContext = createContext<ContextProps>({} as ContextProps);
 
 export const ContextApi = ({ children }: { children: React.ReactNode }) => {
   //Set Course Link

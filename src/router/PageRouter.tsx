@@ -18,7 +18,7 @@ const LazyAdminLogin = lazy(() => import("../admin/Login"));
 const LazyUser = lazy(() => import("../user/User"));
 const LazyUserLogin = lazy(() => import("../user/Login"));
 const LazyLearning = lazy(() => import("../user/MyLearning"));
-const LazyCourseReview = lazy(() => import("../page/CourseReview"));
+const LazyCourseDetails = lazy(() => import("../page/CourseDetails"));
 
 const PageRouter = () => {
   // constant to take constants,variables,method from context api function
@@ -43,10 +43,10 @@ const PageRouter = () => {
         }
       />
       <Route
-        path="courses/:courseTitle"
+        path="courses/:id"
         element={
           <React.Suspense>
-            <LazyCourseReview />
+            <LazyCourseDetails />
           </React.Suspense>
         }
       />

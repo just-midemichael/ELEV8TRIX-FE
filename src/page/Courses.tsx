@@ -3,7 +3,7 @@ import CourseHero from "../component/hero/courseHero/CourseHero";
 import Subscription from "../component/subscription/Subscription";
 import styles from "../style/Courses.module.scss";
 import Tab from "../component/tab/Tab";
-import { courseDataMain } from "../component/tab/TabData";
+import { courseDataMain } from "../data/TabData";
 
 // Set the page title
 const pageTitle = () => (document.title = "Courses");

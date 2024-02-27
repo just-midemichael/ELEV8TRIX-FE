@@ -4,7 +4,7 @@ import MainHero from "../component/hero/mainHero/MainHero";
 import Subscription from "../component/subscription/Subscription";
 import PartnersBanner from "../component/partnersBanner/PartnersBanner";
 import Tab from "../component/tab/Tab.tsx";
-import { courseData } from "../component/tab/TabData.tsx";
+import { courseData } from "../data/TabData.tsx";
 import CoreValue from "../component/coreValue/CoreValue.tsx";
 import Mentor from "../component/mentor/Mentor.tsx";
 import CloudmasteryCommunity from "../component/community/CloudmasteryCommunity.tsx";
