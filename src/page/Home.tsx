@@ -1,8 +1,8 @@
 import { CSSProperties } from "react";
 import styles from "../style/home.module.scss";
-import MainHero from "../component/hero/mainHero/MainHero";
-import Subscription from "../component/subscription/Subscription";
-import PartnersBanner from "../component/partnersBanner/PartnersBanner";
+import MainHero from "../component/hero/mainHero/MainHero.tsx";
+import Subscription from "../component/subscription/Subscription.tsx";
+import PartnersBanner from "../component/partnersBanner/PartnersBanner.tsx";
 import Tab from "../component/tab/Tab.tsx";
 import { courseData } from "../data/TabData.tsx";
 import CoreValue from "../component/coreValue/CoreValue.tsx";

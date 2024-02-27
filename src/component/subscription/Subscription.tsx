@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { H7 } from "../shared/Title/H7";
-import Input from "../shared/inputForm/Input";
-import ColoredButton from "../shared/button/coloredButton/ColoredButton";
+import { H7 } from "../../component/shared/Title/H7";
+import Input from "../../component/shared/inputForm/Input";
+import ColoredButton from "../../component/shared/button/coloredButton/ColoredButton";
 import styles from "./Subscription.module.scss";
 import polygon from "/Polygon2.png";
 import mail from "/mail1.png";
