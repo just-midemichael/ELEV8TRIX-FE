@@ -1,22 +1,43 @@
-import { CSSProperties } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 import { H8 } from "../shared/Title/H8";
 import ColoredButton from "../shared/button/coloredButton/ColoredButton";
-import { courses } from "../../data/CourseData";
+import courses, { CourseProps as CourseType } from "../../data/CourseData";
+import { useParams } from "react-router-dom";
 
 const CourseDescription = () => {
+  const { id } = useParams<{ id: string }>();
+  const [course, setCourse] = useState<CourseType | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const selectedCourse = courses.find(
+        (course) => course.id === parseInt(`${id}`)
+      );
+      setCourse(selectedCourse || null);
+    };
+
+    fetchData();
+  }, [id]);
+
   return (
     <div style={container}>
       <div style={titleBox}>
         <H8 title={"Course Description"} />
       </div>
-      {courses.map((course, id) => (
-        <div key={id} style={descriptionBox}>
+      {course ? (
+        <div key={course.id} style={descriptionBox}>
           {course.description}
         </div>
-      ))}
-      <div style={buttonBox}>
-        <ColoredButton text={"Start Course"} link={""} />
-      </div>
+      ) : (
+        "Not Availble"
+      )}
+      {course ? (
+        <div style={buttonBox}>
+          <ColoredButton text={"Start Course"} link={""} />
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
@@ -29,7 +50,7 @@ const container: CSSProperties = {
   justifyContent: "flex-start",
   alignItems: "flex-start",
   width: "100%",
-  minHeight: "300px",
+  minHeight: "100px",
   maxWidth: "780px",
   gap: "4px"
 };

@@ -2,13 +2,14 @@
   display: flex;
 }
 
+.learningOutcomeBox:last-child {
+  border: none !important;
+}
+
 @media (max-width: 1000px) {
   .container {
     padding: 50px 5% !important;
   }
-}
-
-@media (max-width: 700px) {
   .container {
     flex-direction: column !important;
     padding: 50px 2% !important;
@@ -19,5 +20,14 @@
   .priceBox,
   .learningOutcomeBox {
     max-width: 100% !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 50px 2% !important;
+  }
+  .previewBox {
+    height: 390px !important;
   }
 }

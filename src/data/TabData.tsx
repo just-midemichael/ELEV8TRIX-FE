@@ -2,6 +2,7 @@ import CategoryOne from "../component/courseCategory/CategoryOne";
 import CategoryTwo from "../component/courseCategory/CategoryTwo";
 import styles from "../style/Courses.module.scss";
 import CourseDescription from "../component/courseDescription/CourseDescription";
+import CourseReview from "../component/courseDescription/CourseReview";
 
 export const courseData = [
   {
@@ -86,6 +87,6 @@ export const courseReviewData = [
   },
   {
     label: "Reviews",
-    content: <div>ii</div>
+    content: <CourseReview />
   }
 ];

@@ -1,42 +1,54 @@
-import { CSSProperties } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 import styles from "../style/CourseDetails.module.scss";
 import Tab from "../component/tab/Tab";
 import { courseReviewData } from "../data/TabData";
 import { H8 } from "../component/shared/Title/H8";
-import { courses } from "../data/CourseData";
+import courses, { CourseProps } from "../data/CourseData";
 import { useParams } from "react-router-dom";
 
-const CourseDetails = () => {
-  const { id } = useParams();
-  courses;
+const CourseDetails: React.FC = () => {
+  const { id } = useParams<{ id: string }>();
+  const [course, setCourse] = useState<CourseProps | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const selectedCourse = courses.find(
+        (course) => course.id === parseInt(`${id}`)
+      );
+      setCourse(selectedCourse || null);
+    };
+
+    fetchData();
+  }, [id]);
 
   return (
     <div className={styles.container} style={container}>
       <main style={mainSection}>
-        <section style={previewVideo}>
-          <img src={""} style={{ width: "100%", height: "100%" }} />
+        <section className={styles.previewBox} style={previewBox}>
+          <img
+            src={`${course ? course : ""}`}
+            style={{ width: "100%", height: "100%" }}
+          />
         </section>
         <div>
           <Tab
             tabs={courseReviewData}
-            tabTitle={`${id}`}
+            tabTitle={course ? course.title : `${id}`}
             className={styles.tabTitleBox}
           />
         </div>
       </main>
+
       <section className={styles.sideBar} style={sideBar}>
         <div className={styles.priceBox} style={priceBox}>
-          <H8 title={`Price:${"$0"}`} />
+          <H8 title={`Price:${course ? course.price : "$0"}`} />
         </div>
         <div className={styles.learningOutcomeBox} style={learningOutcomeBox}>
           <div style={outcomeTitle}>
             <H8 title={"what You will Learn"} />
           </div>
           <div className={styles.outcomeList} style={outcomeList}>
-            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Maiores quibusdam impedit saepe amet ipsa sapiente maxime</li>
-            <li>dolorum aliquid alias delectus sed doloremque voluptate .</li>
-            <li>expedita, porro reiciendis hic illo cum volup tatum ?</li>
+            {course ? <li>{course.youWillLearn}</li> : "Not Available"}
           </div>
         </div>
         <div className={styles.learningOutcomeBox} style={learningOutcomeBox}>
@@ -44,10 +56,7 @@ const CourseDetails = () => {
             <H8 title={"Material Includes"} />
           </div>
           <div className={styles.outcomeList} style={outcomeList}>
-            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Maiores quibusdam impedit saepe amet ipsa sapiente maxime</li>
-            <li>dolorum aliquid alias delectus sed doloremque voluptate .</li>
-            <li>expedita, porro reiciendis hic illo cum volup tatum ?</li>
+            {course ? <li>{course.materialInclude}</li> : "Not Available"}
           </div>
         </div>
         <div className={styles.learningOutcomeBox} style={learningOutcomeBox}>
@@ -55,10 +64,7 @@ const CourseDetails = () => {
             <H8 title={"Requirement"} />
           </div>
           <div className={styles.outcomeList} style={outcomeList}>
-            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Maiores quibusdam impedit saepe amet ipsa sapiente maxime</li>
-            <li>dolorum aliquid alias delectus sed doloremque voluptate .</li>
-            <li>expedita, porro reiciendis hic illo cum volup tatum ?</li>
+            {course ? <li>{course.courseRequirement}</li> : "Not Available"}
           </div>
         </div>
       </section>
@@ -74,7 +80,8 @@ const container: CSSProperties = {
   justifyContent: "center",
   alignItems: "flex-start",
   width: "100%",
-  height: "100%"
+  height: "100%",
+  gap: "20px"
 };
 
 const mainSection: CSSProperties = {
@@ -84,33 +91,32 @@ const mainSection: CSSProperties = {
   alignItems: "flex-start",
   width: "100%",
   height: "fit-content",
-  minHeight: "400px",
-  padding: "20px 0"
+  minHeight: "400px"
 };
 
 const sideBar: CSSProperties = {
   width: "100%",
-  maxWidth: "400px",
+  maxWidth: "420px",
   height: "fit-content",
   minHeight: "400px",
-  padding: "10px 20px",
-  paddingBottom: "30px",
   overflow: "hidden",
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-start",
   alignItems: "flex-start",
-  gap: "20px",
-  backgroundColor: "white"
+  borderRadius: "10px",
+  border: "1px solid silver"
 };
 
-const previewVideo: CSSProperties = {
+const previewBox: CSSProperties = {
   width: "100%",
-  maxWidth: "700px",
-  height: "390px",
+  height: "440px",
   borderRadius: "16px",
   backgroundColor: "silver",
-  overflow: "hidden"
+  overflow: "hidden",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center"
 };
 
 const priceBox: CSSProperties = {
@@ -121,15 +127,17 @@ const priceBox: CSSProperties = {
   maxWidth: "500px",
   height: "fit-content",
   minHeight: "40px",
-  padding: "10px 0",
-  fontWeight: "700"
+  padding: "20px 20px",
+  fontWeight: "700",
+  borderBottom: "1px solid silver"
 };
 
 const learningOutcomeBox: CSSProperties = {
-  border: "2px",
   textAlign: "left",
   width: "100%",
-  maxWidth: "500px"
+  maxWidth: "500px",
+  padding: "20px 20px",
+  borderBottom: "1px solid silver"
 };
 
 const outcomeTitle: CSSProperties = {

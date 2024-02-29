@@ -1,6 +1,6 @@
 import CourseCard from "../card/courseCard/CourseCard";
 import { CSSProperties, useState } from "react";
-import { courses } from "../../data/CourseData";
+import courses from "../../data/CourseData";
 
 type categoryProp = {
   sliceNumOne?: number;
@@ -18,7 +18,7 @@ const CategoryTwo = ({ sliceNumOne, sliceNumTwo, className }: categoryProp) => {
           key={index}
           thumbNail={course.thumbnail}
           avatar={course.avatar}
-          authorName={course.authorName}
+          authorName={course.authourName}
           profession={course.profession}
           title={course.title}
           description={course.description}
