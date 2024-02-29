@@ -33,7 +33,7 @@ const CourseDetails: React.FC = () => {
         <div>
           <Tab
             tabs={courseReviewData}
-            tabTitle={course ? course.title : `${id}`}
+            tabTitle={course ? course.title : `${id?.split("_").join(" ")}`}
             className={styles.tabTitleBox}
           />
         </div>
