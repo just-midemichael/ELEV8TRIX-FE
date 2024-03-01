@@ -26,7 +26,7 @@ const CategoryTwo = ({ sliceNumOne, sliceNumTwo, className }: categoryProp) => {
           linkTo={`${link}`}
           onClick={() =>
             setLink(
-              `${(window.location.href = `/courses/${course.title.split(" ").join("_")}`)}`
+              `${(window.location.href = `/courses/${course.title.split(" ").join("_")}/${course.id}`)}`
             )
           }
         />
