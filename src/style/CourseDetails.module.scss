@@ -10,9 +10,8 @@
   .container {
     padding: 50px 5% !important;
   }
-  .container {
+  .wrapper {
     flex-direction: column !important;
-    padding: 50px 2% !important;
   }
   .sideBar {
     max-width: 100% !important;
@@ -25,9 +24,19 @@
 
 @media (max-width: 700px) {
   .container {
-    padding: 50px 2% !important;
+    padding: 30px 0 50px 0 !important;
+  }
+  .mainSection {
+    padding: 0 !important;
+  }
+  .sideBar {
+    padding: 0 !important;
+    border-radius: 0 !important;
   }
   .previewBox {
-    height: 390px !important;
+    border-radius: 0 !important;
+  }
+  .tabBox {
+    padding: 0 2% !important;
   }
 }

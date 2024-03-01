@@ -24,20 +24,22 @@ const CourseDescription = () => {
       <div style={titleBox}>
         <H8 title={"Course Description"} />
       </div>
-      {course ? (
-        <div key={course.id} style={descriptionBox}>
-          {course.description}
-        </div>
-      ) : (
-        "Not Availble"
-      )}
-      {course ? (
-        <div style={buttonBox}>
-          <ColoredButton text={"Start Course"} link={""} />
-        </div>
-      ) : (
-        ""
-      )}
+      <div style={contentBox}>
+        {course ? (
+          <div key={course.id} style={descriptionBox}>
+            {course.description}
+          </div>
+        ) : (
+          "Not Availble"
+        )}
+        {course ? (
+          <div style={buttonBox}>
+            <ColoredButton text={"Add to Cart"} link={""} />
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 };
@@ -50,6 +52,7 @@ const container: CSSProperties = {
   justifyContent: "flex-start",
   alignItems: "flex-start",
   width: "100%",
+  height: "fit-content",
   minHeight: "100px",
   maxWidth: "780px",
   gap: "4px"
@@ -65,6 +68,15 @@ const titleBox: CSSProperties = {
   justifyContent: "flex-start",
   alignItems: "center",
   padding: "4px 0px"
+};
+
+const contentBox: CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "flex-start",
+  alignItems: "flex-start",
+  width: "100%",
+  height: "fit-content"
 };
 
 const descriptionBox: CSSProperties = {

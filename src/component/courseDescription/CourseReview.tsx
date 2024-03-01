@@ -24,20 +24,22 @@ const CourseReview = () => {
       <div style={titleBox}>
         <H8 title={"Reviews"} />
       </div>
-      {course ? (
-        <div key={course.id} style={descriptionBox}>
-          {course.description}
-        </div>
-      ) : (
-        "No Reviews"
-      )}
-      {course ? (
-        <div style={buttonBox}>
-          <ColoredButton text={"Start Course"} link={""} />
-        </div>
-      ) : (
-        ""
-      )}
+      <div style={contentBox}>
+        {course ? (
+          <div key={course.id} style={reviewBox}>
+            {course.review}
+          </div>
+        ) : (
+          "No Reviews"
+        )}
+        {course ? (
+          <div style={buttonBox}>
+            <ColoredButton text={"Add to cart"} link={""} />
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 };
@@ -67,7 +69,16 @@ const titleBox: CSSProperties = {
   padding: "4px 0px"
 };
 
-const descriptionBox: CSSProperties = {
+const contentBox: CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "flex-start",
+  alignItems: "flex-start",
+  width: "100%",
+  height: "fit-content"
+};
+
+const reviewBox: CSSProperties = {
   textAlign: "left",
   width: "100%",
   height: "fit-content",

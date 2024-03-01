@@ -7,67 +7,94 @@ import courses, { CourseProps } from "../data/CourseData";
 import { useParams } from "react-router-dom";
 
 const CourseDetails: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
   const [course, setCourse] = useState<CourseProps | null>(null);
+  // dynamic route parameters
+  const { id, courseTitle } = useParams<{
+    id: string;
+    courseTitle: string;
+  }>();
 
   useEffect(() => {
+    // fetching course data asynchronously base on the course key or parameter
     const fetchData = async () => {
       const selectedCourse = courses.find(
         (course) => course.id === parseInt(`${id}`)
       );
+
+      //set course state to the current course if id or paremeter matches
       setCourse(selectedCourse || null);
     };
 
     fetchData();
   }, [id]);
 
+  // Change the height of the preiew thumbnail or video on screen change
+  const width = 100;
+  const dynamicHeight = 0.6 * width;
+  const maxWidth = 900;
+  const dynamicMaxHeight = 0.6 * maxWidth;
+
   return (
     <div className={styles.container} style={container}>
-      <main style={mainSection}>
-        <section className={styles.previewBox} style={previewBox}>
-          <img
-            src={`${course ? course : ""}`}
-            style={{ width: "100%", height: "100%" }}
-          />
-        </section>
-        <div>
-          <Tab
-            tabs={courseReviewData}
-            tabTitle={course ? course.title : `${id?.split("_").join(" ")}`}
-            className={styles.tabTitleBox}
-          />
-        </div>
-      </main>
+      <div className={styles.wrapper} style={wrapper}>
+        <main className={styles.mainSection} style={mainSection}>
+          <section className={styles.previewBox} style={previewBox}>
+            <img
+              src={`${course ? course.thumbnail : ""}`}
+              style={{
+                width: `${width}%`,
+                height: `${dynamicHeight}`,
+                maxWidth: `${maxWidth}px`,
+                maxHeight: `${dynamicMaxHeight}px`
+              }}
+            />
+          </section>
+          <div className={styles.tabBox} style={tabBox}>
+            <Tab
+              tabs={courseReviewData}
+              tabTitle={
+                course ? course.title : `${courseTitle?.split("_").join(" ")}`
+              }
+              className={styles.tabTitleBox}
+            />
+          </div>
+        </main>
 
-      <section className={styles.sideBar} style={sideBar}>
-        <div className={styles.priceBox} style={priceBox}>
-          <H8 title={`Price: ${course ? course.price : "$0"}`} />
-        </div>
-        <div className={styles.learningOutcomeBox} style={learningOutcomeBox}>
-          <div style={outcomeTitle}>
-            <H8 title={"what You will Learn"} />
+        <section className={styles.sideBar} style={sideBar}>
+          <div className={styles.priceBox} style={priceBox}>
+            <H8 title={`Price: $${course ? course.price : "0"}`} />
           </div>
-          <div className={styles.outcomeList} style={outcomeList}>
-            {course ? <li>{course.youWillLearn}</li> : "Not Available"}
+          <div className={styles.learningOutcomeBox} style={learningOutcomeBox}>
+            <div style={outcomeTitle}>
+              <H8 title={"what You will Learn"} />
+            </div>
+            <div className={styles.outcomeList} style={outcomeList}>
+              {course ? (
+                <li>{course.youWillLearn}</li>
+              ) : (
+                "Not Available"
+                /*{ <Link to={`${(window.location.href = "/404")}`}></Link>}*/
+              )}
+            </div>
           </div>
-        </div>
-        <div className={styles.learningOutcomeBox} style={learningOutcomeBox}>
-          <div style={outcomeTitle}>
-            <H8 title={"Material Includes"} />
+          <div className={styles.learningOutcomeBox} style={learningOutcomeBox}>
+            <div style={outcomeTitle}>
+              <H8 title={"Material Includes"} />
+            </div>
+            <div className={styles.outcomeList} style={outcomeList}>
+              {course ? <li>{course.materialInclude}</li> : "Not Available"}
+            </div>
           </div>
-          <div className={styles.outcomeList} style={outcomeList}>
-            {course ? <li>{course.materialInclude}</li> : "Not Available"}
+          <div className={styles.learningOutcomeBox} style={learningOutcomeBox}>
+            <div style={outcomeTitle}>
+              <H8 title={"Requirement"} />
+            </div>
+            <div className={styles.outcomeList} style={outcomeList}>
+              {course ? <li>{course.courseRequirement}</li> : "Not Available"}
+            </div>
           </div>
-        </div>
-        <div className={styles.learningOutcomeBox} style={learningOutcomeBox}>
-          <div style={outcomeTitle}>
-            <H8 title={"Requirement"} />
-          </div>
-          <div className={styles.outcomeList} style={outcomeList}>
-            {course ? <li>{course.courseRequirement}</li> : "Not Available"}
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 };
@@ -80,6 +107,16 @@ const container: CSSProperties = {
   justifyContent: "center",
   alignItems: "flex-start",
   width: "100%",
+  height: "100%",
+  backgroundColor: "rgb(254, 252, 252)"
+};
+
+const wrapper: CSSProperties = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "flex-start",
+  width: "100%",
+  maxWidth: "1220px",
   height: "100%",
   gap: "20px"
 };
@@ -110,13 +147,19 @@ const sideBar: CSSProperties = {
 
 const previewBox: CSSProperties = {
   width: "100%",
-  height: "440px",
+  maxWidth: "900px",
+  height: "fit-content",
   borderRadius: "16px",
   backgroundColor: "silver",
   overflow: "hidden",
   display: "flex",
   justifyContent: "center",
   alignItems: "center"
+};
+
+const tabBox: CSSProperties = {
+  width: "100%",
+  height: "fit-content"
 };
 
 const priceBox: CSSProperties = {

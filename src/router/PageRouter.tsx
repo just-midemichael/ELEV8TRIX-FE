@@ -43,7 +43,7 @@ const PageRouter = () => {
         }
       />
       <Route
-        path="courses/:id"
+        path="courses/:courseTitle/:id/"
         element={
           <React.Suspense>
             <LazyCourseDetails />
