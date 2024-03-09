@@ -1,82 +1,63 @@
 import CategoryOne from "../component/courseCategory/CategoryOne";
 import CategoryTwo from "../component/courseCategory/CategoryTwo";
-import styles from "../style/Courses.module.scss";
 import CourseDescription from "../component/courseDescription/CourseDescription";
 import CourseReview from "../component/courseDescription/CourseReview";
 
 export const courseData = [
   {
-    label: "Category",
+    label: "Dev Ops",
     content: <CategoryOne sliceNumOne={0} sliceNumTwo={4} />
   },
   {
-    label: "Category",
-    content: <CategoryTwo sliceNumOne={0} sliceNumTwo={4} />
+    label: "Software Engineering",
+    content: <CategoryTwo sliceNumOne={0} sliceNumTwo={6} />
   },
   {
-    label: "Category",
+    label: "Cyber Security",
     content: <CategoryOne sliceNumOne={0} sliceNumTwo={4} />
   },
   {
-    label: "Category",
-    content: <CategoryTwo sliceNumOne={0} sliceNumTwo={4} />
-  },
-  {
-    label: "Category",
-    content: <CategoryOne sliceNumOne={0} sliceNumTwo={4} />
+    label: "Data Science",
+    content: <CategoryTwo sliceNumOne={0} sliceNumTwo={5} />
   }
 ];
 
-export const courseDataMain = [
+export const categoryAllData = [
   {
-    label: "Category",
-    content: (
-      <CategoryOne
-        sliceNumOne={0}
-        sliceNumTwo={8}
-        className={styles.courseLayout}
-      />
-    )
+    label: "Most Popular",
+    content: <CategoryTwo sliceNumOne={0} sliceNumTwo={8} />
   },
   {
-    label: "Category",
-    content: (
-      <CategoryTwo
-        sliceNumOne={0}
-        sliceNumTwo={8}
-        className={styles.courseLayout}
-      />
-    )
-  },
+    label: "New",
+    content: <CategoryTwo sliceNumOne={0} sliceNumTwo={8} />
+  }
+];
+
+export const categoryDevOpsData = [
   {
-    label: "Category",
-    content: (
-      <CategoryOne
-        sliceNumOne={0}
-        sliceNumTwo={8}
-        className={styles.courseLayout}
-      />
-    )
-  },
+    label: "New",
+    content: <CategoryTwo sliceNumOne={0} sliceNumTwo={8} />
+  }
+];
+
+export const categoryCyberSecurityData = [
   {
-    label: "Category",
-    content: (
-      <CategoryTwo
-        sliceNumOne={0}
-        sliceNumTwo={8}
-        className={styles.courseLayout}
-      />
-    )
-  },
+    label: "New",
+    content: <CategoryOne sliceNumOne={0} sliceNumTwo={8} />
+  }
+];
+
+export const categoryDataScienceData = [
   {
-    label: "Category",
-    content: (
-      <CategoryOne
-        sliceNumOne={0}
-        sliceNumTwo={8}
-        className={styles.courseLayout}
-      />
-    )
+    label: "New",
+    content: <CategoryTwo sliceNumOne={0} sliceNumTwo={8} />
+  }
+];
+
+export const categorySoftwareEngineeringData = [
+  {
+    label: "New",
+    content: <CategoryOne sliceNumOne={0} sliceNumTwo={8} />
   }
 ];
 

@@ -1,6 +1,5 @@
 import { CSSProperties, useEffect, useState } from "react";
 import { H8 } from "../shared/Title/H8";
-import ColoredButton from "../shared/button/coloredButton/ColoredButton";
 import courses, { CourseProps as CourseType } from "../../data/CourseData";
 import { useParams } from "react-router-dom";
 
@@ -31,13 +30,6 @@ const CourseDescription = () => {
           </div>
         ) : (
           "Not Availble"
-        )}
-        {course ? (
-          <div style={buttonBox}>
-            <ColoredButton text={"Add to Cart"} link={""} />
-          </div>
-        ) : (
-          ""
         )}
       </div>
     </div>
@@ -84,8 +76,4 @@ const descriptionBox: CSSProperties = {
   width: "100%",
   height: "fit-content",
   padding: "4px 0px"
-};
-
-const buttonBox: CSSProperties = {
-  padding: "10px 0px"
 };

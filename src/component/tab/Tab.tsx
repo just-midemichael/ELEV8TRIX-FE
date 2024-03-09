@@ -1,6 +1,7 @@
 import React from "react";
 import { CSSProperties, useState } from "react";
 import { H5 } from "../shared/Title/H5";
+import styles from "../../style/Courses.module.scss";
 
 interface Tabs {
   label: string;
@@ -9,11 +10,17 @@ interface Tabs {
 
 interface TabsProps {
   tabs: Tabs[];
-  className?: string;
+  headerClassName?: string;
+  labelClassName?: string;
   tabTitle: string;
 }
 
-const Tab = ({ tabs, className, tabTitle }: TabsProps) => {
+const Tab = ({
+  tabs,
+  headerClassName,
+  labelClassName,
+  tabTitle
+}: TabsProps) => {
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabClick = (index: number) => {
@@ -22,13 +29,14 @@ const Tab = ({ tabs, className, tabTitle }: TabsProps) => {
 
   return (
     <div style={tabContaier}>
-      <div className={className} style={titleBox}>
+      <div className={headerClassName} style={titleBox}>
         <H5 style={title} title={tabTitle} />
       </div>
       <div style={tabLabl}>
         {tabs.map((tab, index) => (
           <div
             key={index}
+            className={labelClassName}
             onClick={() => handleTabClick(index)}
             style={{
               fontSize: "1.1rem",
@@ -43,7 +51,9 @@ const Tab = ({ tabs, className, tabTitle }: TabsProps) => {
           </div>
         ))}
       </div>
-      <div style={contentContainer}>{tabs[activeTab].content}</div>
+      <div style={contentContainer} className={styles.courseTab}>
+        {tabs[activeTab].content}
+      </div>
     </div>
   );
 };
@@ -53,8 +63,8 @@ export default Tab;
 const tabContaier: CSSProperties = {
   width: "100%",
   height: "100%",
-  minHeight: "300px",
-  padding: "20px 0"
+  minHeight: "200px",
+  padding: "20px 0 0px 0"
 };
 
 const titleBox: CSSProperties = {
@@ -63,7 +73,7 @@ const titleBox: CSSProperties = {
   minHeight: "50px",
   fontWeight: "700",
   textAlign: "left",
-  padding: "18px 0"
+  padding: "10px 0"
 };
 
 const title: CSSProperties = {

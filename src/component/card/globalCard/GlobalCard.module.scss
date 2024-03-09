@@ -5,14 +5,14 @@ $colorTwo: black;
 .cardContainer {
   height: 370px;
   width: 346px;
-  // border: 1px solid $colorOne;
+  border: 1px solid rgba(192, 192, 192, 0.466);
   border-radius: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   padding: 20px;
-  box-shadow: 1px 1px 4px 0px silver;
+  // box-shadow: 1px 1px 4px 0px silver;
 }
 .cardContainer:hover {
   box-shadow: 1px 1px 10px 0px silver;

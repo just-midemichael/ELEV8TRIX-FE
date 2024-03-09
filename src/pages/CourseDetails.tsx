@@ -55,7 +55,7 @@ const CourseDetails: React.FC = () => {
               tabTitle={
                 course ? course.title : `${courseTitle?.split("_").join(" ")}`
               }
-              className={styles.tabTitleBox}
+              headerClassName={styles.tabTitleBox}
             />
           </div>
         </main>
