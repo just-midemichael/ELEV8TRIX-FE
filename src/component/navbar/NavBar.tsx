@@ -1,9 +1,10 @@
-import { useState } from "react";
 import styles from "./NavBar.module.scss";
 import { NavLink } from "react-router-dom";
+import { useGlobalContex } from "../../utils/ContextApi";
 
 export const NavBar = () => {
-  const [user] = useState(false);
+  const authUser = useGlobalContex();
+
   const activeStyle = ({ isActive }: { isActive: boolean }) => {
     return {
       color: isActive ? "black" : ""
@@ -11,7 +12,7 @@ export const NavBar = () => {
   };
   return (
     <div className={styles.navbarContainer}>
-      {user ? (
+      {authUser?.user ? (
         false
       ) : (
         <NavLink
@@ -31,7 +32,7 @@ export const NavBar = () => {
       >
         Courses
       </NavLink>
-      {user ? (
+      {authUser?.user ? (
         false
       ) : (
         <NavLink
@@ -43,7 +44,7 @@ export const NavBar = () => {
           About Us
         </NavLink>
       )}
-      {user ? (
+      {authUser?.user ? (
         false
       ) : (
         <NavLink
@@ -55,7 +56,7 @@ export const NavBar = () => {
           Contact
         </NavLink>
       )}
-      {user ? (
+      {authUser?.user ? (
         <NavLink
           to={"/my_learning"}
           className={styles.list}

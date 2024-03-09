@@ -1,15 +1,47 @@
-import React, { createContext, useContext, useState } from "react";
+import React, {
+  SetStateAction,
+  createContext,
+  useContext,
+  useState
+} from "react";
 import { ContextProps } from "./type";
 
 // Create Context
 const globalContext = createContext<ContextProps>({} as ContextProps);
 
 export const ContextApi = ({ children }: { children: React.ReactNode }) => {
-  //Set Course Link
-  const [link, setLink] = useState("/courses");
+  const [user, setUser] = useState(null);
+  const [admin, setAdmin] = useState(null);
+
+  const loginUser = (username: SetStateAction<null>) => {
+    setUser(username);
+  };
+
+  const logoutUser = () => {
+    setUser(null);
+  };
+
+  const loginAdmin = (admin: SetStateAction<null>) => {
+    setAdmin(admin);
+  };
+
+  const logoutAdmin = () => {
+    setAdmin(null);
+  };
 
   return (
-    <globalContext.Provider value={{ link, setLink }}>
+    <globalContext.Provider
+      value={{
+        user,
+        setUser,
+        admin,
+        setAdmin,
+        loginUser,
+        logoutUser,
+        loginAdmin,
+        logoutAdmin
+      }}
+    >
       {children}
     </globalContext.Provider>
   );

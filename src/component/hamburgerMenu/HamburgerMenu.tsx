@@ -1,11 +1,14 @@
-import { useState } from "react";
 import ColoredButton from "../shared/button/coloredButton/ColoredButton";
 import WhiteButton from "../shared/button/whiteButton/WhiteButton";
 import styles from "./HamurgerMenu.module.scss";
 import { NavLink } from "react-router-dom";
+import { useGlobalContex } from "../../utils/ContextApi";
+import UserAvatar from "../userAvatar/UserAvatar";
+import Cart from "../cart/Cart";
 
 export const HamburgerMenu = () => {
-  const [user] = useState(false);
+  const authUser = useGlobalContex();
+
   const activeStyle = ({ isActive }: { isActive: boolean }) => {
     return {
       color: isActive ? "black" : ""
@@ -15,7 +18,43 @@ export const HamburgerMenu = () => {
   return (
     <div className={styles.menuContainer}>
       <div className={styles.linkBox}>
-        {user ? (
+        {authUser.user ? (
+          <NavLink
+            to={"/user/my_profile"}
+            className={styles.list}
+            style={{ gap: "12px" }}
+            onClick={() => (window.location.href = "/user/my_profile")}
+          >
+            <UserAvatar /> <div>User: {JSON.stringify(authUser.user)}</div>
+          </NavLink>
+        ) : (
+          false
+        )}
+        {authUser?.user ? (
+          <NavLink
+            to={"/cart"}
+            className={styles.list}
+            style={{ width: "60px" }}
+            onClick={() => (window.location.href = "/cart")}
+          >
+            <Cart />
+          </NavLink>
+        ) : (
+          false
+        )}
+        {authUser?.user ? (
+          <NavLink
+            to={"/my_learning"}
+            className={styles.list}
+            style={activeStyle}
+            onClick={() => (window.location.href = "/my_learning")}
+          >
+            My learning
+          </NavLink>
+        ) : (
+          false
+        )}
+        {authUser?.user ? (
           false
         ) : (
           <NavLink
@@ -35,7 +74,7 @@ export const HamburgerMenu = () => {
         >
           Courses
         </NavLink>
-        {user ? (
+        {authUser?.user ? (
           false
         ) : (
           <NavLink
@@ -47,7 +86,7 @@ export const HamburgerMenu = () => {
             About Us
           </NavLink>
         )}
-        {user ? (
+        {authUser?.user ? (
           false
         ) : (
           <NavLink
@@ -59,21 +98,9 @@ export const HamburgerMenu = () => {
             Contact
           </NavLink>
         )}
-        {user ? (
-          <NavLink
-            to={"/my_learning"}
-            className={styles.list}
-            style={activeStyle}
-            onClick={() => (window.location.href = "/my_learning")}
-          >
-            My learning
-          </NavLink>
-        ) : (
-          false
-        )}
       </div>
       <div className={styles.signinBox}>
-        {user ? (
+        {authUser?.user ? (
           false
         ) : (
           <ColoredButton
@@ -84,33 +111,9 @@ export const HamburgerMenu = () => {
           />
         )}
 
-        {/* {user ? (
-          <NavLink
-            to={"/user/my_profile"}
-            className={styles.list}
-            style={{ width: "60px" }}
-            onClick={() => (window.location.href = "/user/my_profile")}
-          >
-            <UserAvatar />
-          </NavLink>
-        ) : (
-          false
-        )}
-        {user ? (
-          <NavLink
-            to={"/cart"}
-            className={styles.list}
-            style={{ width: "60px" }}
-            onClick={() => (window.location.href = "/cart")}
-          >
-            <Cart />
-          </NavLink>
-        ) : (
-          false
-        )} */}
         <WhiteButton
-          text={user ? "Log out" : "Log in"}
-          link={"/login"}
+          text={authUser?.user ? "Log out" : "Log in"}
+          link={authUser?.user ? "/" : "/login"}
           className={styles.loginButton}
         />
       </div>

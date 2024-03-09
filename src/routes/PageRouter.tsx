@@ -7,6 +7,8 @@ import UserManegement from "../admin/scenes/userManagement/UserManagement";
 import Team from "../admin/scenes/team/Team";
 import AdminSetting from "../admin/scenes/setting/index";
 import CourseManagement from "../admin/scenes/courseManagement/CourseManagement";
+import RequireAdminAuth from "../utils/RequireAdminAuth";
+import RequireUserAuth from "../utils/RequireUserAuth";
 
 //Lazy Load page for performance optimization
 const LazyCourses = lazy(() => import("../pages/Courses"));
@@ -83,11 +85,15 @@ const PageRouter = () => {
         }
       />
 
+      {/* Admin Routes --------------------------------------------------*/}
+
       <Route
         path="/admin"
         element={
           <React.Suspense>
-            <LazyAdmin />
+            <RequireAdminAuth>
+              <LazyAdmin />
+            </RequireAdminAuth>
           </React.Suspense>
         }
       >
@@ -98,19 +104,27 @@ const PageRouter = () => {
         <Route path="team" element={<Team />} />
         <Route path="setting" element={<AdminSetting />} />
       </Route>
+
+      {/* User Routes---------------------------------------------------*/}
+
       <Route
         path="/user"
         element={
           <React.Suspense>
-            <LazyUser />
+            <RequireUserAuth>
+              <LazyUser />
+            </RequireUserAuth>
           </React.Suspense>
         }
       />
+
       <Route
         path="/my_learning"
         element={
           <React.Suspense>
-            <LazyLearning />
+            <RequireUserAuth>
+              <LazyLearning />
+            </RequireUserAuth>
           </React.Suspense>
         }
       />

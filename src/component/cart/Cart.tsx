@@ -17,7 +17,7 @@ export default Cart;
 
 const container: CSSProperties = {
   width: "fit-content",
-  minWidth: "36px",
+  minWidth: "50px",
   height: "fit-content",
   minHeight: "36px",
   display: "flex",

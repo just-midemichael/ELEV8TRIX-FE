@@ -9,9 +9,10 @@ import WhiteButton from "../../component/shared/button/whiteButton/WhiteButton";
 import Cart from "../../component/cart/Cart";
 import UserAvatar from "../../component/userAvatar/UserAvatar";
 import { NavLink } from "react-router-dom";
+import { useGlobalContex } from "../../utils/ContextApi";
 
 const Header = () => {
-  const [user] = useState(false);
+  const authUser = useGlobalContex();
   const [isOpen, setOpen] = useState(false);
   const [overflow, setOverflow] = useState("");
   const [display, SetDisplay] = useState("hideMenu");
@@ -71,7 +72,7 @@ const Header = () => {
           <NavBar />
         </div>
         <div className={styles.signinBox}>
-          {user ? (
+          {authUser?.user ? (
             false
           ) : (
             <WhiteButton
@@ -80,7 +81,7 @@ const Header = () => {
               className={styles.loginButton}
             />
           )}
-          {user ? (
+          {authUser?.user ? (
             false
           ) : (
             <ColoredButton
@@ -89,7 +90,7 @@ const Header = () => {
               className={styles.signupButton}
             />
           )}
-          {user ? (
+          {authUser?.user ? (
             <NavLink
               to={"/cart"}
               style={{ color: "black" }}
@@ -100,16 +101,7 @@ const Header = () => {
           ) : (
             false
           )}
-          {user ? (
-            <NavLink
-              to={"/user/my_profile"}
-              onClick={() => (window.location.href = "/user/my_profile")}
-            >
-              <UserAvatar />
-            </NavLink>
-          ) : (
-            false
-          )}
+          {authUser?.user ? <UserAvatar /> : false}
         </div>
         <div className={styles.hamburgerBox}>
           <HamburgerComp handleClick={handleMenuDisplay} value={isValue} />
