@@ -100,7 +100,7 @@ const description: CSSProperties = {
   maxWidth: "525px",
   fontWeight: "lighter",
   color: "white",
-  fontSize: "1.2rem"
+  fontSize: "1.15rem"
 };
 
 const imageOne: CSSProperties = {
