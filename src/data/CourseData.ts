@@ -156,7 +156,7 @@ const courses: CourseProps[] = [
   {
     id: 5,
     thumbnail: `${thumbnail1}`,
-    avatar: `${avatar1}`,
+    avatar: `${avatar4}`,
     authourName: "Lorem Ipsum 5",
     profession: "Lorem Ipsum 5",
     title: "Lorem ipsum dolor sit amet 5",
@@ -188,7 +188,7 @@ const courses: CourseProps[] = [
   {
     id: 6,
     thumbnail: `${thumbnail2}`,
-    avatar: `${avatar2}`,
+    avatar: `${avatar3}`,
     authourName: "Lorem Ipsum 6",
     profession: "Lorem Ipsum 6",
     title: "Lorem ipsum dolor sit amet 6",
@@ -220,7 +220,7 @@ const courses: CourseProps[] = [
   {
     id: 7,
     thumbnail: `${thumbnail3}`,
-    avatar: `${avatar3}`,
+    avatar: `${avatar2}`,
     authourName: "Lorem Ipsum 7",
     profession: "Lorem Ipsum 7",
     title: "Lorem ipsum dolor sit amet 7",
@@ -252,7 +252,7 @@ const courses: CourseProps[] = [
   {
     id: 8,
     thumbnail: `${thumbnail4}`,
-    avatar: `${avatar4}`,
+    avatar: `${avatar1}`,
     authourName: "Lorem Ipsum 8",
     profession: "Lorem Ipsum 8",
     title: "Lorem ipsum dolor sit amet 8",

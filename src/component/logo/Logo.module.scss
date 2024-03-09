@@ -15,15 +15,11 @@
 }
 
 .logo {
-  width: 224;
-  height: 46;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .logoColored {
-  width: 224;
-  height: 46;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 @media (max-width: 700px) {
