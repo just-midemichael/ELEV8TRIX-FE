@@ -69,12 +69,11 @@ const CourseDetails: React.FC = () => {
               <H8 title={"what You will Learn"} />
             </div>
             <div className={styles.outcomeList} style={outcomeList}>
-              {course ? (
-                <li>{course.youWillLearn}</li>
-              ) : (
-                "Not Available"
-                /*{ <Link to={`${(window.location.href = "/404")}`}></Link>}*/
-              )}
+              {course
+                ? course.youWillLearn.map((courseOutcome, id) => (
+                    <li key={id}>{courseOutcome}</li>
+                  ))
+                : "Not Available"}
             </div>
           </div>
           <div className={styles.learningOutcomeBox} style={learningOutcomeBox}>
@@ -82,7 +81,11 @@ const CourseDetails: React.FC = () => {
               <H8 title={"Material Includes"} />
             </div>
             <div className={styles.outcomeList} style={outcomeList}>
-              {course ? <li>{course.materialInclude}</li> : "Not Available"}
+              {course
+                ? course.materialInclude.map((courseMaterials, id) => (
+                    <li key={id}>{courseMaterials}</li>
+                  ))
+                : "Not Available"}
             </div>
           </div>
           <div className={styles.learningOutcomeBox} style={learningOutcomeBox}>
@@ -90,7 +93,11 @@ const CourseDetails: React.FC = () => {
               <H8 title={"Requirement"} />
             </div>
             <div className={styles.outcomeList} style={outcomeList}>
-              {course ? <li>{course.courseRequirement}</li> : "Not Available"}
+              {course
+                ? course.courseRequirement.map((courseRequirement, id) => (
+                    <li key={id}>{courseRequirement}</li>
+                  ))
+                : "Not Available"}
             </div>
           </div>
         </section>
