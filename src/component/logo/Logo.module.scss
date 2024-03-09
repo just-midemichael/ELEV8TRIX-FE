@@ -20,8 +20,17 @@
   cursor: pointer;
 }
 
+.logoColored {
+  width: 224;
+  height: 46;
+  cursor: pointer;
+}
+
 @media (max-width: 700px) {
   .logo {
     width: 120px !important;
+  }
+  .logoColored {
+    width: 100px !important;
   }
 }

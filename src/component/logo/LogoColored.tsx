@@ -11,7 +11,7 @@ const LogoColored = ({ link, style }: logoProps) => {
     <div className={styles.logoContainer}>
       <a href={link} className={styles.logoLink}>
         <img
-          className={styles.logo}
+          className={styles.logoColored}
           alt="Elev8Trix Logo"
           src={logo}
           style={style}
