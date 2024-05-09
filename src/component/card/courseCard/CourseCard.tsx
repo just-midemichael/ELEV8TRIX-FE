@@ -36,7 +36,7 @@ const CourseCard = ({
       <div
         className={styles.cardContainer}
         style={{
-          height: "283px",
+          height: "284px",
           width: "255px",
           borderRadius: "20px",
           overflow: "hidden"
