@@ -44,7 +44,7 @@ const Tab = ({
               color: index === activeTab ? "#3149A1" : "inherit",
               padding: "12px 14px 12px 0",
               textDecoration: index === activeTab ? "4px underline" : "none",
-              textUnderlineOffset: "12px",
+              textUnderlineOffset: "16px",
               cursor: "pointer"
             }}
           >
