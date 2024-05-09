@@ -1,6 +1,6 @@
 import React from "react";
 import { CSSProperties, useState } from "react";
-import { H5 } from "../shared/Title/H5";
+import { H6 } from "../shared/Title/H6";
 import styles from "../../style/Courses.module.scss";
 
 interface Tabs {
@@ -30,18 +30,19 @@ const Tab = ({
   return (
     <div style={tabContaier}>
       <div className={headerClassName} style={titleBox}>
-        <H5 style={title} title={tabTitle} />
+        <H6 style={title} title={tabTitle} />
       </div>
-      <div style={tabLabl}>
+      <div style={tabLabel}>
         {tabs.map((tab, index) => (
           <div
             key={index}
             className={labelClassName}
             onClick={() => handleTabClick(index)}
             style={{
-              fontSize: "1.1rem",
+              fontSize: "0.95rem",
+              minWidth: "fit-content",
               color: index === activeTab ? "#3149A1" : "inherit",
-              padding: "6px 40px 6px 0",
+              padding: "12px 14px 12px 0",
               textDecoration: index === activeTab ? "4px underline" : "none",
               textUnderlineOffset: "12px",
               cursor: "pointer"
@@ -71,17 +72,19 @@ const titleBox: CSSProperties = {
   width: "100%",
   height: "fit-content",
   minHeight: "50px",
-  fontWeight: "700",
+  fontWeight: "500",
   textAlign: "left",
-  padding: "10px 0"
+  display: "flex",
+  alignItems: "center",
+  padding: "0"
 };
 
 const title: CSSProperties = {
-  maxWidth: "496px",
+  maxWidth: "500px",
   lineHeight: "40px"
 };
 
-const tabLabl: CSSProperties = {
+const tabLabel: CSSProperties = {
   display: "flex",
   justifyContent: "flex-start",
   alignItems: "center",
@@ -93,7 +96,7 @@ const contentContainer: CSSProperties = {
   display: "flex",
   justifyContent: "flex-start",
   alignItems: "flex-start",
-  padding: "30px 0",
+  padding: "10px 0 30px 0",
   width: "100%",
   height: "100%",
   minHeight: "200px",

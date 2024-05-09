@@ -13,9 +13,9 @@ const Login = () => {
   const auth = useGlobalContex();
   const location = useLocation();
   const navigate = useNavigate();
+
   //Redirect to home page for login with ---> '/', only if path is not specified
   const redirectPath = location.state?.path || "/";
-  //-------------------ENDS---------------------->
 
   const handleLogin = (e: { preventDefault: () => void }) => {
     if (username != null) {
