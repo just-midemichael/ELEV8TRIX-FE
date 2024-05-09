@@ -30,7 +30,7 @@ const Login = () => {
   return (
     <div style={loginContainer}>
       User Login Page
-      <div>User: {JSON.stringify(auth.user)}</div>
+      <div>{JSON.stringify(auth.user)}</div>
       <div>
         <ColoredButton
           text={auth?.user ? "Log out" : "Log in"}
