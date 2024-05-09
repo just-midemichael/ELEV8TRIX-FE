@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { H5 } from "../shared/Title/H5";
+import { H6 } from "../shared/Title/H6";
 import MentorCard from "../card/mentorCard/MentorCard";
 import { mentorData } from "../../data/MentorData";
 
@@ -7,7 +7,7 @@ const Mentor = () => {
   return (
     <div style={container}>
       <div style={titleBox}>
-        <H5
+        <H6
           title={"Lorem ipsum dolor sit amet, consectetur Mentors"}
           style={title}
         />
