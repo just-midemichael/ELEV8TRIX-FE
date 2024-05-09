@@ -62,7 +62,12 @@ const CourseDetails: React.FC = () => {
 
         <section className={styles.sideBar} style={sideBar}>
           <div className={styles.priceBox} style={priceBox}>
-            <H8 title={`Price: $${course ? course.price : "0"}`} />
+            <H8 title={`Price:`} />
+            &nbsp;
+            <H8
+              title={` $${course ? course.price : "0"}`}
+              style={{ fontWeight: "500" }}
+            />
           </div>
           <div className={styles.learningOutcomeBox} style={learningOutcomeBox}>
             <div style={outcomeTitle}>
