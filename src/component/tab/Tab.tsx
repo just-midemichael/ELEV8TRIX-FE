@@ -80,7 +80,7 @@ const titleBox: CSSProperties = {
 };
 
 const title: CSSProperties = {
-  maxWidth: "500px",
+  maxWidth: "800px",
   lineHeight: "40px"
 };
 
