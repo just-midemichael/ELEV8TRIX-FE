@@ -72,7 +72,7 @@ const titleBox: CSSProperties = {
   width: "100%",
   height: "fit-content",
   minHeight: "50px",
-  fontWeight: "500",
+  fontWeight: "600",
   textAlign: "left",
   display: "flex",
   alignItems: "center",
