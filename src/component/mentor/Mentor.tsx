@@ -45,9 +45,9 @@ const titleBox: CSSProperties = {
   height: "fit-content",
   minHeight: "50px",
   display: "flex",
-  justifyContent: "flex-start",
+  justifyContent: "center",
   alignItems: "center",
-  textAlign: "left",
+  textAlign: "center",
   padding: "4px 0",
   overflow: "hidden"
 };
@@ -57,7 +57,7 @@ const contentBox: CSSProperties = {
   height: "fit-content",
   minHeight: "300px",
   display: "flex",
-  justifyContent: "flex-start",
+  justifyContent: "center",
   flexWrap: "wrap",
   alignItems: "center",
   padding: "30px 0",
