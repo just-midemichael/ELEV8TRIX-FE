@@ -16,7 +16,11 @@ const PartnersBanner = () => {
         speed={60}
         delay={5}
       >
-        <img src={partnersIcon} className={styles.banner} style={banner} />
+        <img
+          src={partnersIcon}
+          className={styles.bannerIcon}
+          style={bannerIcon}
+        />
       </Marquee>
     </div>
   );
@@ -26,7 +30,7 @@ export default PartnersBanner;
 
 const bannerContainer: CSSProperties = {
   height: "fit-content",
-  minHeight: "240px",
+  minHeight: "140px",
   width: "100%",
   backgroundColor: "white",
   color: "black",
@@ -34,7 +38,7 @@ const bannerContainer: CSSProperties = {
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  gap: "16px",
+  gap: "2px",
   overflow: "hidden"
 };
 
@@ -51,9 +55,9 @@ const title: CSSProperties = {
 
 const marquee: CSSProperties = {
   overflow: "hidden",
-  maxWidth: "1100px"
+  maxWidth: "500px"
 };
 
-const banner: CSSProperties = {
-  height: "90px"
+const bannerIcon: CSSProperties = {
+  height: "60px"
 };
