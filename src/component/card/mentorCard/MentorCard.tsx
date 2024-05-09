@@ -36,10 +36,7 @@ const MentorCard = ({
       >
         <img src={thumbNail} style={{ width: "100%", height: "100%" }} />
       </div>
-      <div
-        className={styles.textFocalContainer}
-        style={{ height: "55%", width: "100%", backgroundColor: "white" }}
-      >
+      <div className={styles.textFocalContainer} style={{ height: "55%" }}>
         <div className={styles.mentorBox}>
           <div className={styles.mentorName}>
             <p className={styles.name}>{mentorName}</p>
