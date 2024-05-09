@@ -67,5 +67,5 @@ const contentBox: CSSProperties = {
 
 const title: CSSProperties = {
   lineHeight: "40px",
-  maxWidth: "496px"
+  maxWidth: "800px"
 };
