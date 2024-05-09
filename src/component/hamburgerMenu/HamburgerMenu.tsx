@@ -25,7 +25,7 @@ export const HamburgerMenu = () => {
             style={{ gap: "12px" }}
             onClick={() => (window.location.href = "/user/my_profile")}
           >
-            <UserAvatar /> <div>User: {JSON.stringify(authUser.user)}</div>
+            <UserAvatar /> <div>{authUser.user}</div>
           </NavLink>
         ) : (
           false
