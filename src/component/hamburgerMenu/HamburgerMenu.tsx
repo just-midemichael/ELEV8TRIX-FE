@@ -18,30 +18,38 @@ export const HamburgerMenu = () => {
   return (
     <div className={styles.menuContainer}>
       <div className={styles.linkBox}>
-        {authUser.user ? (
-          <NavLink
-            to={"/user/my_profile"}
-            className={styles.list}
-            style={{ gap: "12px" }}
-            onClick={() => (window.location.href = "/user/my_profile")}
-          >
-            <UserAvatar /> <div>{authUser.user}</div>
-          </NavLink>
-        ) : (
-          false
-        )}
-        {authUser?.user ? (
-          <NavLink
-            to={"/cart"}
-            className={styles.list}
-            style={{ width: "60px" }}
-            onClick={() => (window.location.href = "/cart")}
-          >
-            <Cart />
-          </NavLink>
-        ) : (
-          false
-        )}
+        <div className={styles.userDetailBox}>
+          {authUser.user ? (
+            <NavLink
+              to={"/user/my_profile"}
+              className={styles.list}
+              style={{ gap: "12px" }}
+              onClick={() => (window.location.href = "/user/my_profile")}
+            >
+              <UserAvatar />{" "}
+              <div style={{ color: "black" }}>{authUser.user}</div>
+            </NavLink>
+          ) : (
+            false
+          )}
+          {authUser?.user ? (
+            <NavLink
+              to={"/cart"}
+              className={styles.list}
+              style={{
+                width: "60px",
+                display: "flex",
+                justifyContent: "center"
+              }}
+              onClick={() => (window.location.href = "/cart")}
+            >
+              <Cart />
+            </NavLink>
+          ) : (
+            false
+          )}
+        </div>
+
         {authUser?.user ? (
           <NavLink
             to={"/my_learning"}
@@ -100,6 +108,12 @@ export const HamburgerMenu = () => {
         )}
       </div>
       <div className={styles.signinBox}>
+        <WhiteButton
+          text={authUser?.user ? "Log out" : "Log in"}
+          link={authUser?.user ? "/" : "/login"}
+          wrapperWidth={"100%"}
+          className={styles.loginButton}
+        />
         {authUser?.user ? (
           false
         ) : (
@@ -107,15 +121,10 @@ export const HamburgerMenu = () => {
             text={"Sign up"}
             link={"/login"}
             target={""}
+            wrapperWidth={"100%"}
             className={styles.signupButton}
           />
         )}
-
-        <WhiteButton
-          text={authUser?.user ? "Log out" : "Log in"}
-          link={authUser?.user ? "/" : "/login"}
-          className={styles.loginButton}
-        />
       </div>
     </div>
   );
