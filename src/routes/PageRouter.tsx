@@ -119,7 +119,7 @@ const PageRouter = () => {
       />
 
       <Route
-        path="/my_learning"
+        path="my_learning"
         element={
           <React.Suspense>
             <RequireUserAuth>

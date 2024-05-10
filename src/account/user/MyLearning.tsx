@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 import MyLearningHero from "../../component/hero/myLearningHero/MyLearningHero";
 import Subscription from "../../component/subscription/Subscription";
-import styles from "../style/MyLearning.module.scss";
+import styles from "../../style/MyLearning.module.scss";
 import MyCourse from "../../component/myCourse/MyCourse";
 
 // Set the page title

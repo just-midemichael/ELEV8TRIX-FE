@@ -15,7 +15,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   //Redirect to home page for login with ---> '/', only if path is not specified
-  const redirectPath = location.state?.path || "/";
+  const redirectPath = location.state?.path;
 
   const handleLogin = (e: { preventDefault: () => void }) => {
     if (username != null) {
