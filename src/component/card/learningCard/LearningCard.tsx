@@ -36,7 +36,7 @@ const LearningCard = ({
       style={{
         height: "283px",
         width: "255px",
-        borderRadius: "20px",
+        borderRadius: "10px",
         overflow: "hidden",
         border: "1px solid silver"
       }}

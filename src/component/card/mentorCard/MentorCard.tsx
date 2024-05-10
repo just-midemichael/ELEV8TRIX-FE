@@ -23,7 +23,7 @@ const MentorCard = ({
       style={{
         height: "283px",
         width: "255px",
-        borderRadius: "20px",
+        borderRadius: "10px",
         overflow: "hidden"
       }}
     >
