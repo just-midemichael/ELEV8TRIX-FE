@@ -6,7 +6,7 @@ $miniMobileHeight: 50px;
 
 // Color
 $backgroundColor: white;
-$menuBackgroundColor: rgba(9, 8, 8, 0.325);
+$menuBackgroundColor: rgb(252, 250, 250);
 
 // Z-Index
 $headerZindex: 30;
@@ -75,7 +75,7 @@ $headerZindex: 30;
 #showMenu {
   width: 100%;
   height: 100%;
-  background-color: $backgroundColor;
+  background-color: $menuBackgroundColor;
   display: flex;
   position: absolute;
   overflow-x: hidden;
