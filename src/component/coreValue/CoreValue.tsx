@@ -36,7 +36,7 @@ const CoreValue = () => {
   return (
     <div style={coreValueWrapper}>
       <div style={titleBox}>
-        <H6 title={"How do we do this ? ( you may ask )"} />
+        <H6 title={"Our Value Propostion"} />
       </div>
       <div style={contentBox} className={styles.contentBox}>
         {corevaluData.map((value, index) => (
