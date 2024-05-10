@@ -2,6 +2,7 @@ type buttonProps = {
   text: React.ReactNode;
   link: string;
   target?: string;
+  wrapperWidth?: string;
   className?: string | undefined;
   onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
 };
@@ -10,11 +11,16 @@ const WhiteButton = ({
   text,
   link,
   target,
+  wrapperWidth,
   className,
   onClick
 }: buttonProps) => {
   return (
-    <a href={link} target={target}>
+    <a
+      href={link}
+      target={target}
+      style={{ width: `${wrapperWidth}`, height: "fit-content" }}
+    >
       <button
         className={className}
         style={{
