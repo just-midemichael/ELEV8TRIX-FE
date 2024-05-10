@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { H6 } from "../shared/Title/H6";
+import { H5 } from "../shared/Title/H5";
 import MentorCard from "../card/mentorCard/MentorCard";
 import { mentorData } from "../../data/MentorData";
 
@@ -7,10 +7,7 @@ const Mentor = () => {
   return (
     <div style={container}>
       <div style={titleBox}>
-        <H6
-          title={"Lorem ipsum dolor sit amet, consectetur Mentors"}
-          style={title}
-        />
+        <H5 title={"Meet Our Mentors"} style={title} />
       </div>
       <div style={contentBox}>
         {mentorData.map((mentor, index) => (

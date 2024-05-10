@@ -41,7 +41,7 @@ const titleBox: CSSProperties = {
   height: "50px",
   width: "100%",
   display: "flex",
-  justifyContent: "flex-start",
+  justifyContent: "center",
   alignItems: "center",
   fontWeight: 800,
   textAlign: "left",
