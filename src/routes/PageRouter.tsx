@@ -2,11 +2,11 @@ import { Route, Routes } from "react-router-dom";
 import { lazy } from "react";
 import React from "react";
 import Home from "../pages/Home";
-import Dashboard from "../admin/scenes/dashboard/index";
-import UserManegement from "../admin/scenes/userManagement/UserManagement";
-import Team from "../admin/scenes/team/Team";
-import AdminSetting from "../admin/scenes/setting/index";
-import CourseManagement from "../admin/scenes/courseManagement/CourseManagement";
+import Dashboard from "../account/admin/scenes/dashboard/index";
+import UserManegement from "../account/admin/scenes/userManagement/UserManagement";
+import Team from "../account/admin/scenes/team/Team";
+import AdminSetting from "../account/admin/scenes/setting/index";
+import CourseManagement from "../account/admin/scenes/courseManagement/CourseManagement";
 import RequireAdminAuth from "../utils/RequireAdminAuth";
 import RequireUserAuth from "../utils/RequireUserAuth";
 
@@ -15,11 +15,11 @@ const LazyCourses = lazy(() => import("../pages/Courses"));
 const LazyAbout = lazy(() => import("../pages/About"));
 const LazyContact = lazy(() => import("../pages/Contact"));
 const LazyPageNotFound = lazy(() => import("../pages/PageNoteFound"));
-const LazyAdmin = lazy(() => import("../admin/Admin"));
-const LazyAdminLogin = lazy(() => import("../admin/Login"));
-const LazyUser = lazy(() => import("../user/User"));
-const LazyUserLogin = lazy(() => import("../user/Login"));
-const LazyLearning = lazy(() => import("../user/MyLearning"));
+const LazyAdmin = lazy(() => import("../account/admin/Admin"));
+const LazyAdminLogin = lazy(() => import("../account/admin/Admin"));
+const LazyUser = lazy(() => import("../account/user/User"));
+const LazyUserLogin = lazy(() => import("../account/user/Login"));
+const LazyLearning = lazy(() => import("../account/user/MyLearning"));
 const LazyCourseDetails = lazy(() => import("../pages/CourseDetails"));
 
 const PageRouter = () => {
