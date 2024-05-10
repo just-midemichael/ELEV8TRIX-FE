@@ -18,7 +18,12 @@ export const HamburgerMenu = () => {
   return (
     <div className={styles.menuContainer}>
       <div className={styles.linkBox}>
-        <div className={styles.userDetailBox}>
+        <div
+          style={{
+            display: "flex",
+            borderBottom: authUser.user ? "1px solid silver" : ""
+          }}
+        >
           {authUser.user ? (
             <NavLink
               to={"/user/my_profile"}
@@ -26,7 +31,7 @@ export const HamburgerMenu = () => {
               style={{ gap: "12px" }}
               onClick={() => (window.location.href = "/user/my_profile")}
             >
-              <UserAvatar />{" "}
+              <UserAvatar />
               <div style={{ color: "black" }}>{authUser.user}</div>
             </NavLink>
           ) : (
