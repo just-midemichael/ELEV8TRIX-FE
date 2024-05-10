@@ -71,13 +71,14 @@ $searchInputBg: #def4ff;
 @media (max-width: 940px) {
   .bannerContainer {
     border-radius: 0 !important;
+    gap: 40px;
   }
 }
 
 @media (max-width: 900px) {
   .bannerContainer {
     padding-top: 50px !important;
-    gap: 10px !important;
+    gap: 20px !important;
   }
   .textFocalWraper {
     height: fit-content !important;
@@ -90,8 +91,13 @@ $searchInputBg: #def4ff;
   .searchBox {
     min-height: fit-content !important;
   }
+  .imageFocalContainer {
+    height: 360px !important;
+    width: 340px !important;
+  }
+
   .imageFocalWrapper {
-    height: 400px !important;
+    height: 380px !important;
     width: 360px !important;
     padding: 0 !important;
   }
@@ -99,7 +105,6 @@ $searchInputBg: #def4ff;
 
 @media (max-width: 700px) {
   .bannerContainer {
-    gap: 10px !important;
     min-height: fit-content !important;
   }
   .textFocalContainer {
@@ -109,14 +114,15 @@ $searchInputBg: #def4ff;
 
 @media (max-width: 450px) {
   .bannerContainer {
-    gap: 40px !important;
+    height: fit-content;
+    gap: 30px !important;
   }
   .imageFocalContainer {
     height: 300px !important;
     width: 280px !important;
   }
   .imageFocalWrapper {
-    height: 340px !important;
+    height: 330px !important;
   }
   .polygon {
     display: none;
