@@ -1,13 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export type ContextProps = {
+export type UserContextProps = {
   user: null;
-  setUser: React.Dispatch<React.SetStateAction<null>>;
   admin: null;
-  setAdmin: React.Dispatch<React.SetStateAction<null>>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  setUser?: React.Dispatch<React.SetStateAction<null>>;
+  setAdmin?: React.Dispatch<React.SetStateAction<null>>;
   loginUser: any;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   logoutUser: any;
   loginAdmin: any;
   logoutAdmin: any;
+};
+
+export type UserContextProviderProps = {
+  children: React.ReactNode;
 };

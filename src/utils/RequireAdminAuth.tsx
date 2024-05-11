@@ -1,10 +1,11 @@
 import { Navigate, useLocation } from "react-router-dom";
-import { useGlobalContex } from "./ContextApi";
+import { useContexApi } from "./ContextApi";
 
 const RequireAdminAuth = ({ children }: { children: React.ReactNode }) => {
-  const adminAuth = useGlobalContex();
+  const adminAuth = useContexApi();
   const location = useLocation();
-  if (!adminAuth.admin)
+
+  if (!adminAuth.admin || adminAuth.admin === null)
     return (
       <Navigate
         to={`${(window.location.href = "/")}`}

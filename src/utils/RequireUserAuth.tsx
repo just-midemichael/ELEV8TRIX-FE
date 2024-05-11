@@ -1,8 +1,8 @@
-import { useGlobalContex } from "./ContextApi";
+import { useContexApi } from "./ContextApi";
 import { Navigate, useLocation } from "react-router-dom";
 
 const RequireUserAuth = ({ children }: { children: React.ReactNode }) => {
-  const userAuth = useGlobalContex();
+  const userAuth = useContexApi();
   const location = useLocation();
 
   if (!userAuth.user)

@@ -1,20 +1,15 @@
-import React, {
-  SetStateAction,
-  createContext,
-  useContext,
-  useState
-} from "react";
-import { ContextProps } from "./type";
+import { SetStateAction, createContext, useContext, useState } from "react";
+import { UserContextProps, UserContextProviderProps } from "./type";
 
 // Create Context
-const globalContext = createContext<ContextProps>({} as ContextProps);
+const globalContext = createContext<UserContextProps>({} as UserContextProps);
 
-export const ContextApi = ({ children }: { children: React.ReactNode }) => {
+const ContextApi = ({ children }: UserContextProviderProps) => {
   const [user, setUser] = useState(null);
   const [admin, setAdmin] = useState(null);
 
-  const loginUser = (username: SetStateAction<null>) => {
-    setUser(username);
+  const loginUser = (user: SetStateAction<null>) => {
+    setUser(user);
   };
 
   const logoutUser = () => {
@@ -33,9 +28,7 @@ export const ContextApi = ({ children }: { children: React.ReactNode }) => {
     <globalContext.Provider
       value={{
         user,
-        setUser,
         admin,
-        setAdmin,
         loginUser,
         logoutUser,
         loginAdmin,
@@ -49,6 +42,8 @@ export const ContextApi = ({ children }: { children: React.ReactNode }) => {
 
 // Allow us to use the context created
 // eslint-disable-next-line react-refresh/only-export-components
-export const useGlobalContex = () => {
+export const useContexApi = () => {
   return useContext(globalContext);
 };
+
+export default ContextApi;
