@@ -1,9 +1,9 @@
 import { useContexApi } from "../../../../utils/ContextApi";
 
-const Index = () => {
+const Dashboard = () => {
   const authAdmin = useContexApi();
 
   return <div>Admin Dashboard, {authAdmin.admin}</div>;
 };
 
-export default Index;
+export default Dashboard;
