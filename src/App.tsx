@@ -4,7 +4,7 @@ import Footer from "./layout/footer/Footer";
 import Header from "./layout/header/Header";
 import Body from "./layout/body/Body";
 import PageRouter from "./routes/PageRouter";
-import { ContextApi } from "./utils/ContextApi";
+import ContextApi from "./utils/ContextApi";
 
 function App() {
   const [isAdmin] = useState(false);
