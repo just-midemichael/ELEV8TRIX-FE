@@ -146,7 +146,8 @@ $sencondaryColor: #119ee3;
 
 .button {
   height: 36px !important;
-  width: 70px !important;
+  width: fit-content !important;
+  min-width: 70px !important;
   font-weight: 600 !important;
 }
 
