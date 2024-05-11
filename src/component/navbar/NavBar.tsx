@@ -1,9 +1,9 @@
 import styles from "./NavBar.module.scss";
 import { NavLink } from "react-router-dom";
-import { useGlobalContex } from "../../utils/ContextApi";
+import { useContexApi } from "../../utils/ContextApi";
 
 export const NavBar = () => {
-  const authUser = useGlobalContex();
+  const authUser = useContexApi();
 
   const activeStyle = ({ isActive }: { isActive: boolean }) => {
     return {
@@ -15,44 +15,24 @@ export const NavBar = () => {
       {authUser?.user ? (
         false
       ) : (
-        <NavLink
-          to={"/"}
-          className={styles.list}
-          style={activeStyle}
-          onClick={() => (window.location.href = "/")}
-        >
+        <NavLink to={"/"} className={styles.list} style={activeStyle}>
           Home
         </NavLink>
       )}
-      <NavLink
-        to={"/courses"}
-        className={styles.list}
-        style={activeStyle}
-        onClick={() => (window.location.href = "/courses")}
-      >
+      <NavLink to={"/courses"} className={styles.list} style={activeStyle}>
         Courses
       </NavLink>
       {authUser?.user ? (
         false
       ) : (
-        <NavLink
-          to={"/about"}
-          className={styles.list}
-          style={activeStyle}
-          onClick={() => (window.location.href = "/about")}
-        >
+        <NavLink to={"/about"} className={styles.list} style={activeStyle}>
           About Us
         </NavLink>
       )}
       {authUser?.user ? (
         false
       ) : (
-        <NavLink
-          to={"/contact"}
-          className={styles.list}
-          style={activeStyle}
-          onClick={() => (window.location.href = "/contact")}
-        >
+        <NavLink to={"/contact"} className={styles.list} style={activeStyle}>
           Contact
         </NavLink>
       )}
@@ -61,7 +41,6 @@ export const NavBar = () => {
           to={"/my_learning"}
           className={styles.list}
           style={activeStyle}
-          onClick={() => (window.location.href = "/my_learning")}
         >
           My learning
         </NavLink>

@@ -1,41 +1,53 @@
 import { CSSProperties, useState } from "react";
 import ColoredButton from "../../component/shared/button/coloredButton/ColoredButton";
-import { useGlobalContex } from "../../utils/ContextApi";
+import { useContexApi } from "../../utils/ContextApi";
 import { useLocation, useNavigate } from "react-router-dom";
+import Input from "../../component/shared/inputForm/Input";
 
 // Set the page title
 const pageTitle = () => (document.title = "User Login");
 pageTitle();
 
 const Login = () => {
-  const [username] = useState("Elev8trix");
-
-  const auth = useGlobalContex();
+  const [user, setUser] = useState("");
+  const auth = useContexApi();
   const location = useLocation();
   const navigate = useNavigate();
 
-  //Redirect to home page for login with ---> '/', only if path is not specified
+  //Redirect to home page with this path ---> '/', only if path is not specified
   const redirectPath = location.state?.path || "/";
+  //-------------------ENDS---------------------->
 
-  const handleLogin = (e: { preventDefault: () => void }) => {
-    if (username != null) {
-      auth?.loginUser(username);
-      navigate(redirectPath);
-    } else {
-      auth?.logoutUser();
-    }
-    e.preventDefault();
+  // Login Method
+  const handleLogin = () => {
+    auth.loginUser(user);
+    navigate(redirectPath);
+  };
+
+  // Logout Method
+  const handleLogout = () => {
+    auth.logoutUser(user);
+    navigate(redirectPath, { replace: true });
   };
 
   return (
     <div style={loginContainer}>
       User Login Page
       <div>{auth.user}</div>
+      <Input
+        className={""}
+        type={"text"}
+        placeholder={"Enter your name"}
+        name={"loginForm"}
+        value={undefined}
+        onChange={(e) => {
+          setUser(e.target.value);
+        }}
+      />
       <div>
         <ColoredButton
           text={auth?.user ? "Log out" : "Log in"}
-          link={auth?.user ? redirectPath : "/login"}
-          onClick={auth?.user ? handleLogin : handleLogin}
+          onClick={auth?.user ? handleLogout : handleLogin}
         />
       </div>
     </div>

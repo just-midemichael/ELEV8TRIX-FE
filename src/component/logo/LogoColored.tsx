@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styles from "./Logo.module.scss";
 import logo from "/elev8trix-logo-colored.svg";
 
@@ -9,14 +10,14 @@ type logoProps = {
 const LogoColored = ({ link, style }: logoProps) => {
   return (
     <div className={styles.logoContainer}>
-      <a href={link} className={styles.logoLink}>
+      <NavLink to={link} className={styles.logoLink}>
         <img
           className={styles.logoColored}
           alt="Elev8Trix Logo"
           src={logo}
           style={style}
         />
-      </a>
+      </NavLink>
     </div>
   );
 };

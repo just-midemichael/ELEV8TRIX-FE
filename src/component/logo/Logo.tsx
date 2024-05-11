@@ -1,22 +1,23 @@
+import { NavLink } from "react-router-dom";
 import styles from "./Logo.module.scss";
 import logo from "/elev8trix-logo-white.svg";
 
 type logoProps = {
-  link?: string;
+  link: string;
   style?: React.CSSProperties;
 };
 
 const Logo = ({ link, style }: logoProps) => {
   return (
     <div className={styles.logoContainer}>
-      <a href={link} className={styles.logoLink}>
+      <NavLink to={link} className={styles.logoLink}>
         <img
           className={styles.logo}
           alt="Elev8Trix Logo"
           src={logo}
           style={style}
         />
-      </a>
+      </NavLink>
     </div>
   );
 };

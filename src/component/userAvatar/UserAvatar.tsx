@@ -1,9 +1,12 @@
 import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
 import { CSSProperties } from "react";
+import { useContexApi } from "../../utils/ContextApi";
 
 const UserAvatar = () => {
+  const authUser = useContexApi();
+
   return (
-    <div style={container}>
+    <div style={container} title={`${authUser.user}`}>
       <PermIdentityOutlinedIcon
         style={{ width: "26px", height: "26px", color: "white" }}
       />

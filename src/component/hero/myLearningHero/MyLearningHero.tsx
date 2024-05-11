@@ -7,6 +7,7 @@ import {
   textFocalWraper,
   titleBox
 } from ".";
+import { useContexApi } from "../../../utils/ContextApi";
 
 const MyLearningHero = () => {
   // Greet User with Date Object
@@ -19,13 +20,15 @@ const MyLearningHero = () => {
         : "Good Morning";
 
   console.log(greetTime);
+  const authUser = useContexApi();
 
   return (
     <div className={styles.bannerContainer} style={bannerContainer}>
       <div className={styles.textFocalContainer} style={textFocalContainer}>
         <div className={styles.textFocalWraper} style={textFocalWraper}>
           <div style={titleBox}>
-            <H5 title={`${greetUser}, User`} />
+            <H5 title={`${greetUser}, ${authUser.user}`} />
+            <div>Time: {greetTime} O'clock</div>
           </div>
         </div>
       </div>

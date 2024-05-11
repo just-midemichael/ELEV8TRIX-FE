@@ -9,10 +9,10 @@ import WhiteButton from "../../component/shared/button/whiteButton/WhiteButton";
 import Cart from "../../component/cart/Cart";
 import UserAvatar from "../../component/userAvatar/UserAvatar";
 import { NavLink } from "react-router-dom";
-import { useGlobalContex } from "../../utils/ContextApi";
+import { useContexApi } from "../../utils/ContextApi";
 
 const Header = () => {
-  const authUser = useGlobalContex();
+  const authUser = useContexApi();
   const [isOpen, setOpen] = useState(false);
   const [overflow, setOverflow] = useState("");
   const [display, SetDisplay] = useState("hideMenu");
@@ -108,7 +108,7 @@ const Header = () => {
         </div>
       </div>
       <div className={styles.hamburgerMenuBox} id={styles[`${display}`]}>
-        <HamburgerMenu />
+        <HamburgerMenu handleClick={handleMenuDisplay} />
       </div>
     </>
   );

@@ -2,12 +2,13 @@ import ColoredButton from "../shared/button/coloredButton/ColoredButton";
 import WhiteButton from "../shared/button/whiteButton/WhiteButton";
 import styles from "./HamurgerMenu.module.scss";
 import { NavLink } from "react-router-dom";
-import { useGlobalContex } from "../../utils/ContextApi";
+import { useContexApi } from "../../utils/ContextApi";
 import UserAvatar from "../userAvatar/UserAvatar";
 import Cart from "../cart/Cart";
+import { hamburgerType } from "../hamburgerButton/HamburgerType";
 
-export const HamburgerMenu = () => {
-  const authUser = useGlobalContex();
+export const HamburgerMenu = ({ handleClick }: hamburgerType) => {
+  const authUser = useContexApi();
 
   const activeStyle = ({ isActive }: { isActive: boolean }) => {
     return {
@@ -26,10 +27,10 @@ export const HamburgerMenu = () => {
         >
           {authUser.user ? (
             <NavLink
-              to={"/user/my_profile"}
+              to={"/user"}
               className={styles.list}
               style={{ gap: "12px" }}
-              onClick={() => (window.location.href = "/user/my_profile")}
+              onClick={handleClick}
             >
               <UserAvatar />
               <div style={{ color: "black" }}>{authUser.user}</div>
@@ -46,7 +47,7 @@ export const HamburgerMenu = () => {
                 display: "flex",
                 justifyContent: "center"
               }}
-              onClick={() => (window.location.href = "/cart")}
+              onClick={handleClick}
             >
               <Cart />
             </NavLink>
@@ -60,7 +61,7 @@ export const HamburgerMenu = () => {
             to={"/my_learning"}
             className={styles.list}
             style={activeStyle}
-            onClick={() => (window.location.href = "/my_learning")}
+            onClick={handleClick}
           >
             My learning
           </NavLink>
@@ -74,7 +75,7 @@ export const HamburgerMenu = () => {
             to={"/"}
             className={styles.list}
             style={activeStyle}
-            onClick={() => (window.location.href = "/")}
+            onClick={handleClick}
           >
             Home
           </NavLink>
@@ -83,7 +84,7 @@ export const HamburgerMenu = () => {
           to={"/courses"}
           className={styles.list}
           style={activeStyle}
-          onClick={() => (window.location.href = "/courses")}
+          onClick={handleClick}
         >
           Courses
         </NavLink>
@@ -94,7 +95,7 @@ export const HamburgerMenu = () => {
             to={"/about"}
             className={styles.list}
             style={activeStyle}
-            onClick={() => (window.location.href = "/about")}
+            onClick={handleClick}
           >
             About Us
           </NavLink>
@@ -106,7 +107,7 @@ export const HamburgerMenu = () => {
             to={"/contact"}
             className={styles.list}
             style={activeStyle}
-            onClick={() => (window.location.href = "/contact")}
+            onClick={handleClick}
           >
             Contact
           </NavLink>
