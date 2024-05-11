@@ -2,7 +2,7 @@ import { CSSProperties } from "react";
 import heroImage from "/heroImage.jpg";
 import styles from "../style/About.module.scss";
 import { H5 } from "../component/shared/Title/H5";
-import { H4 } from "../component/shared/Title/H4";
+import Mentor from "../component/mentor/Mentor";
 
 // Set the page title
 const pageTitle = () => (document.title = "About Us");
@@ -15,13 +15,26 @@ const About = () => {
         <img src={`${heroImage}`} style={heroImageStyle} />
         <div style={textFocalBox}>
           <H5 title={"About Us"} />
+          <div style={{ fontWeight: 500 }}>
+            Like the name suggests, AltSchool Africa offers a more effective
+            “alternative” to traditional academic institutions, in that it
+            explores and offers practical & functional learning with the aid of
+            modern technology.
+            <br /> Like the name suggests, AltSchool Africa offers a more
+            effective “alternative” to traditional academic institutions, in
+            that it explores and offers practical & functional learning with the
+            aid of modern technology. Like the name suggests, AltSchool Africa
+            offers a more effective “alternative” to traditional academic
+            institutions, in that it explores and offers practical & functional
+            learning with the aid of modern technology.
+          </div>
         </div>
       </section>
       <section className={styles.sectionTwo} style={sectionTwo}>
-        <div style={title}>
-          <H4 title={"Where we are headed"} />
+        <div className={styles.title} style={title}>
+          <H5 title={"Where we are headed"} />
         </div>
-        <article style={description}>
+        <article className={styles.description} style={description}>
           Like the name suggests, AltSchool Africa offers a more effective
           “alternative” to traditional academic institutions, in that it
           explores and offers practical & functional learning with the aid of
@@ -36,6 +49,9 @@ const About = () => {
           it explores and offers practical & functional learning with the aid of
           modern technology.
         </article>
+      </section>
+      <section style={{ padding: "50px 0" }}>
+        <Mentor />
       </section>
     </div>
   );
@@ -65,10 +81,12 @@ const textFocalBox: CSSProperties = {
   height: "fit-content",
   minHeight: "400px",
   display: "flex",
-  alignItems: "flex-start",
+  flexDirection: "column",
+  alignItems: "center",
   justifyContent: "center",
-  padding: "50px 10px",
-  fontWeight: 600
+  padding: "50px 5%",
+  fontWeight: 600,
+  gap: "20px"
 };
 
 const sectionTwo: CSSProperties = {
@@ -78,25 +96,27 @@ const sectionTwo: CSSProperties = {
   height: "fit-content",
   minHeight: "300px",
   display: "flex",
-  justifyContent: "flex-start",
-  alignItems: "flex-start"
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center"
 };
 
 const title: CSSProperties = {
   width: "100%",
-  maxWidth: "400px",
+  maxWidth: "800px",
   height: "fit-content",
   minHeight: "20px",
   fontWeight: 600,
   padding: "10px 3%",
-  textAlign: "left"
+  textAlign: "center"
 };
 
 const description: CSSProperties = {
   width: "100%",
+  maxWidth: "800px",
   height: "fit-content",
   minHeight: "200px",
   textAlign: "left",
-  fontSize: "1.15rem",
+  fontSize: "1rem",
   padding: "0 3%"
 };
