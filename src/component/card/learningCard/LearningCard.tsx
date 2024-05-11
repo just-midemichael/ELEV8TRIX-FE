@@ -37,8 +37,7 @@ const LearningCard = ({
         height: "283px",
         width: "255px",
         borderRadius: "10px",
-        overflow: "hidden",
-        border: "1px solid silver"
+        overflow: "hidden"
       }}
     >
       <div
