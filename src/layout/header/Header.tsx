@@ -99,7 +99,7 @@ const Header = () => {
           )}
 
           {authUser?.user ? (
-            <NavLink to={"/user"}>
+            <NavLink to={`/user/${authUser.user}`}>
               <UserAvatar />
             </NavLink>
           ) : (

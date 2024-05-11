@@ -9,6 +9,7 @@ import AdminSetting from "../account/admin/scenes/setting/Setting";
 import CourseManagement from "../account/admin/scenes/courseManagement/CourseManagement";
 import RequireAdminAuth from "../utils/RequireAdminAuth";
 import RequireUserAuth from "../utils/RequireUserAuth";
+import { useContexApi } from "../utils/ContextApi";
 
 //Lazy Load page for performance optimization
 const LazyCourses = lazy(() => import("../pages/Courses"));
@@ -20,10 +21,13 @@ const LazyAdminLogin = lazy(() => import("../account/admin/Login"));
 const LazyUser = lazy(() => import("../account/user/User"));
 const LazyUserLogin = lazy(() => import("../account/user/Login"));
 const LazyLearning = lazy(() => import("../account/user/MyLearning"));
+const LazyCart = lazy(() => import("../account/user/Cart"));
+const LazyUserProfile = lazy(() => import("../account/user/UserProfile"));
 const LazyCourseDetails = lazy(() => import("../pages/CourseDetails"));
 
 const PageRouter = () => {
-  // constant to take constants,variables,method from context api function
+  // Take constants,variables,method from context api function
+  const authUser = useContexApi();
 
   return (
     <Routes>
@@ -98,7 +102,6 @@ const PageRouter = () => {
         }
       >
         <Route index element={<Dashboard />} />
-        {/* <Route path="dashboard" element={<Dashboard />} /> */}
         <Route path="course_management" element={<CourseManagement />} />
         <Route path="user_management" element={<UserManegement />} />
         <Route path="team" element={<Team />} />
@@ -108,7 +111,7 @@ const PageRouter = () => {
       {/* User Routes---------------------------------------------------*/}
 
       <Route
-        path="/user"
+        path={`user/${authUser.user}`}
         element={
           <React.Suspense>
             <RequireUserAuth>
@@ -116,7 +119,9 @@ const PageRouter = () => {
             </RequireUserAuth>
           </React.Suspense>
         }
-      />
+      >
+        <Route index element={<LazyUserProfile />} />
+      </Route>
 
       <Route
         path="/my_learning"
@@ -125,6 +130,14 @@ const PageRouter = () => {
             <RequireUserAuth>
               <LazyLearning />
             </RequireUserAuth>
+          </React.Suspense>
+        }
+      />
+      <Route
+        path="/cart"
+        element={
+          <React.Suspense>
+            <LazyCart />
           </React.Suspense>
         }
       />

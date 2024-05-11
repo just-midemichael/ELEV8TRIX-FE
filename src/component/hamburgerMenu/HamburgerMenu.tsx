@@ -27,7 +27,7 @@ export const HamburgerMenu = ({ handleClick }: hamburgerType) => {
         >
           {authUser.user ? (
             <NavLink
-              to={"/user"}
+              to={`user/${authUser.user}`}
               className={styles.list}
               style={{ gap: "12px" }}
               onClick={handleClick}

@@ -4,7 +4,7 @@ import Tab from "../component/tab/Tab";
 import { courseReviewData } from "../data/TabData";
 import { H8 } from "../component/shared/Title/H8";
 import courses, { CourseProps } from "../data/CourseData";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import ColoredButton from "../component/shared/button/coloredButton/ColoredButton";
 
 const CourseDetails: React.FC = () => {
@@ -34,6 +34,8 @@ const CourseDetails: React.FC = () => {
   const dynamicHeight = 0.6 * width;
   const maxWidth = 900;
   const dynamicMaxHeight = 0.6 * maxWidth;
+
+  const navigate = useNavigate();
 
   return (
     <div className={styles.container} style={container}>
@@ -76,6 +78,7 @@ const CourseDetails: React.FC = () => {
                 className={styles.courseButton}
                 text={"Add to cart"}
                 wrapperWidth="100%"
+                onClick={() => navigate("/cart")}
               />
             </div>
           </div>
