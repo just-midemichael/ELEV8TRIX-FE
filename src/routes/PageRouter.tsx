@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { lazy } from "react";
 import React from "react";
 import Home from "../pages/Home";
-import Dashboard from "../account/admin/scenes/dashboard/Index";
+import Dashboard from "../account/admin/scenes/dashboard/Dashboard";
 import UserManegement from "../account/admin/scenes/userManagement/UserManagement";
 import Team from "../account/admin/scenes/team/Team";
 import AdminSetting from "../account/admin/scenes/setting/Setting";
