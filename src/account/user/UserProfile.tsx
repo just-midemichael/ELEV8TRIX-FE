@@ -18,7 +18,7 @@ const UserProfile = () => {
     <div style={containerStyle}>
       <h4>Hello, {authUser.user}</h4>
       <div>
-        <ColoredButton text={"Sign out"} onClick={handleLogout} />
+        <ColoredButton text={"Logout"} onClick={handleLogout} />
       </div>
     </div>
   );
