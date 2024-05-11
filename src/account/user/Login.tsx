@@ -10,7 +10,7 @@ pageTitle();
 
 const Login = () => {
   const [user, setUser] = useState("");
-  const auth = useContexApi();
+  const authUser = useContexApi();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -20,20 +20,20 @@ const Login = () => {
 
   // Login Method
   const handleLogin = () => {
-    auth.loginUser(user);
+    authUser.loginUser(user);
     navigate(redirectPath);
   };
 
   // Logout Method
   const handleLogout = () => {
-    auth.logoutUser(user);
+    authUser.logoutUser(user);
     navigate(redirectPath, { replace: true });
   };
 
   return (
     <div style={loginContainer}>
       User Login Page
-      <div>{auth.user}</div>
+      <div>{authUser.user}</div>
       <Input
         className={""}
         type={"text"}
@@ -46,8 +46,8 @@ const Login = () => {
       />
       <div>
         <ColoredButton
-          text={auth?.user ? "Log out" : "Log in"}
-          onClick={auth?.user ? handleLogout : handleLogin}
+          text={authUser?.user ? "Log out" : "Log in"}
+          onClick={authUser?.user ? handleLogout : handleLogin}
         />
       </div>
     </div>

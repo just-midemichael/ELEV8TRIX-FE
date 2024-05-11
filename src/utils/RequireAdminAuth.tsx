@@ -8,7 +8,7 @@ const RequireAdminAuth = ({ children }: { children: React.ReactNode }) => {
   if (!adminAuth.admin || adminAuth.admin === null)
     return (
       <Navigate
-        to={`${(window.location.href = "/")}`}
+        to={`${(window.location.href = "/admin_login")}`}
         state={{ path: location.pathname }}
       />
     );

@@ -1,22 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import Footer from "./layout/footer/Footer";
-import Header from "./layout/header/Header";
-import Body from "./layout/body/Body";
-import PageRouter from "./routes/PageRouter";
 import ContextApi from "./utils/ContextApi";
+import AppContainer from "./AppContainer";
 
 function App() {
-  const [isAdmin] = useState(false);
-
   return (
     <React.Fragment>
       <ContextApi>
-        {isAdmin ? null : <Header />}
-        <Body>
-          <PageRouter />
-        </Body>
-        {isAdmin ? null : <Footer />}
+        <AppContainer />
       </ContextApi>
     </React.Fragment>
   );

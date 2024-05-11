@@ -2,10 +2,10 @@ import { Route, Routes } from "react-router-dom";
 import { lazy } from "react";
 import React from "react";
 import Home from "../pages/Home";
-import Dashboard from "../account/admin/scenes/dashboard/index";
+import Dashboard from "../account/admin/scenes/dashboard/Index";
 import UserManegement from "../account/admin/scenes/userManagement/UserManagement";
 import Team from "../account/admin/scenes/team/Team";
-import AdminSetting from "../account/admin/scenes/setting/index";
+import AdminSetting from "../account/admin/scenes/setting/Setting";
 import CourseManagement from "../account/admin/scenes/courseManagement/CourseManagement";
 import RequireAdminAuth from "../utils/RequireAdminAuth";
 import RequireUserAuth from "../utils/RequireUserAuth";
@@ -16,7 +16,7 @@ const LazyAbout = lazy(() => import("../pages/About"));
 const LazyContact = lazy(() => import("../pages/Contact"));
 const LazyPageNotFound = lazy(() => import("../pages/PageNoteFound"));
 const LazyAdmin = lazy(() => import("../account/admin/Admin"));
-const LazyAdminLogin = lazy(() => import("../account/admin/Admin"));
+const LazyAdminLogin = lazy(() => import("../account/admin/Login"));
 const LazyUser = lazy(() => import("../account/user/User"));
 const LazyUserLogin = lazy(() => import("../account/user/Login"));
 const LazyLearning = lazy(() => import("../account/user/MyLearning"));
@@ -98,7 +98,7 @@ const PageRouter = () => {
         }
       >
         <Route index element={<Dashboard />} />
-        <Route path="dashboard" element={<Dashboard />} />
+        {/* <Route path="dashboard" element={<Dashboard />} /> */}
         <Route path="course_management" element={<CourseManagement />} />
         <Route path="user_management" element={<UserManegement />} />
         <Route path="team" element={<Team />} />
