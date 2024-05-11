@@ -91,17 +91,20 @@ const Header = () => {
             />
           )}
           {authUser?.user ? (
-            <NavLink
-              to={"/cart"}
-              style={{ color: "black" }}
-              onClick={() => (window.location.href = "/cart")}
-            >
+            <NavLink to={"/cart"} style={{ color: "black" }}>
               <Cart />
             </NavLink>
           ) : (
             false
           )}
-          {authUser?.user ? <UserAvatar /> : false}
+
+          {authUser?.user ? (
+            <NavLink to={"/user"} style={{ color: "black" }}>
+              <UserAvatar />
+            </NavLink>
+          ) : (
+            false
+          )}
         </div>
         <div className={styles.hamburgerBox}>
           <HamburgerComp handleClick={handleMenuDisplay} value={isValue} />

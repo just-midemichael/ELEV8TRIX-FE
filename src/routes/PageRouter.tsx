@@ -111,7 +111,9 @@ const PageRouter = () => {
         path="/user"
         element={
           <React.Suspense>
-            <LazyUser />
+            <RequireUserAuth>
+              <LazyUser />
+            </RequireUserAuth>
           </React.Suspense>
         }
       />
