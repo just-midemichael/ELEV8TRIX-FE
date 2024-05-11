@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
 import ContextApi from "./utils/ContextApi";
-import Wrapper from "./Wrapper";
+import AppContainer from "./AppContainer";
 
 function App() {
   return (
     <React.Fragment>
       <ContextApi>
-        <Wrapper />
+        <AppContainer />
       </ContextApi>
     </React.Fragment>
   );
