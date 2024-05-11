@@ -6,6 +6,11 @@
   border: none !important;
 }
 
+.courseButton {
+  width: 100% !important;
+  // max-width: 600px !important;
+}
+
 @media (max-width: 1000px) {
   .container {
     padding: 50px 5% !important;
@@ -32,6 +37,7 @@
   .sideBar {
     padding: 0 !important;
     border-radius: 0 !important;
+    border: 0 !important;
   }
   .previewBox {
     border-radius: 0 !important;

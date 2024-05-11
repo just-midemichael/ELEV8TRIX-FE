@@ -5,6 +5,7 @@ import { courseReviewData } from "../data/TabData";
 import { H8 } from "../component/shared/Title/H8";
 import courses, { CourseProps } from "../data/CourseData";
 import { useParams } from "react-router-dom";
+import ColoredButton from "../component/shared/button/coloredButton/ColoredButton";
 
 const CourseDetails: React.FC = () => {
   const [course, setCourse] = useState<CourseProps | null>(null);
@@ -62,12 +63,21 @@ const CourseDetails: React.FC = () => {
 
         <section className={styles.sideBar} style={sideBar}>
           <div className={styles.priceBox} style={priceBox}>
-            <H8 title={`Price:`} />
-            &nbsp;
-            <H8
-              title={` $${course ? course.price : "0"}`}
-              style={{ fontWeight: "500" }}
-            />
+            <div style={{ display: "flex" }}>
+              <H8 title={`Price:`} />
+              &nbsp;
+              <H8
+                title={` $${course ? course.price : "0"}`}
+                style={{ fontWeight: "500" }}
+              />
+            </div>
+            <div style={{ width: "100%" }}>
+              <ColoredButton
+                className={styles.courseButton}
+                text={"Add to cart"}
+                wrapperWidth="100%"
+              />
+            </div>
           </div>
           <div className={styles.learningOutcomeBox} style={learningOutcomeBox}>
             <div style={outcomeTitle}>
@@ -176,15 +186,17 @@ const tabBox: CSSProperties = {
 
 const priceBox: CSSProperties = {
   display: "flex",
+  flexDirection: "column",
   justifyContent: "flex-start",
-  alignItems: "center",
+  alignItems: "flex-start",
   width: "100%",
   maxWidth: "500px",
   height: "fit-content",
   minHeight: "40px",
   padding: "20px 20px",
   fontWeight: "700",
-  borderBottom: "1px solid silver"
+  borderBottom: "1px solid silver",
+  gap: "20px"
 };
 
 const learningOutcomeBox: CSSProperties = {

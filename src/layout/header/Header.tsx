@@ -91,7 +91,7 @@ const Header = () => {
             />
           )}
           {authUser?.user ? (
-            <NavLink to={"/cart"} style={{ color: "black" }}>
+            <NavLink to={"/cart"} style={{ color: "#3149a1" }}>
               <Cart />
             </NavLink>
           ) : (
@@ -99,7 +99,7 @@ const Header = () => {
           )}
 
           {authUser?.user ? (
-            <NavLink to={"/user"} style={{ color: "black" }}>
+            <NavLink to={"/user"}>
               <UserAvatar />
             </NavLink>
           ) : (
