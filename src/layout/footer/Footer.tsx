@@ -29,14 +29,14 @@ const Footer = () => {
               <a className={styles.link} href="#">
                 <li className={styles.list}>Useful link 2</li>
               </a>
-              <a className={styles.link} href="#">
-                <li className={styles.list}>Useful link 3</li>
+              <a className={styles.link} href="/courses">
+                <li className={styles.list}>Courses</li>
               </a>
-              <a className={styles.link} href="#">
-                <li className={styles.list}>Useful link 4</li>
+              <a className={styles.link} href="/about">
+                <li className={styles.list}>About Us</li>
               </a>
-              <a className={styles.link} href="#">
-                <li className={styles.list}>Useful link 5</li>
+              <a className={styles.link} href="/admin">
+                <li className={styles.list}>Admin</li>
               </a>
             </div>
             <div className={styles.supportContainer}>
@@ -53,8 +53,8 @@ const Footer = () => {
               <a className={styles.link} href="#">
                 <li className={styles.list}>Support 4</li>
               </a>
-              <a className={styles.link} href="#">
-                <li className={styles.list}>Support 5</li>
+              <a className={styles.link} href="/contact">
+                <li className={styles.list}>Contact Us</li>
               </a>
             </div>
           </div>

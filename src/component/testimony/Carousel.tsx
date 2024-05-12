@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import styles from "./Carousel.module.scss";
 import ArrowCircleLeftOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutlined";
 import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOutlined";
-import { H8 } from "../shared/Title/H8";
 import {
   carouselContainer,
   carouselWrapper,
@@ -59,7 +58,7 @@ const Carousel = ({
     <div className={styles.carouselContainer} style={carouselContainer}>
       <div className={styles.carouselWrapper} style={carouselWrapper}>
         <div style={contentBox}>
-          <H8 title={`" ${content[currentSlide]} "`} />{" "}
+          <p>{content[currentSlide]}</p>
         </div>
         <div className={styles.detailBox} style={detailBox}>
           <div className={styles.avatarBox} style={avatarBox}>
@@ -88,7 +87,7 @@ const Carousel = ({
             style={{
               height: "30px",
               width: "30px",
-              color: "#3149A1",
+              color: "silver",
               fontWeight: 900
             }}
           />
@@ -102,7 +101,7 @@ const Carousel = ({
             style={{
               height: "30px",
               width: "30px",
-              color: "#3149A1",
+              color: "silver",
               fontWeight: 900
             }}
           />

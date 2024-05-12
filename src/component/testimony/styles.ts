@@ -2,7 +2,7 @@ import { CSSProperties } from "react";
 
 export const carouselContainer: CSSProperties = {
   width: "100%",
-  height: "500px",
+  height: "460px",
   position: "relative",
   padding: "20px 0",
   display: "flex",
@@ -14,8 +14,8 @@ export const carouselContainer: CSSProperties = {
 
 export const carouselWrapper: CSSProperties = {
   width: "100%",
+  maxWidth: "540px",
   height: "100%",
-  borderRadius: "30px",
   backgroundColor: "white",
   overflow: "hidden",
   padding: "40px 2%",
@@ -28,15 +28,15 @@ export const carouselWrapper: CSSProperties = {
 
 export const contentBox: CSSProperties = {
   width: "100%",
-  height: "70%",
+  height: "80%",
   overflow: "hidden",
   display: "flex",
   justifyContent: "flex-start",
   alignItems: "flex-start",
   textAlign: "left",
   padding: "10px",
-  fontSize: "1rem",
-  color: "black"
+  color: "black",
+  fontSize: "1.05rem"
 };
 
 export const detailBox: CSSProperties = {

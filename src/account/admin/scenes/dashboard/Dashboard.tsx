@@ -1,9 +1,7 @@
-import { useContexApi } from "../../../../utils/ContextApi";
+import { Box } from "@mui/material";
 
 const Dashboard = () => {
-  const authAdmin = useContexApi();
-
-  return <div>Admin Dashboard, {authAdmin.admin}</div>;
+  return <Box>Dashboard</Box>;
 };
 
 export default Dashboard;

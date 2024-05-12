@@ -2,7 +2,7 @@
   display: none !important;
 }
 
-.carouselWrapper:hover .button {
+.carouselContainer:hover .button {
   display: grid !important;
 }
 
@@ -16,6 +16,9 @@
   }
   .carouselWrapper {
     padding: 10px 2% !important;
+  }
+  .carouselWrapper:hover .button {
+    display: grid !important;
   }
   .detailBox {
     flex-direction: row !important;
