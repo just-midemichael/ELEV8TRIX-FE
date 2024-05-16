@@ -3,10 +3,16 @@ import { lazy } from "react";
 import React from "react";
 import Home from "../pages/Home";
 import Dashboard from "../account/admin/scenes/dashboard/Dashboard";
-import UserManegement from "../account/admin/scenes/userManagement/UserManagement";
+import CreateUser from "../account/admin/scenes/user/CreateUser";
+import UserManegement from "../account/admin/scenes/user/UserManagement";
+import PaymentHistory from "../account/admin/scenes/user/PaymentHistory";
 import Team from "../account/admin/scenes/team/Team";
+import TeamManagement from "../account/admin/scenes/team/TeamManagement";
+import Authorization from "../account/admin/scenes/team/Authorization";
 import AdminSetting from "../account/admin/scenes/setting/Setting";
-import CourseManagement from "../account/admin/scenes/courseManagement/CourseManagement";
+import Profile from "../account/admin/scenes/setting/Profile";
+import CreateCourse from "../account/admin/scenes/course/CreateCourse";
+import CourseManagement from "../account/admin/scenes/course/CourseManagement";
 import RequireAdminAuth from "../utils/RequireAdminAuth";
 import RequireUserAuth from "../utils/RequireUserAuth";
 import { useContexApi } from "../utils/ContextApi";
@@ -102,10 +108,16 @@ const PageRouter = () => {
         }
       >
         <Route index element={<Dashboard />} />
+        <Route path="create_course" element={<CreateCourse />} />
         <Route path="course_management" element={<CourseManagement />} />
+        <Route path="create_user" element={<CreateUser />} />
         <Route path="user_management" element={<UserManegement />} />
+        <Route path="payment_history" element={<PaymentHistory />} />
         <Route path="team" element={<Team />} />
+        <Route path="team_management" element={<TeamManagement />} />
+        <Route path="authorization" element={<Authorization />} />
         <Route path="setting" element={<AdminSetting />} />
+        <Route path="profile" element={<Profile />} />
       </Route>
 
       {/* User Routes---------------------------------------------------*/}
