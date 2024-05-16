@@ -27,7 +27,7 @@ const MenuNavItem = ({ menuText, listIcon, link }: MenuListItemProp) => {
 export default MenuNavItem;
 
 const menuListStyle: CSSProperties = {
-  height: "50px"
+  height: "46px"
 };
 
 const textStyle: CSSProperties = {
