@@ -15,6 +15,7 @@ import MenuNavItem from "../../../../component/admin/menuItem/MenuItem";
 
 const SideBar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [selected, setSelected] = useState("Dashboard");
   const authAdmin = useContexApi();
   const role = "Super Admin";
 
@@ -45,6 +46,7 @@ const SideBar = () => {
             }
           }}
         >
+          {/*Logo and Hamburger Menu */}
           <MenuItem style={menuContainer}>
             <Box style={menuWrapper}>
               {!isCollapsed && (
@@ -56,7 +58,7 @@ const SideBar = () => {
                     "&:hover": { backgroundColor: "transparent" }
                   }}
                 >
-                  <LogoColored link={"/"} />
+                  <LogoColored link={"/admin"} />
                 </IconButton>
               )}
               <IconButton
@@ -72,6 +74,7 @@ const SideBar = () => {
             </Box>
           </MenuItem>
 
+          {/*Admin Detail */}
           {!isCollapsed && (
             <Box style={userDetailContainer}>
               <Box style={profileAvatarContainr}>
@@ -104,10 +107,13 @@ const SideBar = () => {
             </Box>
           )}
 
+          {/*MENU NAVIGATION */}
           <MenuNavItem
             listIcon={<HomeOutlinedIcon />}
             menuText={"Dashboard"}
             link={"/admin"}
+            selected={selected}
+            setSelected={setSelected}
           />
 
           <Typography
@@ -120,11 +126,15 @@ const SideBar = () => {
             listIcon={<BarChartOutlinedIcon />}
             menuText={"Create Course"}
             link={"/admin/create_course"}
+            selected={selected}
+            setSelected={setSelected}
           />
           <MenuNavItem
             listIcon={<HelpOutlineOutlinedIcon />}
             menuText={"Manage Course"}
             link={"/admin/course_management"}
+            selected={selected}
+            setSelected={setSelected}
           />
 
           <Typography
@@ -137,16 +147,22 @@ const SideBar = () => {
             listIcon={<PersonOutlinedIcon />}
             menuText={"Create User"}
             link={"/admin/create_user"}
+            selected={selected}
+            setSelected={setSelected}
           />
           <MenuNavItem
             listIcon={<PeopleOutlinedIcon />}
             menuText={"Manage User"}
             link={"/admin/user_management"}
+            selected={selected}
+            setSelected={setSelected}
           />
           <MenuNavItem
             listIcon={<ReceiptOutlinedIcon />}
             menuText={"Payment History"}
             link={"/admin/payment_history"}
+            selected={selected}
+            setSelected={setSelected}
           />
 
           <Typography
@@ -159,16 +175,22 @@ const SideBar = () => {
             listIcon={<HomeOutlinedIcon />}
             menuText={"Team"}
             link={"/admin/team"}
+            selected={selected}
+            setSelected={setSelected}
           />
           <MenuNavItem
             listIcon={<PeopleOutlinedIcon />}
             menuText={"Manage Team"}
             link={"/admin/team_management"}
+            selected={selected}
+            setSelected={setSelected}
           />
           <MenuNavItem
             listIcon={<HomeOutlinedIcon />}
             menuText={"Authorization"}
             link={"/admin/authorization"}
+            selected={selected}
+            setSelected={setSelected}
           />
 
           <Typography
@@ -181,6 +203,8 @@ const SideBar = () => {
             listIcon={<PersonOutlinedIcon />}
             menuText={"Profile"}
             link={"/admin/profile"}
+            selected={selected}
+            setSelected={setSelected}
           />
         </Menu>
       </Sidebar>

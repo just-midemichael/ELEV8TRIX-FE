@@ -1,23 +1,29 @@
 import { IconButton, Typography } from "@mui/material";
-import React, { CSSProperties, useState } from "react";
+import React, { CSSProperties } from "react";
 import { MenuItem } from "react-pro-sidebar";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 interface MenuListItemProp {
   listIcon: React.ReactNode;
   menuText: string;
   link: string;
+  selected: string;
+  setSelected: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const MenuNavItem = ({ menuText, listIcon, link }: MenuListItemProp) => {
-  const [selected, setSelected] = useState("Dashboard");
-
+const MenuNavItem = ({
+  menuText,
+  listIcon,
+  link,
+  selected,
+  setSelected
+}: MenuListItemProp) => {
   return (
     <MenuItem
       active={selected === menuText}
       onClick={() => setSelected(menuText)}
       icon={<IconButton title={menuText}>{listIcon}</IconButton>}
-      component={<Link to={link} style={menuListStyle} />}
+      component={<NavLink to={link} style={menuListStyle} />}
     >
       <Typography style={textStyle}>{menuText}</Typography>
     </MenuItem>
