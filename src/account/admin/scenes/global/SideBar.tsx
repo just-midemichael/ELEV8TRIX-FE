@@ -32,15 +32,15 @@ const SideBar = () => {
       >
         <Menu
           menuItemStyles={{
-            button: ({ level, active, disabled }) => {
+            button: ({ level, active }) => {
               // only apply styles on first level (Menu) element
               if (level === 0)
                 return {
-                  color: disabled ? "#f5d9ff" : "#d359ff",
-                  backgroundColor: active ? `whitesmoke` : "transparent",
+                  color: active ? "white" : "black",
+                  backgroundColor: active ? `#3149a1` : "transparent",
                   borderRadius: 0,
                   "&:hover": {
-                    backgroundColor: active ? `whitesmoke` : "transparent"
+                    backgroundColor: active ? `#3149a1` : "transparent"
                   }
                 };
             }
