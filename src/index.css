@@ -5,6 +5,8 @@
   color: black;
   background-color: white;
   min-width: 270px;
+  height: 100%;
+  width: 100%;
 }
 
 * {

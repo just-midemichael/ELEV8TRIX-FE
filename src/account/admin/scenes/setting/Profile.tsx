@@ -1,5 +1,15 @@
+import { Box } from "@mui/material";
+import PageHeader from "../global/PageHeader";
+
 const Profile = () => {
-  return <div>Profile</div>;
+  return (
+    <Box>
+      <PageHeader
+        headerTitle={"Profile"}
+        subHeaderTitle={"Update profile details"}
+      />
+    </Box>
+  );
 };
 
 export default Profile;

@@ -1,5 +1,6 @@
 #root {
-  max-width: 1880px;
+  max-width: 2000px;
+  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -8,4 +9,22 @@
 
 * {
   box-sizing: border-box;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 10px;
+}
+/* Scroll bar Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+}
+/* Scroll bar handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+/* Scroll bar handle hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
 }

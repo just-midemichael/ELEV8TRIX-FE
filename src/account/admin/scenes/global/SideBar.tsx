@@ -1,4 +1,4 @@
-import { Menu, MenuItem, Sidebar } from "react-pro-sidebar";
+import { Menu, Sidebar } from "react-pro-sidebar";
 import { Box, IconButton, Typography } from "@mui/material";
 import { CSSProperties, useState } from "react";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
@@ -20,7 +20,7 @@ const SideBar = () => {
   const role = "Super Admin";
 
   return (
-    <Box style={container}>
+    <Box>
       <Sidebar
         collapsed={isCollapsed}
         rootStyles={{
@@ -28,7 +28,7 @@ const SideBar = () => {
           position: "relative",
           height: "100%"
         }}
-        backgroundColor={``}
+        backgroundColor={`white`}
       >
         <Menu
           menuItemStyles={{
@@ -37,46 +37,45 @@ const SideBar = () => {
               if (level === 0)
                 return {
                   color: disabled ? "#f5d9ff" : "#d359ff",
-                  backgroundColor: active ? `#119ee3` : "transparent",
-                  borderRadius: "0",
+                  backgroundColor: active ? `whitesmoke` : "transparent",
+                  borderRadius: 0,
                   "&:hover": {
-                    backgroundColor: active ? `#119ee3` : "transparent"
+                    backgroundColor: active ? `whitesmoke` : "transparent"
                   }
                 };
             }
           }}
         >
           {/*Logo and Hamburger Menu */}
-          <MenuItem style={menuContainer}>
-            <Box style={menuWrapper}>
-              {!isCollapsed && (
-                <IconButton
-                  href="/admin"
-                  style={iconStyle}
-                  sx={{
-                    borderRadius: "0",
-                    "&:hover": { backgroundColor: "transparent" }
-                  }}
-                >
-                  <LogoColored link={"/admin"} />
-                </IconButton>
-              )}
+
+          <Box style={menuWrapper}>
+            {!isCollapsed && (
               <IconButton
-                onClick={() => setIsCollapsed(!isCollapsed)}
+                href="/admin"
                 style={iconStyle}
                 sx={{
-                  width: isCollapsed ? "100%" : "fit-content",
-                  borderRadius: isCollapsed ? "0" : "100%"
+                  borderRadius: "0",
+                  "&:hover": { backgroundColor: "transparent" }
                 }}
               >
-                <MenuOutlinedIcon />
+                <LogoColored link={"/admin"} />
               </IconButton>
-            </Box>
-          </MenuItem>
+            )}
+            <IconButton
+              onClick={() => setIsCollapsed(!isCollapsed)}
+              style={iconStyle}
+              sx={{
+                width: isCollapsed ? "100%" : "fit-content",
+                borderRadius: isCollapsed ? "0" : "100%"
+              }}
+            >
+              <MenuOutlinedIcon />
+            </IconButton>
+          </Box>
 
           {/*Admin Detail */}
           {!isCollapsed && (
-            <Box style={userDetailContainer}>
+            <Box style={adminDetailContainer}>
               <Box style={profileAvatarContainr}>
                 {/* Admin Profile picture */}
                 <img
@@ -85,13 +84,14 @@ const SideBar = () => {
                   style={profileAvatar}
                 />
               </Box>
+
               {/* Admin name and designation */}
               <Box textAlign="left">
                 <Typography
                   fontWeight={700}
                   fontSize={"1.1rem"}
                   textAlign={"left"}
-                  color={"white"}
+                  color={"black"}
                 >
                   {authAdmin.admin}
                 </Typography>
@@ -99,113 +99,135 @@ const SideBar = () => {
                   fontWeight={500}
                   fontSize={"0.8rem"}
                   textAlign={"left"}
-                  color={"silver"}
+                  color={"grey"}
                 >
                   {role}
                 </Typography>
               </Box>
             </Box>
           )}
+          {/*-------------------------*/}
+          {/*Admin Avatar*/}
+          {isCollapsed && (
+            <MenuNavItem
+              listIcon={
+                <img
+                  src={`${adminImage}`}
+                  alt={`${authAdmin.admin}`}
+                  style={profileAvatar}
+                  title={`${authAdmin.admin}`}
+                />
+              }
+              menuText={""}
+              link={"/admin/profile"}
+              selected={selected}
+              setSelected={setSelected}
+            />
+          )}
+          {/*-------------------------*/}
 
           {/*MENU NAVIGATION */}
-          <MenuNavItem
-            listIcon={<HomeOutlinedIcon />}
-            menuText={"Dashboard"}
-            link={"/admin"}
-            selected={selected}
-            setSelected={setSelected}
-          />
+          <Box style={{ overflowX: "hidden" }}>
+            <MenuNavItem
+              listIcon={<HomeOutlinedIcon />}
+              menuText={"Dashboard"}
+              link={"/admin"}
+              selected={selected}
+              setSelected={setSelected}
+            />
 
-          <Typography
-            style={categoryStyle}
-            textAlign={!isCollapsed ? "left" : "center"}
-          >
-            Course
-          </Typography>
-          <MenuNavItem
-            listIcon={<BarChartOutlinedIcon />}
-            menuText={"Create Course"}
-            link={"/admin/create_course"}
-            selected={selected}
-            setSelected={setSelected}
-          />
-          <MenuNavItem
-            listIcon={<HelpOutlineOutlinedIcon />}
-            menuText={"Manage Course"}
-            link={"/admin/course_management"}
-            selected={selected}
-            setSelected={setSelected}
-          />
+            <Typography
+              style={categoryStyle}
+              textAlign={!isCollapsed ? "left" : "center"}
+            >
+              Course
+            </Typography>
+            <MenuNavItem
+              listIcon={<BarChartOutlinedIcon />}
+              menuText={"Create Course"}
+              link={"/admin/create_course"}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <MenuNavItem
+              listIcon={<HelpOutlineOutlinedIcon />}
+              menuText={"Manage Course"}
+              link={"/admin/course_management"}
+              selected={selected}
+              setSelected={setSelected}
+            />
 
-          <Typography
-            style={categoryStyle}
-            textAlign={!isCollapsed ? "left" : "center"}
-          >
-            User
-          </Typography>
-          <MenuNavItem
-            listIcon={<PersonOutlinedIcon />}
-            menuText={"Create User"}
-            link={"/admin/create_user"}
-            selected={selected}
-            setSelected={setSelected}
-          />
-          <MenuNavItem
-            listIcon={<PeopleOutlinedIcon />}
-            menuText={"Manage User"}
-            link={"/admin/user_management"}
-            selected={selected}
-            setSelected={setSelected}
-          />
-          <MenuNavItem
-            listIcon={<ReceiptOutlinedIcon />}
-            menuText={"Payment History"}
-            link={"/admin/payment_history"}
-            selected={selected}
-            setSelected={setSelected}
-          />
+            <Typography
+              style={categoryStyle}
+              textAlign={!isCollapsed ? "left" : "center"}
+            >
+              User
+            </Typography>
+            <MenuNavItem
+              listIcon={<PersonOutlinedIcon />}
+              menuText={"Create User"}
+              link={"/admin/create_user"}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <MenuNavItem
+              listIcon={<PeopleOutlinedIcon />}
+              menuText={"Manage User"}
+              link={"/admin/user_management"}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <MenuNavItem
+              listIcon={<ReceiptOutlinedIcon />}
+              menuText={"Payment History"}
+              link={"/admin/payment_history"}
+              selected={selected}
+              setSelected={setSelected}
+            />
 
-          <Typography
-            style={categoryStyle}
-            textAlign={!isCollapsed ? "left" : "center"}
-          >
-            Team
-          </Typography>
-          <MenuNavItem
-            listIcon={<PersonOutlinedIcon />}
-            menuText={"Team"}
-            link={"/admin/team"}
-            selected={selected}
-            setSelected={setSelected}
-          />
-          <MenuNavItem
-            listIcon={<PeopleOutlinedIcon />}
-            menuText={"Manage Team"}
-            link={"/admin/team_management"}
-            selected={selected}
-            setSelected={setSelected}
-          />
-          <MenuNavItem
-            listIcon={<HelpOutlineOutlinedIcon />}
-            menuText={"Authorization"}
-            link={"/admin/authorization"}
-            selected={selected}
-            setSelected={setSelected}
-          />
+            <Typography
+              style={categoryStyle}
+              textAlign={!isCollapsed ? "left" : "center"}
+            >
+              Team
+            </Typography>
+            <MenuNavItem
+              listIcon={<PersonOutlinedIcon />}
+              menuText={"Team"}
+              link={"/admin/team"}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <MenuNavItem
+              listIcon={<PeopleOutlinedIcon />}
+              menuText={"Manage Team"}
+              link={"/admin/team_management"}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <MenuNavItem
+              listIcon={<HelpOutlineOutlinedIcon />}
+              menuText={"Authorization"}
+              link={"/admin/authorization"}
+              selected={selected}
+              setSelected={setSelected}
+            />
 
-          <Typography
-            style={categoryStyle}
-            textAlign={!isCollapsed ? "left" : "center"}
-          >
-            Setting
-          </Typography>
-          <MenuNavItem
-            listIcon={<PersonOutlinedIcon />}
-            menuText={"Profile"}
-            link={"/admin/profile"}
-            selected={selected}
-            setSelected={setSelected}
-          />
+            <Typography
+              style={categoryStyle}
+              textAlign={!isCollapsed ? "left" : "center"}
+            >
+              Setting
+            </Typography>
+            <MenuNavItem
+              listIcon={<PersonOutlinedIcon />}
+              menuText={"Profile"}
+              link={"/admin/profile"}
+              selected={selected}
+              setSelected={setSelected}
+            />
+          </Box>
+          {/*-------------------------*/}
         </Menu>
       </Sidebar>
     </Box>
@@ -214,25 +236,13 @@ const SideBar = () => {
 
 export default SideBar;
 
-const container: CSSProperties = {
-  height: "100%",
-  backgroundColor: "white",
-  padding: "10px 5px",
-  borderRight: "1px solid silver"
-};
-
-const menuContainer: CSSProperties = {
-  width: "100%",
-  height: "55px",
-  padding: "0 10px"
-};
-
 const menuWrapper: CSSProperties = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  height: "100%",
-  width: "100%"
+  height: "55px",
+  width: "100%",
+  padding: "0 10px"
 };
 
 const iconStyle: CSSProperties = {
@@ -242,7 +252,7 @@ const iconStyle: CSSProperties = {
   padding: "4px"
 };
 
-const userDetailContainer: CSSProperties = {
+const adminDetailContainer: CSSProperties = {
   display: "flex",
   justifyContent: "flex-start",
   alignItems: "center",

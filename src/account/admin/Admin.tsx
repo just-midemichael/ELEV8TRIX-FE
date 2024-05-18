@@ -27,13 +27,15 @@ export default Admin;
 
 const dashboardContainer: CSSProperties = {
   display: "flex",
-  height: "100dvh",
+  width: "100%",
+  height: "100vh",
   position: "relative"
 };
 
 const mainContainer: CSSProperties = {
   height: "100%",
   width: "100%",
-  backgroundColor: "white",
-  position: "relative"
+  position: "relative",
+  overflowX: "hidden",
+  backgroundColor: "white"
 };

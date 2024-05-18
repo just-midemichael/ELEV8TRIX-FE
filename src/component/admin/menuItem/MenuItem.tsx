@@ -24,7 +24,7 @@ const MenuNavItem = ({
       onClick={() => setSelected(menuText)}
       icon={<IconButton title={menuText}>{listIcon}</IconButton>}
       component={
-        <NavLink to={link} style={{ height: "46px", color: "black" }} />
+        <NavLink to={link} style={{ height: "50px", color: "black" }} />
       }
     >
       <Typography style={textStyle}>{menuText}</Typography>
