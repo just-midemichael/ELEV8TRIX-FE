@@ -172,7 +172,7 @@ const SideBar = () => {
             Team
           </Typography>
           <MenuNavItem
-            listIcon={<HomeOutlinedIcon />}
+            listIcon={<PersonOutlinedIcon />}
             menuText={"Team"}
             link={"/admin/team"}
             selected={selected}
@@ -186,7 +186,7 @@ const SideBar = () => {
             setSelected={setSelected}
           />
           <MenuNavItem
-            listIcon={<HomeOutlinedIcon />}
+            listIcon={<HelpOutlineOutlinedIcon />}
             menuText={"Authorization"}
             link={"/admin/authorization"}
             selected={selected}
