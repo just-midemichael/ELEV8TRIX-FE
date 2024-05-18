@@ -37,10 +37,10 @@ const SideBar = () => {
               if (level === 0)
                 return {
                   color: disabled ? "#f5d9ff" : "#d359ff",
-                  backgroundColor: active ? `silver` : "transparent",
+                  backgroundColor: active ? `#119ee3` : "transparent",
                   borderRadius: "0",
                   "&:hover": {
-                    backgroundColor: active ? `silver` : "transparent"
+                    backgroundColor: active ? `#119ee3` : "transparent"
                   }
                 };
             }
@@ -216,8 +216,9 @@ export default SideBar;
 
 const container: CSSProperties = {
   height: "100%",
-  backgroundColor: "grey",
-  padding: "10px 5px"
+  backgroundColor: "white",
+  padding: "10px 5px",
+  borderRight: "1px solid silver"
 };
 
 const menuContainer: CSSProperties = {
@@ -268,7 +269,7 @@ const profileAvatar: CSSProperties = {
 };
 
 const categoryStyle: CSSProperties = {
-  color: "silver",
+  color: "black",
   margin: "5px 0 0 0",
   fontSize: "0.9rem",
   padding: "10px 20px 0 20px"

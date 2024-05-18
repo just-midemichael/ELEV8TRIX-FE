@@ -23,7 +23,9 @@ const MenuNavItem = ({
       active={selected === menuText}
       onClick={() => setSelected(menuText)}
       icon={<IconButton title={menuText}>{listIcon}</IconButton>}
-      component={<NavLink to={link} style={menuListStyle} />}
+      component={
+        <NavLink to={link} style={{ height: "46px", color: "black" }} />
+      }
     >
       <Typography style={textStyle}>{menuText}</Typography>
     </MenuItem>
@@ -32,14 +34,9 @@ const MenuNavItem = ({
 
 export default MenuNavItem;
 
-const menuListStyle: CSSProperties = {
-  height: "46px"
-};
-
 const textStyle: CSSProperties = {
   width: "100%",
   textAlign: "left",
-  color: "white",
   display: "flex",
   fontSize: "0.85rem"
 };
