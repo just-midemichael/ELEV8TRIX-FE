@@ -31,6 +31,7 @@ const SideBar = () => {
         backgroundColor={`white`}
       >
         <Menu
+          style={{ paddingBottom: "100px" }}
           menuItemStyles={{
             button: ({ level, active }) => {
               // only apply styles on first level (Menu) element
