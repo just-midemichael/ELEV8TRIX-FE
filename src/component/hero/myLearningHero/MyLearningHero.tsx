@@ -18,8 +18,6 @@ const MyLearningHero = () => {
       : greetTime >= 18 && greetTime < 24
         ? "Good Evening"
         : "Good Morning";
-
-  console.log(greetTime);
   const authUser = useContexApi();
 
   return (
