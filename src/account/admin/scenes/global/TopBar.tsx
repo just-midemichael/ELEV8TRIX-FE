@@ -30,7 +30,7 @@ const TopBar = () => {
         </IconButton>
       </Box>
 
-      <Box display={"flex"} p={"0 15px 0 0"}>
+      <Box display={"flex"} p={"0 10px 0 0"}>
         <IconButton
           onClick={colorMode.toggleColorMode}
           title="Color Mode"

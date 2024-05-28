@@ -27,5 +27,7 @@ export default PageHeader;
 const headerContainer: CSSProperties = {
   padding: "15px 10px",
   textAlign: "left",
-  backdropFilter: "blur(1px)"
+  backdropFilter: "blur(2px)",
+  position: "sticky",
+  top: "60px"
 };

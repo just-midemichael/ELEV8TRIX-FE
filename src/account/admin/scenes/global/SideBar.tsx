@@ -3,12 +3,15 @@ import { Avatar, Box, IconButton, Typography, useTheme } from "@mui/material";
 import { CSSProperties, useState } from "react";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import LogoColored from "../../../../component/logo/LogoColored";
+import PaymentsOutlinedIcon from "@mui/icons-material/PaymentsOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+import LibraryAddOutlinedIcon from "@mui/icons-material/LibraryAddOutlined";
+import ManageAccountsOutlinedIcon from "@mui/icons-material/ManageAccountsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
-import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
+import PersonAddAlt1OutlinedIcon from "@mui/icons-material/PersonAddAlt1Outlined";
+import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
+import PaddingOutlinedIcon from "@mui/icons-material/PaddingOutlined";
 import { useContexApi } from "../../../../utils/ContextApi";
 import adminImage from "/mentorImage2.png";
 import MenuNavItem from "../../../../component/admin/menuItem/MenuItem";
@@ -157,14 +160,14 @@ const SideBar = () => {
               Course
             </Typography>
             <MenuNavItem
-              listIcon={<BarChartOutlinedIcon />}
+              listIcon={<LibraryAddOutlinedIcon />}
               menuText={"Create Course"}
               link={"/admin/create_course"}
               selected={selected}
               setSelected={setSelected}
             />
             <MenuNavItem
-              listIcon={<HelpOutlineOutlinedIcon />}
+              listIcon={<PaddingOutlinedIcon />}
               menuText={"Manage Course"}
               link={"/admin/course_management"}
               selected={selected}
@@ -179,7 +182,7 @@ const SideBar = () => {
               User
             </Typography>
             <MenuNavItem
-              listIcon={<PersonOutlinedIcon />}
+              listIcon={<PersonAddAlt1OutlinedIcon />}
               menuText={"Create User"}
               link={"/admin/create_user"}
               selected={selected}
@@ -193,7 +196,7 @@ const SideBar = () => {
               setSelected={setSelected}
             />
             <MenuNavItem
-              listIcon={<ReceiptOutlinedIcon />}
+              listIcon={<PaymentsOutlinedIcon />}
               menuText={"Payment History"}
               link={"/admin/payment_history"}
               selected={selected}
@@ -222,7 +225,7 @@ const SideBar = () => {
               setSelected={setSelected}
             />
             <MenuNavItem
-              listIcon={<HelpOutlineOutlinedIcon />}
+              listIcon={<AdminPanelSettingsOutlinedIcon />}
               menuText={"Authorization"}
               link={"/admin/authorization"}
               selected={selected}
@@ -237,7 +240,7 @@ const SideBar = () => {
               Setting
             </Typography>
             <MenuNavItem
-              listIcon={<PersonOutlinedIcon />}
+              listIcon={<ManageAccountsOutlinedIcon />}
               menuText={"Profile"}
               link={"/admin/profile"}
               selected={selected}
