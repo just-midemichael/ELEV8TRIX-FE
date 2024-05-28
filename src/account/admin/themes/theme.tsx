@@ -1,11 +1,12 @@
-import { createTheme } from "@mui/material/styles";
+import { Theme, createTheme } from "@mui/material/styles";
 import { useMemo, useState } from "react";
 import { themeSettings } from "./themeSettings";
 
 export const useMode = () => {
   const [mode, setMode] = useState("light");
 
-  const colorMode = useMemo(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const colorMode = useMemo<Theme | any>(
     () => ({
       toggleColorMode: () => {
         setMode((prev) => (prev === "light" ? "dark" : "light"));
@@ -13,7 +14,7 @@ export const useMode = () => {
     }),
     []
   );
-  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+  const theme = useMemo<Theme>(() => createTheme(themeSettings(mode)), [mode]);
 
   return [theme, colorMode];
 };
