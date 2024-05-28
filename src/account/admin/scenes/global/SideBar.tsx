@@ -1,5 +1,5 @@
 import { Menu, Sidebar } from "react-pro-sidebar";
-import { Box, IconButton, Typography } from "@mui/material";
+import { Avatar, Box, IconButton, Typography, useTheme } from "@mui/material";
 import { CSSProperties, useState } from "react";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import LogoColored from "../../../../component/logo/LogoColored";
@@ -12,12 +12,17 @@ import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import { useContexApi } from "../../../../utils/ContextApi";
 import adminImage from "/mentorImage2.png";
 import MenuNavItem from "../../../../component/admin/menuItem/MenuItem";
+import { tokens } from "../../themes/tokens";
+import Logo from "../../../../component/logo/Logo";
 
 const SideBar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
   const authAdmin = useContexApi();
   const role = "Super Admin";
+
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
 
   return (
     <Box>
@@ -28,7 +33,7 @@ const SideBar = () => {
           position: "relative",
           height: "100%"
         }}
-        backgroundColor={`white`}
+        backgroundColor={`${colors.primary[0]}`}
       >
         <Menu
           style={{ paddingBottom: "100px" }}
@@ -37,11 +42,13 @@ const SideBar = () => {
               // only apply styles on first level (Menu) element
               if (level === 0)
                 return {
-                  color: active ? "white" : "black",
+                  color: active ? `white` : `${colors.grey[100]}`,
                   backgroundColor: active ? `#3149a1` : "transparent",
                   borderRadius: 0,
                   "&:hover": {
-                    backgroundColor: active ? `#3149a1` : "transparent"
+                    backgroundColor: active
+                      ? "#3149a1"
+                      : `${colors.primary[400]}`
                   }
                 };
             }
@@ -59,7 +66,11 @@ const SideBar = () => {
                   "&:hover": { backgroundColor: "transparent" }
                 }}
               >
-                <LogoColored link={"/admin"} />
+                {theme.palette.mode === "dark" ? (
+                  <Logo link={"/admin"} style={{ maxWidth: "100px" }} />
+                ) : (
+                  <LogoColored link={"/admin"} style={{ maxWidth: "100px" }} />
+                )}
               </IconButton>
             )}
             <IconButton
@@ -79,10 +90,11 @@ const SideBar = () => {
             <Box style={adminDetailContainer}>
               <Box style={profileAvatarContainr}>
                 {/* Admin Profile picture */}
-                <img
+                <Avatar
                   src={`${adminImage}`}
                   alt={`${authAdmin.admin}`}
                   style={profileAvatar}
+                  title={`${authAdmin.admin}`}
                 />
               </Box>
 
@@ -92,7 +104,7 @@ const SideBar = () => {
                   fontWeight={700}
                   fontSize={"1.1rem"}
                   textAlign={"left"}
-                  color={"black"}
+                  color={colors.grey[100]}
                 >
                   {authAdmin.admin}
                 </Typography>
@@ -100,7 +112,7 @@ const SideBar = () => {
                   fontWeight={500}
                   fontSize={"0.8rem"}
                   textAlign={"left"}
-                  color={"grey"}
+                  color={`${colors.blueAccent[500]}`}
                 >
                   {role}
                 </Typography>
@@ -112,7 +124,7 @@ const SideBar = () => {
           {isCollapsed && (
             <MenuNavItem
               listIcon={
-                <img
+                <Avatar
                   src={`${adminImage}`}
                   alt={`${authAdmin.admin}`}
                   style={profileAvatar}
@@ -139,6 +151,7 @@ const SideBar = () => {
 
             <Typography
               style={categoryStyle}
+              color={colors.grey[300]}
               textAlign={!isCollapsed ? "left" : "center"}
             >
               Course
@@ -160,6 +173,7 @@ const SideBar = () => {
 
             <Typography
               style={categoryStyle}
+              color={colors.grey[300]}
               textAlign={!isCollapsed ? "left" : "center"}
             >
               User
@@ -188,6 +202,7 @@ const SideBar = () => {
 
             <Typography
               style={categoryStyle}
+              color={colors.grey[300]}
               textAlign={!isCollapsed ? "left" : "center"}
             >
               Team
@@ -216,6 +231,7 @@ const SideBar = () => {
 
             <Typography
               style={categoryStyle}
+              color={colors.grey[300]}
               textAlign={!isCollapsed ? "left" : "center"}
             >
               Setting
@@ -241,7 +257,7 @@ const menuWrapper: CSSProperties = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  height: "55px",
+  height: "70px",
   width: "100%",
   padding: "0 10px"
 };
@@ -280,7 +296,6 @@ const profileAvatar: CSSProperties = {
 };
 
 const categoryStyle: CSSProperties = {
-  color: "black",
   margin: "5px 0 0 0",
   fontSize: "0.9rem",
   padding: "10px 20px 0 20px"

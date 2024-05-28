@@ -33,7 +33,7 @@ const Courses = () => {
         />
         <Tab
           tabs={categorySoftwareEngineeringData}
-          tabTitle={"Software Engineer"}
+          tabTitle={"Software Engineering"}
           labelClassName={styles.tabLabel}
         />
         <Tab

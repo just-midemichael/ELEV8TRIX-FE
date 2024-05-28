@@ -3,23 +3,29 @@ import SideBar from "./scenes/global/SideBar";
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import TopBar from "./scenes/global/TopBar";
 import { CSSProperties } from "react";
+import { ColorModeContext } from "./themes/colorModeContext";
+import { useMode } from "./themes/theme";
 
 // Set the page title
 const pageTitle = () => (document.title = "Admin Dashboard");
 pageTitle();
 
 const Admin = () => {
+  const [theme, colorMode] = useMode();
+
   return (
-    <ThemeProvider theme={""}>
-      <CssBaseline />
-      <Box style={dashboardContainer}>
-        <SideBar />
-        <main style={mainContainer}>
-          <TopBar />
-          <Outlet />
-        </main>
-      </Box>
-    </ThemeProvider>
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Box style={dashboardContainer}>
+          <SideBar />
+          <Box style={mainContainer}>
+            <TopBar />
+            <Outlet />
+          </Box>
+        </Box>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
   );
 };
 
@@ -37,5 +43,5 @@ const mainContainer: CSSProperties = {
   width: "100%",
   position: "relative",
   overflowX: "hidden",
-  backgroundColor: "white"
+  backgroundColor: "whiteSmoke"
 };

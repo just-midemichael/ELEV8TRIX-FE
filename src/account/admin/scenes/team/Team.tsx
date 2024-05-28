@@ -1,10 +1,18 @@
-import { Box } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import PageHeader from "../global/PageHeader";
+import { tokens } from "../../themes/tokens";
+
+// Set the page title
+const pageTitle = () => (document.title = "Team");
+pageTitle();
 
 const Team = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
   return (
-    <Box>
-      <PageHeader headerTitle={"Team"} subHeaderTitle={"View team"} />
+    <Box height={"100%"} bgcolor={`${colors.primary[400]}`}>
+      <PageHeader headerTitle={"Team"} subHeaderTitle={"View team members"} />
     </Box>
   );
 };
