@@ -17,6 +17,7 @@ import adminImage from "/mentorImage2.png";
 import MenuNavItem from "../../../../component/admin/menuItem/MenuItem";
 import { tokens } from "../../themes/tokens";
 import Logo from "../../../../component/logo/Logo";
+import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 
 const SideBar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -57,13 +58,14 @@ const SideBar = () => {
             }
           }}
         >
+          {/*Menu Container*/}
           <Box
             position={"sticky"}
             top={0}
             zIndex={30}
             bgcolor={`${colors.primary[0]}`}
             style={{ backdropFilter: "blur(5px)" }}
-            paddingBottom={"10px"}
+            paddingBottom={"20px"}
           >
             {/*Logo and Hamburger Menu */}
             <Box style={menuWrapper}>
@@ -130,6 +132,25 @@ const SideBar = () => {
                     {role}
                   </Typography>
                 </Box>
+              </Box>
+            )}
+            {!isCollapsed && (
+              <Box style={logoutStyle}>
+                <IconButton
+                  sx={{ "&:hover": { backgroundColor: "transparent" } }}
+                  onClick={() => authAdmin.logoutAdmin()}
+                >
+                  <ExitToAppOutlinedIcon
+                    sx={{ width: "20px", height: "20px" }}
+                  />
+                </IconButton>
+                <Typography
+                  fontSize={"0.8rem"}
+                  sx={{ cursor: "pointer" }}
+                  onClick={() => authAdmin.logoutAdmin()}
+                >
+                  Log-out
+                </Typography>
               </Box>
             )}
             {/*-------------------------*/}
@@ -288,7 +309,6 @@ const adminDetailContainer: CSSProperties = {
   justifyContent: "flex-start",
   alignItems: "center",
   padding: "5px 10px",
-  margin: "0 0 20px 0",
   gap: "10px",
   cursor: "pointer",
   textTransform: "capitalize"
@@ -307,6 +327,14 @@ const profileAvatar: CSSProperties = {
   width: "36px",
   height: "36px",
   backgroundColor: "sliver"
+};
+
+const logoutStyle: CSSProperties = {
+  display: "flex",
+  justifyContent: "flex-start",
+  alignItems: "center",
+  paddingLeft: "55px",
+  height: "30px"
 };
 
 const categoryStyle: CSSProperties = {
