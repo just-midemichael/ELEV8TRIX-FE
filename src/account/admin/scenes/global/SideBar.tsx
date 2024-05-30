@@ -57,93 +57,104 @@ const SideBar = () => {
             }
           }}
         >
-          {/*Logo and Hamburger Menu */}
-
-          <Box style={menuWrapper}>
-            {!isCollapsed && (
+          <Box
+            position={"sticky"}
+            top={0}
+            zIndex={30}
+            bgcolor={`${colors.primary[0]}`}
+            style={{ backdropFilter: "blur(5px)" }}
+            paddingBottom={"10px"}
+          >
+            {/*Logo and Hamburger Menu */}
+            <Box style={menuWrapper}>
+              {!isCollapsed && (
+                <IconButton
+                  href="/admin"
+                  style={iconStyle}
+                  sx={{
+                    borderRadius: "0",
+                    "&:hover": { backgroundColor: "transparent" }
+                  }}
+                >
+                  {theme.palette.mode === "dark" ? (
+                    <Logo link={"/admin"} style={{ maxWidth: "100px" }} />
+                  ) : (
+                    <LogoColored
+                      link={"/admin"}
+                      style={{ maxWidth: "100px" }}
+                    />
+                  )}
+                </IconButton>
+              )}
               <IconButton
-                href="/admin"
+                onClick={() => setIsCollapsed(!isCollapsed)}
                 style={iconStyle}
                 sx={{
-                  borderRadius: "0",
-                  "&:hover": { backgroundColor: "transparent" }
+                  width: isCollapsed ? "100%" : "fit-content",
+                  borderRadius: isCollapsed ? "0" : "100%"
                 }}
               >
-                {theme.palette.mode === "dark" ? (
-                  <Logo link={"/admin"} style={{ maxWidth: "100px" }} />
-                ) : (
-                  <LogoColored link={"/admin"} style={{ maxWidth: "100px" }} />
-                )}
+                <MenuOutlinedIcon />
               </IconButton>
-            )}
-            <IconButton
-              onClick={() => setIsCollapsed(!isCollapsed)}
-              style={iconStyle}
-              sx={{
-                width: isCollapsed ? "100%" : "fit-content",
-                borderRadius: isCollapsed ? "0" : "100%"
-              }}
-            >
-              <MenuOutlinedIcon />
-            </IconButton>
-          </Box>
-
-          {/*Admin Detail */}
-          {!isCollapsed && (
-            <Box style={adminDetailContainer}>
-              <Box style={profileAvatarContainr}>
-                {/* Admin Profile picture */}
-                <Avatar
-                  src={`${adminImage}`}
-                  alt={`${authAdmin.admin}`}
-                  style={profileAvatar}
-                  title={`${authAdmin.admin}`}
-                />
-              </Box>
-
-              {/* Admin name and designation */}
-              <Box textAlign="left">
-                <Typography
-                  fontWeight={700}
-                  fontSize={"1.1rem"}
-                  textAlign={"left"}
-                  color={colors.grey[100]}
-                >
-                  {authAdmin.admin}
-                </Typography>
-                <Typography
-                  fontWeight={500}
-                  fontSize={"0.8rem"}
-                  textAlign={"left"}
-                  color={`${colors.blueAccent[500]}`}
-                >
-                  {role}
-                </Typography>
-              </Box>
             </Box>
-          )}
-          {/*-------------------------*/}
-          {/*Admin Avatar*/}
-          {isCollapsed && (
-            <MenuNavItem
-              listIcon={
-                <Avatar
-                  src={`${adminImage}`}
-                  alt={`${authAdmin.admin}`}
-                  style={profileAvatar}
-                  title={`${authAdmin.admin}`}
-                />
-              }
-              menuText={""}
-              link={"/admin/profile"}
-              selected={selected}
-              setSelected={setSelected}
-            />
-          )}
+
+            {/*Admin Detail */}
+            {!isCollapsed && (
+              <Box style={adminDetailContainer}>
+                <Box style={profileAvatarContainr}>
+                  {/* Admin Profile picture */}
+                  <Avatar
+                    src={`${adminImage}`}
+                    alt={`${authAdmin.admin}`}
+                    style={profileAvatar}
+                    title={`${authAdmin.admin}`}
+                  />
+                </Box>
+
+                {/* Admin name and designation */}
+                <Box textAlign="left">
+                  <Typography
+                    fontWeight={700}
+                    fontSize={"1.1rem"}
+                    textAlign={"left"}
+                    color={colors.grey[100]}
+                  >
+                    {authAdmin.admin}
+                  </Typography>
+                  <Typography
+                    fontWeight={500}
+                    fontSize={"0.8rem"}
+                    textAlign={"left"}
+                    color={`${colors.blueAccent[500]}`}
+                  >
+                    {role}
+                  </Typography>
+                </Box>
+              </Box>
+            )}
+            {/*-------------------------*/}
+            {/*Admin Avatar*/}
+            {isCollapsed && (
+              <MenuNavItem
+                listIcon={
+                  <Avatar
+                    src={`${adminImage}`}
+                    alt={`${authAdmin.admin}`}
+                    style={profileAvatar}
+                    title={`${authAdmin.admin}`}
+                  />
+                }
+                menuText={""}
+                link={"/admin/profile"}
+                selected={selected}
+                setSelected={setSelected}
+              />
+            )}
+          </Box>
           {/*-------------------------*/}
 
           {/*MENU NAVIGATION */}
-          <Box style={{ overflowX: "hidden" }}>
+          <Box style={{ overflowX: "hidden" }} zIndex={20}>
             <MenuNavItem
               listIcon={<HomeOutlinedIcon />}
               menuText={"Dashboard"}
