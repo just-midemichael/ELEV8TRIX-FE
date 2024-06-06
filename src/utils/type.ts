@@ -13,3 +13,18 @@ export type UserContextProps = {
 export type UserContextProviderProps = {
   children: React.ReactNode;
 };
+
+export interface adminProps {
+  admin_id: number;
+  email: string;
+  password: string;
+  firstname: string;
+  middlename?: string;
+  lastname: string;
+  role: string;
+  role_level: number;
+  image: string;
+  username: string;
+  date_created: string;
+  last_login: string;
+}

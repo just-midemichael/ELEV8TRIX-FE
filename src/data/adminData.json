@@ -1,0 +1,60 @@
+{
+  "admins": [
+    {
+      "admin_id": 1,
+      "email": "superadmin@elev8trix.com",
+      "password": "Elev8*123#",
+      "firstname": "elev8trix",
+      "middlename": "",
+      "lastname": "admin",
+      "role": "superadmin",
+      "role_level": "1",
+      "image": ".../.../public/mentorImage1.png",
+      "username": "elev8",
+      "date_created": "1/1/2024",
+      "last_login": "6/6/2024"
+    },
+    {
+      "admin_id": 2,
+      "email": "olumide.ojo@elev8trix.com",
+      "password": "Olu4000&44",
+      "firstname": "olumide",
+      "middlename": "michael",
+      "lastname": "ojo",
+      "role": "topadmin",
+      "role_level": "2",
+      "image": ".../.../public/mentorImage2.png",
+      "username": "just_midemichael",
+      "date_created": "2/1/2024",
+      "last_login": "6/6/2024"
+    },
+    {
+      "admin_id": 3,
+      "email": "jane.ade@elev8trix.com",
+      "password": "JAne@7UP#1",
+      "firstname": "jane",
+      "middlename": "tope",
+      "lastname": "Ade",
+      "role": "publisher",
+      "role_level": "3",
+      "image": ".../.../public/mentorImage3.png",
+      "username": "janetop",
+      "date_created": "3/1/2024",
+      "last_login": "6/6/2024"
+    },
+    {
+      "admin_id": 4,
+      "email": "john.isaac@elev8trix.com",
+      "password": "John123@4!",
+      "firstname": "john",
+      "middlename": "uche",
+      "lastname": "isaac",
+      "role": "reader",
+      "role_level": "4",
+      "image": ".../.../public/mentorImage4.png",
+      "username": "johndeo1",
+      "date_created": "4/1/2024",
+      "last_login": "6/6/2024"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 type buttonProps = {
   text: React.ReactNode;
-  link: string;
+  link?: string;
   target?: string;
   wrapperWidth?: string;
   className?: string | undefined;

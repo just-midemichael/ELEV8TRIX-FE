@@ -1,5 +1,5 @@
 import { Menu, Sidebar } from "react-pro-sidebar";
-import { Avatar, Box, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { CSSProperties, useState } from "react";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import LogoColored from "../../../../component/logo/LogoColored";
@@ -13,11 +13,11 @@ import PersonAddAlt1OutlinedIcon from "@mui/icons-material/PersonAddAlt1Outlined
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
 import PaddingOutlinedIcon from "@mui/icons-material/PaddingOutlined";
 import { useContexApi } from "../../../../utils/ContextApi";
-import adminImage from "/mentorImage2.png";
 import MenuNavItem from "../../../../component/admin/menuItem/MenuItem";
 import { tokens } from "../../themes/tokens";
 import Logo from "../../../../component/logo/Logo";
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
+import AdminAvatar from "../../../../component/admin/avatar/Avatar";
 
 const SideBar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -105,12 +105,7 @@ const SideBar = () => {
               <Box style={adminDetailContainer}>
                 <Box style={profileAvatarContainr}>
                   {/* Admin Profile picture */}
-                  <Avatar
-                    src={`${adminImage}`}
-                    alt={`${authAdmin.admin}`}
-                    style={profileAvatar}
-                    title={`${authAdmin.admin}`}
-                  />
+                  <AdminAvatar style={profileAvatar} />
                 </Box>
 
                 {/* Admin name and designation */}
@@ -157,14 +152,7 @@ const SideBar = () => {
             {/*Admin Avatar*/}
             {isCollapsed && (
               <MenuNavItem
-                listIcon={
-                  <Avatar
-                    src={`${adminImage}`}
-                    alt={`${authAdmin.admin}`}
-                    style={profileAvatar}
-                    title={`${authAdmin.admin}`}
-                  />
-                }
+                listIcon={<AdminAvatar style={profileAvatar} />}
                 menuText={""}
                 link={"/admin/profile"}
                 selected={selected}

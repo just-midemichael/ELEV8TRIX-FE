@@ -1,4 +1,10 @@
 interface buttonProps {
+  icon: React.ReactNode;
+  display: string;
+  justifyContent: string;
+  alignItems: string;
+  padding: string;
+  gap: string;
   height: string;
   minHeight: string;
   width: string;
@@ -11,7 +17,7 @@ interface buttonProps {
   borderRadius: string;
   border: string;
   text: React.ReactNode;
-  link: string;
+  link?: string;
   target?: string;
   wrapperWidth?: string;
   className?: string | undefined;
@@ -19,6 +25,7 @@ interface buttonProps {
 }
 
 const GlobalButton = ({
+  icon,
   height,
   minHeight,
   width,
@@ -34,6 +41,11 @@ const GlobalButton = ({
   link,
   target,
   wrapperWidth,
+  padding,
+  gap,
+  display,
+  justifyContent,
+  alignItems,
   className,
   onClick
 }: buttonProps) => {
@@ -56,10 +68,16 @@ const GlobalButton = ({
           color: `${textColor}`,
           cursor: `${cursor}`,
           fontSize: `${fontSize}`,
-          fontWeight: `${fontWeight}`
+          fontWeight: `${fontWeight}`,
+          display: `${display}`,
+          justifyContent: `${justifyContent}`,
+          alignItems: `${alignItems}`,
+          padding: `${padding}`,
+          gap: `${gap}`
         }}
         onClick={onClick}
       >
+        {icon}
         {text}
       </button>
     </a>
