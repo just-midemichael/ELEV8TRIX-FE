@@ -42,6 +42,6 @@ const mainContainer: CSSProperties = {
   height: "100%",
   width: "100%",
   position: "relative",
-  overflowX: "hidden",
+  overflow: "hidden",
   backgroundColor: "whiteSmoke"
 };

@@ -11,7 +11,7 @@ const CreateCourse = () => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box height={"100%"} bgcolor={`${colors.primary[400]}`}>
+    <Box height={"100%"} bgcolor={`${colors.primary[0]}`}>
       <PageHeader
         headerTitle={"Create Course"}
         subHeaderTitle={"Add new course"}

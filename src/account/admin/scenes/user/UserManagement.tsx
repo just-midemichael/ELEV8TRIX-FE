@@ -11,7 +11,7 @@ const UserManagement = () => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box height={"100%"} bgcolor={`${colors.primary[400]}`}>
+    <Box height={"100%"} bgcolor={`${colors.primary[0]}`}>
       <PageHeader
         headerTitle={"User Management"}
         subHeaderTitle={"Manage all user"}

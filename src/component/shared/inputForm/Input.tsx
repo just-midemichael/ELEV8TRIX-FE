@@ -35,7 +35,7 @@ export default Input;
 const inputStyle: CSSProperties = {
   border: "none",
   outline: "none",
-  backgroundColor: "white",
+  backgroundColor: "inherit",
   minHeight: "46px",
   width: "100%",
   maxWidth: "338px",
@@ -45,5 +45,6 @@ const inputStyle: CSSProperties = {
   padding: "10px 20px",
   overflow: "hidden",
   color: "inherit",
-  borderRadius: "inherit"
+  borderRadius: "inherit",
+  textTransform: "capitalize"
 };

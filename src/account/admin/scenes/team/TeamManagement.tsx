@@ -11,7 +11,7 @@ const TeamManagement = () => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box height={"100%"} bgcolor={`${colors.primary[400]}`}>
+    <Box height={"100%"} bgcolor={`${colors.primary[0]}`}>
       <PageHeader
         headerTitle={"Team Management"}
         subHeaderTitle={"Manage team member"}

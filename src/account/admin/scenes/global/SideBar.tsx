@@ -33,11 +33,11 @@ const SideBar = () => {
       <Sidebar
         collapsed={isCollapsed}
         rootStyles={{
-          borderRight: "0",
+          borderRight: `1px solid ${colors.grey[800]}`,
           position: "relative",
           height: "100%"
         }}
-        backgroundColor={`${colors.primary[0]}`}
+        backgroundColor={`${colors.primary[1]}`}
       >
         <Menu
           style={{ paddingBottom: "100px" }}
@@ -63,7 +63,7 @@ const SideBar = () => {
             position={"sticky"}
             top={0}
             zIndex={30}
-            bgcolor={`${colors.primary[0]}`}
+            bgcolor={`${colors.primary[1]}`}
             style={{ backdropFilter: "blur(5px)" }}
             paddingBottom={"20px"}
           >

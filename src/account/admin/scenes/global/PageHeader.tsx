@@ -12,7 +12,7 @@ const PageHeader = ({ headerTitle, subHeaderTitle }: PageHeaderProps) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
-    <Box style={headerContainer} bgcolor={""}>
+    <Box style={headerContainer}>
       <H6
         title={`${headerTitle}`}
         style={{ fontWeight: 900, color: `${colors.blueAccent[500]}` }}
@@ -28,7 +28,8 @@ const headerContainer: CSSProperties = {
   padding: "15px 10px",
   textAlign: "left",
   backdropFilter: "blur(2px)",
-  position: "sticky",
-  top: "60px",
-  zIndex: 20
+  // position: "sticky",
+  // top: "70px",
+  zIndex: 1,
+  height: "80px"
 };

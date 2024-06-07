@@ -15,8 +15,16 @@ const TopBar = () => {
   const colorMode = useContext(ColorModeContext);
 
   return (
-    <Box style={container} bgcolor={`${colors.primary[0]}`}>
-      <Box style={searchBox} bgcolor={`${colors.primary[400]}`}>
+    <Box
+      style={container}
+      bgcolor={`${colors.primary[1]}`}
+      borderBottom={`1px solid ${colors.grey[800]}`}
+    >
+      <Box
+        style={searchBox}
+        bgcolor={`${colors.primary[0]}`}
+        border={`1px solid ${colors.grey[800]}`}
+      >
         <InputBase
           sx={{ m: 0.5, flex: 1, color: `${colors.grey[100]}` }}
           placeholder="search"
@@ -65,7 +73,7 @@ const container: CSSProperties = {
   padding: "5px",
   position: "sticky",
   top: 0,
-  zIndex: 10,
+  zIndex: 50,
   overflow: "hidden",
   display: "flex",
   alignItems: "center",

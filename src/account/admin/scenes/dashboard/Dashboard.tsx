@@ -12,7 +12,7 @@ const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
-  // Greet User with Date Object
+  // Greet User using the Date Object
   const greetTime = new Date().getHours();
   const greetAdmin =
     greetTime >= 12 && greetTime < 18
@@ -22,7 +22,7 @@ const Dashboard = () => {
         : "Good Morning";
 
   return (
-    <Box height={"100%"} bgcolor={`${colors.primary[400]}`}>
+    <Box height={"100%"} bgcolor={`${colors.primary[0]}`}>
       <PageHeader
         headerTitle={"Dashboard"}
         subHeaderTitle={`${greetAdmin}, ${authAdmin.admin}`}

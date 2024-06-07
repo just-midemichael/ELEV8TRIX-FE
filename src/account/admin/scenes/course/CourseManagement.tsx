@@ -11,7 +11,7 @@ const CourseManagement = () => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box height={"100%"} bgcolor={`${colors.primary[400]}`}>
+    <Box height={"100%"} bgcolor={`${colors.primary[0]}`}>
       <PageHeader headerTitle={"Courses"} subHeaderTitle={"Manage courses"} />
     </Box>
   );
