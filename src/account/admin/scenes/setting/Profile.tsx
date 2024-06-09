@@ -342,7 +342,7 @@ const inputWrapperMobile: CSSProperties = {
   display: "flex",
   flexWrap: "wrap",
   width: "100%",
-  maxWidth: "600px",
+  maxWidth: "500px",
   gap: "5px",
   overflow: "hidden"
 };
