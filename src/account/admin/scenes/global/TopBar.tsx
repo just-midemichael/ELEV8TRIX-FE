@@ -28,6 +28,7 @@ const TopBar = () => {
         <InputBase
           sx={{ m: 0.5, flex: 1, color: `${colors.grey[100]}` }}
           placeholder="search"
+          name="search"
         />
         <IconButton
           type="button"
@@ -70,6 +71,7 @@ export default TopBar;
 
 const container: CSSProperties = {
   height: "70px",
+  width: "100%",
   padding: "5px",
   position: "sticky",
   top: 0,

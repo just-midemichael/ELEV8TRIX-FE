@@ -57,6 +57,7 @@ const GlobalButton = ({
     >
       <button
         className={className}
+        type="button"
         style={{
           background: `${buttonColor}`,
           width: `${width}`,

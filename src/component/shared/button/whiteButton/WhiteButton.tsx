@@ -23,6 +23,7 @@ const WhiteButton = ({
     >
       <button
         className={className}
+        type="button"
         style={{
           background: "white",
           width: "140px",

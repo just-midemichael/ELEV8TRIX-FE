@@ -23,6 +23,7 @@ const ColoredButton = ({
     >
       <button
         className={className}
+        type="button"
         style={{
           background: "#3149a1",
           width: "140px",

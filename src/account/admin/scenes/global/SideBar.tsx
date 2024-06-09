@@ -71,7 +71,6 @@ const SideBar = () => {
             <Box style={menuWrapper}>
               {!isCollapsed && (
                 <IconButton
-                  href="/admin"
                   style={iconStyle}
                   sx={{
                     borderRadius: "0",

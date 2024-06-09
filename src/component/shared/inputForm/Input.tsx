@@ -1,31 +1,43 @@
 import { CSSProperties } from "react";
 
 type inputProps = {
+  id?: string;
   className: string;
   type: string;
   placeholder: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
   name: string;
+  defaultValue?: string | number | readonly string[] | undefined;
   value: string | number | readonly string[] | undefined;
+  required?: boolean;
+  pattern?: string;
 };
 
 const Input = ({
+  id,
   className,
   type,
   placeholder,
   onChange,
   name,
-  value
+  defaultValue,
+  value,
+  required,
+  pattern
 }: inputProps) => {
   return (
     <input
+      id={id}
       className={className}
       type={type}
+      defaultValue={defaultValue}
       value={value}
       name={name}
       onChange={onChange}
       placeholder={placeholder}
       style={inputStyle}
+      required={required}
+      pattern={pattern}
     />
   );
 };
