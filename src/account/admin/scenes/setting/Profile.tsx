@@ -22,7 +22,7 @@ const Profile = () => {
 
   //CSS Styles Media Query hook
   const isMobile = useMediaQuery({
-    query: "(max-width: 650px)",
+    query: "(max-width: 700px)",
     defaultValue: false
   });
 
