@@ -44,7 +44,7 @@ const Profile = () => {
         headerTitle={"Profile"}
         subHeaderTitle={"Update public profile"}
       />
-      <Box width={"100%"} minWidth={"270px"}>
+      <Box style={isMobile ? detailContainerMobile : detailContainer}>
         {/*Photo Section*/}
         <Box style={isMobile ? photoContainerMobile : photoContainer}>
           <AdminAvatar style={profileAvatar} />
@@ -268,6 +268,16 @@ const pageContainerMobile: CSSProperties = {
   overflowX: "scroll",
   overflowY: "scroll",
   padding: "10px 10px 100px 10px",
+  minWidth: "270px"
+};
+
+const detailContainer: CSSProperties = {
+  width: "100%",
+  maxWidth: "600px"
+};
+
+const detailContainerMobile: CSSProperties = {
+  width: "100%",
   minWidth: "270px"
 };
 
