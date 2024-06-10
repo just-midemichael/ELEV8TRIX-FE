@@ -6,6 +6,10 @@ interface detailFormProps {
   lastname: string;
   middlename: string;
   phoneNumber: string;
+  homeAddress: string;
+  homeState: string;
+  homeCountry: string;
+  bio: string;
 }
 
 const useProfileForm = () => {
@@ -16,7 +20,11 @@ const useProfileForm = () => {
     firstname: `${authAdmin.admin}`,
     lastname: `${authAdmin.admin}`,
     middlename: `${authAdmin.admin}`,
-    phoneNumber: `08179207152`
+    phoneNumber: `08179207152`,
+    homeAddress: `4, abey street, abuja`,
+    homeState: `Abuja`,
+    homeCountry: `Nigeria`,
+    bio: `lorem ipsum init de marquee. la juma fet et acel. de la cate cmon ceva baet evour cloret de ison ma tuli se`
   });
   const [newValue, setNewValue] = useState<detailFormProps | null>(null);
 
@@ -30,6 +38,7 @@ const useProfileForm = () => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setValue({ ...initialValue, [name]: value });
+    alert(initialValue.firstname);
   };
 
   //Handle Edit Button Click Event

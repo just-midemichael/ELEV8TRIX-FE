@@ -14,7 +14,7 @@ const ProfileForm = () => {
 
   //CSS Styles Media Query hook
   const isMobile = useMediaQuery({
-    query: "(max-width: 700px)",
+    query: "(max-width: 650px)",
     defaultValue: false
   });
 
@@ -32,7 +32,7 @@ const ProfileForm = () => {
       <Box style={inputContianer}>
         <Box style={isMobile ? inputWrapperMobile : inputWrapper}>
           <Box width={"100%"} textAlign={"left"}>
-            <InputLabel variant="standard">
+            <InputLabel variant="standard" sx={{ fontSize: "0.9rem" }}>
               Firstname
               <Box
                 bgcolor={`${colors.primary[0]}`}
@@ -49,7 +49,8 @@ const ProfileForm = () => {
                     onChange={handleChange}
                     defaultValue={initialValue.firstname}
                     value={undefined}
-                    required={true}
+                    required
+                    autoFocus
                   />
                 ) : (
                   <Typography style={staticDetail}>
@@ -60,7 +61,7 @@ const ProfileForm = () => {
             </InputLabel>
           </Box>
           <Box width={"100%"} textAlign={"left"}>
-            <InputLabel variant="standard">
+            <InputLabel variant="standard" sx={{ fontSize: "0.9rem" }}>
               Lastname
               <Box
                 bgcolor={`${colors.primary[0]}`}
@@ -77,7 +78,7 @@ const ProfileForm = () => {
                     onChange={handleChange}
                     defaultValue={initialValue.lastname}
                     value={undefined}
-                    required={true}
+                    required
                   />
                 ) : (
                   <Typography style={staticDetail}>
@@ -90,7 +91,7 @@ const ProfileForm = () => {
         </Box>
         <Box style={isMobile ? inputWrapperMobile : inputWrapper}>
           <Box width={"100%"} textAlign={"left"}>
-            <InputLabel variant="standard">
+            <InputLabel variant="standard" sx={{ fontSize: "0.9rem" }}>
               Middlename
               <Box
                 bgcolor={`${colors.primary[0]}`}
@@ -117,7 +118,7 @@ const ProfileForm = () => {
             </InputLabel>
           </Box>
           <Box width={"100%"} textAlign={"left"}>
-            <InputLabel variant="standard">
+            <InputLabel variant="standard" sx={{ fontSize: "0.9rem" }}>
               Phone Number
               <Box
                 bgcolor={`${colors.primary[0]}`}
@@ -134,7 +135,7 @@ const ProfileForm = () => {
                     onChange={handleChange}
                     defaultValue={initialValue.phoneNumber}
                     value={undefined}
-                    required={true}
+                    required
                     pattern={"[0-9]{4}[0-9]{3}[0-9]{4}"}
                   />
                 ) : (
@@ -143,6 +144,131 @@ const ProfileForm = () => {
                   </Typography>
                 )}
               </Box>
+            </InputLabel>
+          </Box>
+        </Box>
+        <Box style={isMobile ? inputWrapperMobile : inputWrapper}>
+          <Box width={"100%"} textAlign={"left"}>
+            <InputLabel variant="standard" sx={{ fontSize: "0.9rem" }}>
+              Home Address
+              <Box
+                bgcolor={`${colors.primary[0]}`}
+                borderRadius={1}
+                border={`1px solid ${colors.grey[800]}`}
+                style={inputComponentBox}
+              >
+                {isEditing ? (
+                  <Input
+                    className={""}
+                    type={"text"}
+                    placeholder={`Address`}
+                    name={"adminMiddlenameEditable"}
+                    onChange={handleChange}
+                    defaultValue={initialValue.homeAddress}
+                    value={undefined}
+                  />
+                ) : (
+                  <Typography style={staticDetail}>
+                    {initialValue.homeAddress}
+                  </Typography>
+                )}
+              </Box>
+            </InputLabel>
+          </Box>
+        </Box>
+        <Box style={isMobile ? inputWrapperMobile : inputWrapper}>
+          <Box width={"100%"} textAlign={"left"}>
+            <InputLabel variant="standard" sx={{ fontSize: "0.9rem" }}>
+              State
+              <Box
+                bgcolor={`${colors.primary[0]}`}
+                borderRadius={1}
+                border={`1px solid ${colors.grey[800]}`}
+                style={inputComponentBox}
+              >
+                {isEditing ? (
+                  <Input
+                    className={""}
+                    type={"text"}
+                    placeholder={`State`}
+                    name={"adminMiddlenameEditable"}
+                    onChange={handleChange}
+                    defaultValue={initialValue.homeState}
+                    value={undefined}
+                  />
+                ) : (
+                  <Typography style={staticDetail}>
+                    {initialValue.homeState}
+                  </Typography>
+                )}
+              </Box>
+            </InputLabel>
+          </Box>
+          <Box width={"100%"} textAlign={"left"}>
+            <InputLabel variant="standard" sx={{ fontSize: "0.9rem" }}>
+              Country
+              <Box
+                bgcolor={`${colors.primary[0]}`}
+                borderRadius={1}
+                border={`1px solid ${colors.grey[800]}`}
+                style={inputComponentBox}
+              >
+                {isEditing ? (
+                  <Input
+                    className={""}
+                    type={"tel"}
+                    placeholder={`Country`}
+                    name={"phoneNumberEditable"}
+                    onChange={handleChange}
+                    defaultValue={initialValue.homeCountry}
+                    value={undefined}
+                    required
+                    pattern={"[0-9]{4}[0-9]{3}[0-9]{4}"}
+                  />
+                ) : (
+                  <Typography style={staticDetail}>
+                    {initialValue.homeAddress}
+                  </Typography>
+                )}
+              </Box>
+            </InputLabel>
+          </Box>
+        </Box>
+        <Box style={isMobile ? inputWrapperMobile : inputWrapper}>
+          <Box width={"100%"} textAlign={"left"}>
+            <InputLabel variant="standard" sx={{ fontSize: "0.9rem" }}>
+              Bio
+              {isEditing ? (
+                <Box
+                  bgcolor={`${colors.primary[0]}`}
+                  borderRadius={1}
+                  minHeight={"80px"}
+                >
+                  <textarea
+                    style={{
+                      backgroundColor: "transparent",
+                      border: `1px solid ${colors.grey[800]}`,
+                      width: "100%",
+                      height: "100%",
+                      minHeight: "80px",
+                      outline: "none"
+                    }}
+                    defaultValue={initialValue.bio}
+                  />
+                </Box>
+              ) : (
+                <Box
+                  bgcolor={`${colors.primary[0]}`}
+                  borderRadius={1}
+                  minHeight={"80px"}
+                  alignItems={"flex-start"}
+                  border={`1px solid ${colors.grey[800]}`}
+                >
+                  <Typography style={staticDetail}>
+                    {initialValue.bio}
+                  </Typography>
+                </Box>
+              )}
             </InputLabel>
           </Box>
         </Box>
@@ -241,5 +367,7 @@ const staticDetail: CSSProperties = {
   padding: "10px 20px",
   fontSize: "0.85rem",
   textTransform: "capitalize",
-  fontWeight: 400
+  fontWeight: 400,
+  overflow: "hidden",
+  minWidth: "120px"
 };

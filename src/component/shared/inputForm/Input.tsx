@@ -13,6 +13,7 @@ type inputProps = {
   value: string | number | readonly string[] | undefined;
   required?: boolean;
   pattern?: string;
+  autoFocus?: boolean;
 };
 
 const Input = ({
@@ -27,7 +28,8 @@ const Input = ({
   defaultValue,
   value,
   required,
-  pattern
+  pattern,
+  autoFocus
 }: inputProps) => {
   return (
     <input
@@ -44,6 +46,7 @@ const Input = ({
       style={inputStyle}
       required={required}
       pattern={pattern}
+      autoFocus={autoFocus}
     />
   );
 };
