@@ -251,7 +251,10 @@ const ProfileForm = () => {
                       width: "100%",
                       height: "100%",
                       minHeight: "80px",
-                      outline: "none"
+                      outline: "none",
+                      padding: "10px",
+                      fontSize: "0.85rem",
+                      color: `${colors.grey[300]}`
                     }}
                     defaultValue={initialValue.bio}
                   />
@@ -261,12 +264,21 @@ const ProfileForm = () => {
                   bgcolor={`${colors.primary[0]}`}
                   borderRadius={1}
                   minHeight={"80px"}
-                  alignItems={"flex-start"}
-                  border={`1px solid ${colors.grey[800]}`}
                 >
-                  <Typography style={staticDetail}>
-                    {initialValue.bio}
-                  </Typography>
+                  <textarea
+                    style={{
+                      backgroundColor: "transparent",
+                      border: `1px solid ${colors.grey[800]}`,
+                      width: "100%",
+                      height: "100%",
+                      minHeight: "80px",
+                      outline: "none",
+                      padding: "10px",
+                      fontSize: "0.85rem",
+                      color: `${colors.grey[300]}`
+                    }}
+                    value={initialValue.bio}
+                  />
                 </Box>
               )}
             </InputLabel>
@@ -369,5 +381,9 @@ const staticDetail: CSSProperties = {
   textTransform: "capitalize",
   fontWeight: 400,
   overflow: "hidden",
-  minWidth: "120px"
+  height: "100%",
+  maxWidth: "100",
+  display: "flex",
+  flexWrap: "wrap",
+  boxSizing: "border-box"
 };
