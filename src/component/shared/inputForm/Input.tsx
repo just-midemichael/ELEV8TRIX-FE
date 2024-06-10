@@ -6,6 +6,8 @@ type inputProps = {
   type: string;
   placeholder: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
+  onFocus?: React.ChangeEventHandler<HTMLInputElement> | undefined;
+  onInput?: React.ChangeEventHandler<HTMLInputElement> | undefined;
   name: string;
   defaultValue?: string | number | readonly string[] | undefined;
   value: string | number | readonly string[] | undefined;
@@ -19,6 +21,8 @@ const Input = ({
   type,
   placeholder,
   onChange,
+  onFocus,
+  onInput,
   name,
   defaultValue,
   value,
@@ -34,6 +38,8 @@ const Input = ({
       value={value}
       name={name}
       onChange={onChange}
+      onFocus={onFocus}
+      onInput={onInput}
       placeholder={placeholder}
       style={inputStyle}
       required={required}

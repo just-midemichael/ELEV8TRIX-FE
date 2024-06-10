@@ -10,7 +10,7 @@ interface detailFormProps {
 
 const useProfileForm = () => {
   const authAdmin = useContexApi();
-  const [display, setDisplay] = useState("none");
+  const [isEditing, setIsEditing] = useState(false);
   const [Submitted, setSubmitted] = useState(false);
   const [initialValue, setValue] = useState<detailFormProps>({
     firstname: `${authAdmin.admin}`,
@@ -34,19 +34,17 @@ const useProfileForm = () => {
 
   //Handle Edit Button Click Event
   const handleEdit = () => {
-    if (display === "none") return setDisplay("flex");
-    else return setDisplay("none");
+    setIsEditing(!isEditing);
   };
 
   //Handle Save Button Click Event
   const handleSave = () => {
-    const savedFormData = { ...initialValue };
-    setNewValue(savedFormData);
+    setNewValue(initialValue);
     handleEdit();
   };
 
   return {
-    display,
+    isEditing,
     Submitted,
     initialValue,
     newValue,
