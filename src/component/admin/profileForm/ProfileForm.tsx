@@ -325,8 +325,7 @@ const inputWrapper: CSSProperties = {
   display: "flex",
   width: "100%",
   gap: "20px",
-  maxWidth: "700px",
-  overflow: "hidden"
+  maxWidth: "700px"
 };
 
 const inputWrapperMobile: CSSProperties = {
@@ -334,8 +333,7 @@ const inputWrapperMobile: CSSProperties = {
   flexWrap: "wrap",
   width: "100%",
   maxWidth: "500px",
-  gap: "5px",
-  overflow: "hidden"
+  gap: "5px"
 };
 
 const inputComponentBox: CSSProperties = {
