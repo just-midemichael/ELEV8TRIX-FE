@@ -239,6 +239,7 @@ const ProfileForm = () => {
                     backgroundColor: "transparent",
                     border: `1px solid ${colors.grey[800]}`,
                     width: "100%",
+                    maxWidth: "100%",
                     height: "100%",
                     minHeight: "80px",
                     outline: "none",
