@@ -50,6 +50,7 @@ const Input = ({
       pattern={pattern}
       autoFocus={autoFocus}
       disabled={disabled}
+      autoComplete="on"
     />
   );
 };

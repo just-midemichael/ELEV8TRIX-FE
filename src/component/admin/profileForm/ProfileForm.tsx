@@ -38,25 +38,26 @@ const ProfileForm = () => {
               sx={{ fontSize: "0.9rem" }}
             >
               Firstname
-              <Box
-                bgcolor={`${colors.primary[0]}`}
-                borderRadius={1}
-                border={`1px solid ${colors.grey[800]}`}
-                style={inputComponentBox}
-              >
-                <Input
-                  className={""}
-                  type={"text"}
-                  placeholder={`Firstname`}
-                  name={"firstname"}
-                  onInput={handleChange}
-                  defaultValue={initialValue.firstname}
-                  required
-                  disabled={isEditing ? false : true}
-                  autoFocus={isEditing ? true : true}
-                />
-              </Box>
             </InputLabel>
+            <Box
+              bgcolor={`${colors.primary[0]}`}
+              borderRadius={1}
+              border={`1px solid ${colors.grey[800]}`}
+              style={inputComponentBox}
+            >
+              <Input
+                className={""}
+                id={"firstname"}
+                type={"text"}
+                placeholder={`Firstname`}
+                name={"firstname"}
+                onInput={handleChange}
+                defaultValue={initialValue.firstname}
+                required
+                disabled={isEditing ? false : true}
+                autoFocus={isEditing ? true : true}
+              />
+            </Box>
           </Box>
           <Box width={"100%"} textAlign={"left"}>
             <InputLabel
@@ -65,24 +66,25 @@ const ProfileForm = () => {
               sx={{ fontSize: "0.9rem" }}
             >
               Lastname
-              <Box
-                bgcolor={`${colors.primary[0]}`}
-                borderRadius={1}
-                border={`1px solid ${colors.grey[800]}`}
-                style={inputComponentBox}
-              >
-                <Input
-                  className={""}
-                  type={"text"}
-                  placeholder={`Lastname`}
-                  name={"lastname"}
-                  onInput={handleChange}
-                  defaultValue={initialValue.lastname}
-                  required
-                  disabled={isEditing ? false : true}
-                />
-              </Box>
             </InputLabel>
+            <Box
+              bgcolor={`${colors.primary[0]}`}
+              borderRadius={1}
+              border={`1px solid ${colors.grey[800]}`}
+              style={inputComponentBox}
+            >
+              <Input
+                className={""}
+                id={"lastname"}
+                type={"text"}
+                placeholder={`Lastname`}
+                name={"lastname"}
+                onInput={handleChange}
+                defaultValue={initialValue.lastname}
+                required
+                disabled={isEditing ? false : true}
+              />
+            </Box>
           </Box>
         </Box>
         <Box style={isMobile ? inputWrapperMobile : inputWrapper}>
@@ -93,23 +95,24 @@ const ProfileForm = () => {
               sx={{ fontSize: "0.9rem" }}
             >
               Middlename
-              <Box
-                bgcolor={`${colors.primary[0]}`}
-                borderRadius={1}
-                border={`1px solid ${colors.grey[800]}`}
-                style={inputComponentBox}
-              >
-                <Input
-                  className={""}
-                  type={"text"}
-                  placeholder={`Middlename`}
-                  name={"middlename"}
-                  onInput={handleChange}
-                  defaultValue={initialValue.middlename}
-                  disabled={isEditing ? false : true}
-                />
-              </Box>
             </InputLabel>
+            <Box
+              bgcolor={`${colors.primary[0]}`}
+              borderRadius={1}
+              border={`1px solid ${colors.grey[800]}`}
+              style={inputComponentBox}
+            >
+              <Input
+                className={""}
+                id={"middlename"}
+                type={"text"}
+                placeholder={`Middlename`}
+                name={"middlename"}
+                onInput={handleChange}
+                defaultValue={initialValue.middlename}
+                disabled={isEditing ? false : true}
+              />
+            </Box>
           </Box>
           <Box width={"100%"} textAlign={"left"}>
             <InputLabel
@@ -118,25 +121,26 @@ const ProfileForm = () => {
               sx={{ fontSize: "0.9rem" }}
             >
               Phone Number
-              <Box
-                bgcolor={`${colors.primary[0]}`}
-                borderRadius={1}
-                border={`1px solid ${colors.grey[800]}`}
-                style={inputComponentBox}
-              >
-                <Input
-                  className={""}
-                  type={"tel"}
-                  placeholder={`Phone Number`}
-                  name={"phoneNumber"}
-                  onInput={handleChange}
-                  defaultValue={initialValue.phoneNumber}
-                  required
-                  disabled={isEditing ? false : true}
-                  pattern={"[0-9]{4}[0-9]{3}[0-9]{4}"}
-                />
-              </Box>
             </InputLabel>
+            <Box
+              bgcolor={`${colors.primary[0]}`}
+              borderRadius={1}
+              border={`1px solid ${colors.grey[800]}`}
+              style={inputComponentBox}
+            >
+              <Input
+                className={""}
+                id={"phoneNumber"}
+                type={"tel"}
+                placeholder={`Phone Number`}
+                name={"phoneNumber"}
+                onInput={handleChange}
+                defaultValue={initialValue.phoneNumber}
+                required
+                disabled={isEditing ? false : true}
+                pattern={"[0-9]{4}[0-9]{3}[0-9]{4}"}
+              />
+            </Box>
           </Box>
         </Box>
         <Box style={isMobile ? inputWrapperMobile : inputWrapper}>
@@ -147,23 +151,24 @@ const ProfileForm = () => {
               sx={{ fontSize: "0.9rem" }}
             >
               Sex
-              <Box
-                bgcolor={`${colors.primary[0]}`}
-                borderRadius={1}
-                border={`1px solid ${colors.grey[800]}`}
-                style={inputComponentBox}
-              >
-                <Input
-                  className={""}
-                  type={"text"}
-                  placeholder={`Male or Female`}
-                  name={"sex"}
-                  onInput={handleChange}
-                  defaultValue={initialValue.sex}
-                  disabled={isEditing ? false : true}
-                />
-              </Box>
             </InputLabel>
+            <Box
+              bgcolor={`${colors.primary[0]}`}
+              borderRadius={1}
+              border={`1px solid ${colors.grey[800]}`}
+              style={inputComponentBox}
+            >
+              <Input
+                className={""}
+                id={"sex"}
+                type={"text"}
+                placeholder={`Male or Female`}
+                name={"sex"}
+                onInput={handleChange}
+                defaultValue={initialValue.sex}
+                disabled={isEditing ? false : true}
+              />
+            </Box>
           </Box>
           <Box width={"100%"} textAlign={"left"}>
             <InputLabel
@@ -172,53 +177,55 @@ const ProfileForm = () => {
               sx={{ fontSize: "0.9rem" }}
             >
               Occupation
-              <Box
-                bgcolor={`${colors.primary[0]}`}
-                borderRadius={1}
-                border={`1px solid ${colors.grey[800]}`}
-                style={inputComponentBox}
-              >
-                <Input
-                  className={""}
-                  type={"text"}
-                  placeholder={`Occupation`}
-                  name={"occupation"}
-                  onInput={handleChange}
-                  defaultValue={initialValue.occupation}
-                  required
-                  disabled={isEditing ? false : true}
-                  pattern={"[0-9]{4}[0-9]{3}[0-9]{4}"}
-                />
-              </Box>
             </InputLabel>
+            <Box
+              bgcolor={`${colors.primary[0]}`}
+              borderRadius={1}
+              border={`1px solid ${colors.grey[800]}`}
+              style={inputComponentBox}
+            >
+              <Input
+                className={""}
+                id={"occupation"}
+                type={"text"}
+                placeholder={`Occupation`}
+                name={"occupation"}
+                onInput={handleChange}
+                defaultValue={initialValue.occupation}
+                required
+                disabled={isEditing ? false : true}
+                pattern={"[0-9]{4}[0-9]{3}[0-9]{4}"}
+              />
+            </Box>
           </Box>
         </Box>
         <Box style={isMobile ? inputWrapperMobile : inputWrapper}>
           <Box width={"100%"} textAlign={"left"}>
             <InputLabel
-              htmlFor="address"
+              htmlFor="homeAddress"
               variant="standard"
               sx={{ fontSize: "0.9rem" }}
             >
               Home Address
-              <Box
-                bgcolor={`${colors.primary[0]}`}
-                borderRadius={1}
-                border={`1px solid ${colors.grey[800]}`}
-                style={inputComponentBox}
-              >
-                <Input
-                  className={""}
-                  type={"text"}
-                  placeholder={`Address`}
-                  name={"address"}
-                  onInput={handleChange}
-                  defaultValue={initialValue.homeAddress}
-                  required
-                  disabled={isEditing ? false : true}
-                />
-              </Box>
             </InputLabel>
+            <Box
+              bgcolor={`${colors.primary[0]}`}
+              borderRadius={1}
+              border={`1px solid ${colors.grey[800]}`}
+              style={inputComponentBox}
+            >
+              <Input
+                className={""}
+                id={"homeAddress"}
+                type={"text"}
+                placeholder={`Address`}
+                name={"homeAddress"}
+                onInput={handleChange}
+                defaultValue={initialValue.homeAddress}
+                required
+                disabled={isEditing ? false : true}
+              />
+            </Box>
           </Box>
         </Box>
         <Box style={isMobile ? inputWrapperMobile : inputWrapper}>
@@ -229,24 +236,25 @@ const ProfileForm = () => {
               sx={{ fontSize: "0.9rem" }}
             >
               State
-              <Box
-                bgcolor={`${colors.primary[0]}`}
-                borderRadius={1}
-                border={`1px solid ${colors.grey[800]}`}
-                style={inputComponentBox}
-              >
-                <Input
-                  className={""}
-                  type={"text"}
-                  placeholder={`State`}
-                  name={"state"}
-                  onInput={handleChange}
-                  defaultValue={initialValue.homeState}
-                  required
-                  disabled={isEditing ? false : true}
-                />
-              </Box>
             </InputLabel>
+            <Box
+              bgcolor={`${colors.primary[0]}`}
+              borderRadius={1}
+              border={`1px solid ${colors.grey[800]}`}
+              style={inputComponentBox}
+            >
+              <Input
+                className={""}
+                id={"state"}
+                type={"text"}
+                placeholder={`State`}
+                name={"state"}
+                onInput={handleChange}
+                defaultValue={initialValue.homeState}
+                required
+                disabled={isEditing ? false : true}
+              />
+            </Box>
           </Box>
           <Box width={"100%"} textAlign={"left"}>
             <InputLabel
@@ -255,24 +263,25 @@ const ProfileForm = () => {
               sx={{ fontSize: "0.9rem" }}
             >
               Country
-              <Box
-                bgcolor={`${colors.primary[0]}`}
-                borderRadius={1}
-                border={`1px solid ${colors.grey[800]}`}
-                style={inputComponentBox}
-              >
-                <Input
-                  className={""}
-                  type={"text"}
-                  placeholder={`Country`}
-                  name={"country"}
-                  onInput={handleChange}
-                  defaultValue={initialValue.homeCountry}
-                  required
-                  disabled={isEditing ? false : true}
-                />
-              </Box>
             </InputLabel>
+            <Box
+              bgcolor={`${colors.primary[0]}`}
+              borderRadius={1}
+              border={`1px solid ${colors.grey[800]}`}
+              style={inputComponentBox}
+            >
+              <Input
+                className={""}
+                id={"country"}
+                type={"text"}
+                placeholder={`Country`}
+                name={"country"}
+                onInput={handleChange}
+                defaultValue={initialValue.homeCountry}
+                required
+                disabled={isEditing ? false : true}
+              />
+            </Box>
           </Box>
         </Box>
         <Box style={isMobile ? inputWrapperMobile : inputWrapper}>
@@ -283,32 +292,34 @@ const ProfileForm = () => {
               sx={{ fontSize: "0.9rem" }}
             >
               Bio
-              <Box
-                bgcolor={`${colors.primary[0]}`}
-                borderRadius={1}
-                minHeight={"80px"}
-              >
-                <textarea
-                  style={{
-                    backgroundColor: "transparent",
-                    border: `1px solid ${colors.grey[800]}`,
-                    width: "100%",
-                    maxWidth: "100%",
-                    height: "100%",
-                    minHeight: "80px",
-                    outline: "none",
-                    padding: "10px",
-                    fontSize: "0.85rem",
-                    color: `${colors.grey[300]}`
-                  }}
-                  name={"bio"}
-                  placeholder={"About me"}
-                  defaultValue={initialValue.bio}
-                  onChange={handleChange}
-                  disabled={isEditing ? false : true}
-                />
-              </Box>
             </InputLabel>
+            <Box
+              bgcolor={`${colors.primary[0]}`}
+              borderRadius={1}
+              minHeight={"80px"}
+            >
+              <textarea
+                style={{
+                  backgroundColor: "transparent",
+                  border: `1px solid ${colors.grey[800]}`,
+                  width: "100%",
+                  maxWidth: "100%",
+                  height: "100%",
+                  minHeight: "80px",
+                  outline: "none",
+                  padding: "10px",
+                  fontSize: "0.85rem",
+                  color: `${colors.grey[300]}`
+                }}
+                id={"bio"}
+                name={"bio"}
+                placeholder={"About me"}
+                defaultValue={initialValue.bio}
+                onChange={handleChange}
+                disabled={isEditing ? false : true}
+                autoComplete="off"
+              />
+            </Box>
           </Box>
         </Box>
       </Box>
