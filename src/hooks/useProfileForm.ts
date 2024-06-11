@@ -5,6 +5,7 @@ interface detailFormProps {
   firstname: string;
   lastname: string;
   middlename: string;
+  email: string;
   phoneNumber: string;
   homeAddress: string;
   homeState: string;
@@ -20,7 +21,8 @@ const useProfileForm = () => {
     firstname: `${authAdmin.admin}`,
     lastname: `${authAdmin.admin}`,
     middlename: `${authAdmin.admin}`,
-    phoneNumber: `08179207152`,
+    email: `admin@elev8trix.com`,
+    phoneNumber: `080119227154`,
     homeAddress: `4, abey street, abuja`,
     homeState: `Abuja`,
     homeCountry: `Nigeria`,
