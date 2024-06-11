@@ -5,6 +5,8 @@ interface detailFormProps {
   firstname: string;
   lastname: string;
   middlename: string;
+  sex: string;
+  occupation: string;
   email: string;
   phoneNumber: string;
   homeAddress: string;
@@ -21,6 +23,8 @@ const useProfileForm = () => {
     firstname: `${authAdmin.admin}`,
     lastname: `${authAdmin.admin}`,
     middlename: `${authAdmin.admin}`,
+    sex: `Male`,
+    occupation: `Admin Manager`,
     email: `admin@elev8trix.com`,
     phoneNumber: `080119227154`,
     homeAddress: `4, abey street, abuja`,

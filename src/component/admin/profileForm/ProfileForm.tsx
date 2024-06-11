@@ -48,7 +48,7 @@ const ProfileForm = () => {
                   className={""}
                   type={"text"}
                   placeholder={`Firstname`}
-                  name={"firstnameEditable"}
+                  name={"firstname"}
                   onInput={handleChange}
                   defaultValue={initialValue.firstname}
                   required
@@ -75,7 +75,7 @@ const ProfileForm = () => {
                   className={""}
                   type={"text"}
                   placeholder={`Lastname`}
-                  name={"lastnameEditable"}
+                  name={"lastname"}
                   onInput={handleChange}
                   defaultValue={initialValue.lastname}
                   required
@@ -103,7 +103,7 @@ const ProfileForm = () => {
                   className={""}
                   type={"text"}
                   placeholder={`Middlename`}
-                  name={"middlenameEditable"}
+                  name={"middlename"}
                   onInput={handleChange}
                   defaultValue={initialValue.middlename}
                   disabled={isEditing ? false : true}
@@ -128,7 +128,7 @@ const ProfileForm = () => {
                   className={""}
                   type={"tel"}
                   placeholder={`Phone Number`}
-                  name={"phoneNumberEditable"}
+                  name={"phoneNumber"}
                   onInput={handleChange}
                   defaultValue={initialValue.phoneNumber}
                   required
@@ -142,7 +142,61 @@ const ProfileForm = () => {
         <Box style={isMobile ? inputWrapperMobile : inputWrapper}>
           <Box width={"100%"} textAlign={"left"}>
             <InputLabel
-              htmlFor="homeAddress"
+              htmlFor="sex"
+              variant="standard"
+              sx={{ fontSize: "0.9rem" }}
+            >
+              Sex
+              <Box
+                bgcolor={`${colors.primary[0]}`}
+                borderRadius={1}
+                border={`1px solid ${colors.grey[800]}`}
+                style={inputComponentBox}
+              >
+                <Input
+                  className={""}
+                  type={"text"}
+                  placeholder={`Male or Female`}
+                  name={"sex"}
+                  onInput={handleChange}
+                  defaultValue={initialValue.sex}
+                  disabled={isEditing ? false : true}
+                />
+              </Box>
+            </InputLabel>
+          </Box>
+          <Box width={"100%"} textAlign={"left"}>
+            <InputLabel
+              htmlFor="occupation"
+              variant="standard"
+              sx={{ fontSize: "0.9rem" }}
+            >
+              Occupation
+              <Box
+                bgcolor={`${colors.primary[0]}`}
+                borderRadius={1}
+                border={`1px solid ${colors.grey[800]}`}
+                style={inputComponentBox}
+              >
+                <Input
+                  className={""}
+                  type={"text"}
+                  placeholder={`Occupation`}
+                  name={"occupation"}
+                  onInput={handleChange}
+                  defaultValue={initialValue.occupation}
+                  required
+                  disabled={isEditing ? false : true}
+                  pattern={"[0-9]{4}[0-9]{3}[0-9]{4}"}
+                />
+              </Box>
+            </InputLabel>
+          </Box>
+        </Box>
+        <Box style={isMobile ? inputWrapperMobile : inputWrapper}>
+          <Box width={"100%"} textAlign={"left"}>
+            <InputLabel
+              htmlFor="address"
               variant="standard"
               sx={{ fontSize: "0.9rem" }}
             >
@@ -157,7 +211,7 @@ const ProfileForm = () => {
                   className={""}
                   type={"text"}
                   placeholder={`Address`}
-                  name={"addressEditable"}
+                  name={"address"}
                   onInput={handleChange}
                   defaultValue={initialValue.homeAddress}
                   required
@@ -185,7 +239,7 @@ const ProfileForm = () => {
                   className={""}
                   type={"text"}
                   placeholder={`State`}
-                  name={"stateEditable"}
+                  name={"state"}
                   onInput={handleChange}
                   defaultValue={initialValue.homeState}
                   required
@@ -209,9 +263,9 @@ const ProfileForm = () => {
               >
                 <Input
                   className={""}
-                  type={"tel"}
+                  type={"text"}
                   placeholder={`Country`}
-                  name={"countryEditable"}
+                  name={"country"}
                   onInput={handleChange}
                   defaultValue={initialValue.homeCountry}
                   required
@@ -247,7 +301,7 @@ const ProfileForm = () => {
                     fontSize: "0.85rem",
                     color: `${colors.grey[300]}`
                   }}
-                  name={"bioEditable"}
+                  name={"bio"}
                   placeholder={"About me"}
                   defaultValue={initialValue.bio}
                   onChange={handleChange}
