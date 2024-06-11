@@ -26,7 +26,6 @@ const useProfileForm = () => {
     homeCountry: `Nigeria`,
     bio: `lorem ipsum init de marquee. la juma fet et acel. de la cate cmon ceva baet evour cloret de ison ma tuli se`
   });
-  const [newValue, setNewValue] = useState<detailFormProps | null>(null);
 
   //Handle Submit Event
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -35,10 +34,11 @@ const useProfileForm = () => {
   };
 
   //Handle Input Change Event
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = event.target;
     setValue({ ...initialValue, [name]: value });
-    alert(initialValue.firstname);
   };
 
   //Handle Edit Button Click Event
@@ -48,15 +48,14 @@ const useProfileForm = () => {
 
   //Handle Save Button Click Event
   const handleSave = () => {
-    setNewValue(initialValue);
     handleEdit();
+    setSubmitted(true);
   };
 
   return {
     isEditing,
     Submitted,
     initialValue,
-    newValue,
     handleChange,
     handleEdit,
     handleSave,

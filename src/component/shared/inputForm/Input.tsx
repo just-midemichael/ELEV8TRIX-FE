@@ -10,10 +10,11 @@ type inputProps = {
   onInput?: React.ChangeEventHandler<HTMLInputElement> | undefined;
   name: string;
   defaultValue?: string | number | readonly string[] | undefined;
-  value: string | number | readonly string[] | undefined;
+  value?: string | number | readonly string[] | undefined;
   required?: boolean;
   pattern?: string;
   autoFocus?: boolean;
+  disabled?: boolean;
 };
 
 const Input = ({
@@ -29,7 +30,8 @@ const Input = ({
   value,
   required,
   pattern,
-  autoFocus
+  autoFocus,
+  disabled
 }: inputProps) => {
   return (
     <input
@@ -47,6 +49,7 @@ const Input = ({
       required={required}
       pattern={pattern}
       autoFocus={autoFocus}
+      disabled={disabled}
     />
   );
 };
