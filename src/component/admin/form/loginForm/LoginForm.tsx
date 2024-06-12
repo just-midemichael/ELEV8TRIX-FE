@@ -170,8 +170,7 @@ const formLogoContainer: CSSProperties = {
 
 const formLabelStyle: CSSProperties = {
   fontSize: "1.2rem",
-  fontWeight: 500,
-  color: "black"
+  fontWeight: 100
 };
 
 const inputWrapper: CSSProperties = {
