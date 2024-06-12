@@ -102,7 +102,7 @@ const LoginForm = () => {
           </Box>
         </Box>
         <Box textAlign={"left"} fontSize={"0.9rem"}>
-          Forget password?
+          Forgot password?
         </Box>
 
         <Box>
@@ -128,6 +128,9 @@ const LoginForm = () => {
             text={authAdmin?.user ? "Log out" : "Log in"}
             onClick={authAdmin?.user ? handleLogout : handleLogin}
           />
+        </Box>
+        <Box textAlign={"left"} fontSize={"0.9rem"} margin={"6px 0"}>
+          Don't have an account? <span style={signupStyle}>Sign up</span>
         </Box>
       </form>
     </Box>
@@ -174,14 +177,14 @@ const formLabelStyle: CSSProperties = {
 };
 
 const inputWrapper: CSSProperties = {
-  padding: "10px 0"
+  padding: "6px 0"
 };
 
 const inputBox: CSSProperties = {
   width: "100%",
   display: "flex",
   border: "2px solid silver",
-  margin: "5px 0",
+  margin: "8px 0",
   borderRadius: "2px",
   overflow: "hidden"
 };
@@ -193,4 +196,10 @@ const inputIconStyle: CSSProperties = {
   justifyContent: "center",
   width: "50px",
   maxWidth: "50px"
+};
+
+const signupStyle: CSSProperties = {
+  color: "#119ee3",
+  cursor: "pointer",
+  fontSize: "0.95rem"
 };
