@@ -1,12 +1,12 @@
 import { Box, InputLabel, useTheme } from "@mui/material";
 import { CSSProperties } from "react";
-import GlobalButton from "../../shared/button/globalButton/GlobalButton";
+import GlobalButton from "../../../shared/button/globalButton/GlobalButton";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
-import useProfileForm from "../../../hooks/useProfileForm";
-import { tokens } from "../../../account/admin/themes/tokens";
-import useMediaQuery from "../../../hooks/useMediaQuery";
-import Input from "../../shared/inputForm/Input";
+import useProfileForm from "../../../../hooks/useProfileForm";
+import { tokens } from "../../../../account/admin/themes/tokens";
+import useMediaQuery from "../../../../hooks/useMediaQuery";
+import Input from "../../../shared/inputForm/Input";
 
 const ProfileForm = () => {
   const theme = useTheme();

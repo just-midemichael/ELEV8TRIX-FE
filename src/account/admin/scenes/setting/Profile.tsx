@@ -3,7 +3,7 @@ import PageHeader from "../global/PageHeader";
 import { tokens } from "../../themes/tokens";
 import { CSSProperties } from "react";
 import useMediaQuery from "../../../../hooks/useMediaQuery";
-import ProfileForm from "../../../../component/admin/profileForm/ProfileForm";
+import ProfileForm from "../../../../component/admin/form/profileForm/ProfileForm";
 import ProfilePicture from "../../../../component/admin/profilePicture/ProfilePicture";
 
 // Set the page title

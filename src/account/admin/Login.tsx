@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import LoginForm from "../../component/admin/loginForm/LoginForm";
+import LoginForm from "../../component/admin/form/loginForm/LoginForm";
 import { Box } from "@mui/material";
 
 // Set the page title

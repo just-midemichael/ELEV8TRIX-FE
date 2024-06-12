@@ -1,11 +1,11 @@
 import { Box, IconButton, InputLabel, Typography } from "@mui/material";
-import GlobalButton from "../../shared/button/globalButton/GlobalButton";
+import GlobalButton from "../../../shared/button/globalButton/GlobalButton";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PasswordOutlinedIcon from "@mui/icons-material/PasswordOutlined";
-import Input from "../../shared/inputForm/Input";
+import Input from "../../../shared/inputForm/Input";
 import { CSSProperties, useState } from "react";
-import LogoColored from "../../logo/LogoColored";
-import { useContexApi } from "../../../utils/ContextApi";
+import LogoColored from "../../../logo/LogoColored";
+import { useContexApi } from "../../../../utils/ContextApi";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
