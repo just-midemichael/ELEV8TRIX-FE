@@ -108,10 +108,10 @@ const SideBar = () => {
                 </Box>
 
                 {/* Admin name and designation */}
-                <Box textAlign="left">
+                <Box textAlign="left" maxWidth={"90%"} overflow={"hidden"}>
                   <Typography
                     fontWeight={700}
-                    fontSize={"1.1rem"}
+                    fontSize={"0.95rem"}
                     textAlign={"left"}
                     color={colors.grey[100]}
                   >
@@ -296,6 +296,7 @@ const adminDetailContainer: CSSProperties = {
   justifyContent: "flex-start",
   alignItems: "center",
   padding: "5px 10px",
+  margin: "0 5px",
   gap: "10px",
   cursor: "pointer",
   textTransform: "capitalize"

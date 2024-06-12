@@ -325,6 +325,7 @@ const ProfileForm = () => {
       </Box>
       <Box p={"10px"} display={"flex"} gap={2}>
         <GlobalButton
+          type={isEditing ? "button" : "reset"}
           icon={isEditing ? <CloseOutlinedIcon /> : <EditOutlinedIcon />}
           display={"flex"}
           justifyContent={"center"}
@@ -347,6 +348,7 @@ const ProfileForm = () => {
         />
         {isEditing ? (
           <GlobalButton
+            type="submit"
             icon={undefined}
             display={""}
             justifyContent={"center"}

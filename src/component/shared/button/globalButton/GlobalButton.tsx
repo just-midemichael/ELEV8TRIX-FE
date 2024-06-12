@@ -21,6 +21,7 @@ interface buttonProps {
   target?: string;
   wrapperWidth?: string;
   className?: string | undefined;
+  type?: "submit" | "reset" | "button" | undefined;
   onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
@@ -47,6 +48,7 @@ const GlobalButton = ({
   justifyContent,
   alignItems,
   className,
+  type,
   onClick
 }: buttonProps) => {
   return (
@@ -57,7 +59,7 @@ const GlobalButton = ({
     >
       <button
         className={className}
-        type="button"
+        type={type}
         style={{
           background: `${buttonColor}`,
           width: `${width}`,
