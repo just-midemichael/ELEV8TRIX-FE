@@ -56,7 +56,7 @@ const LoginForm = () => {
         <Box style={inputWrapper}>
           <Box>
             <InputLabel htmlFor="email" sx={{ textAlign: "left" }}>
-              Email
+              Email {}
             </InputLabel>
             <Box style={inputBox}>
               <Input

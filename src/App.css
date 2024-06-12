@@ -13,7 +13,7 @@
 
 /* Scroll bar */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 2px;
   border-radius: 10px;
 }
 /* Scroll bar Track */
