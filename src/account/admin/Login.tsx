@@ -12,6 +12,7 @@ const Login = () => {
 
     rootBody.style.overflow = "hidden";
   };
+
   return (
     <Box style={loginContainer} onLoad={handleBodyOverflow}>
       <LoginForm />

@@ -1,14 +1,23 @@
 import { Box, IconButton, InputLabel, Typography } from "@mui/material";
 import GlobalButton from "../../../shared/button/globalButton/GlobalButton";
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import PasswordOutlinedIcon from "@mui/icons-material/PasswordOutlined";
+import EmailIcon from "@mui/icons-material/Email";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import Input from "../../../shared/inputForm/Input";
 import { CSSProperties, useState } from "react";
 import LogoColored from "../../../logo/LogoColored";
 import { useContexApi } from "../../../../utils/ContextApi";
 import { useLocation, useNavigate } from "react-router-dom";
+import { SubmitHandler, useForm } from "react-hook-form";
+
+type FormFieds = {
+  email: "";
+  password: "";
+};
 
 const LoginForm = () => {
+  const { register, handleSubmit } = useForm<FormFieds>();
+
   const [isVisible, setIsVisible] = useState("password");
   const [admin, setAdmin] = useState("");
   const authAdmin = useContexApi();
@@ -42,13 +51,14 @@ const LoginForm = () => {
     if (isVisible === "password") return setIsVisible("text");
     else return setIsVisible("password");
   };
+
+  //React-Hook-Form onSubmit Function
+  const onSubmit: SubmitHandler<FormFieds> = (data) => {
+    console.log(`formData: ${data}`);
+  };
   return (
     <Box style={formContainer}>
-      <form
-        id="loginForm"
-        onSubmit={(e) => e.preventDefault()}
-        style={formStyle}
-      >
+      <form id="loginForm" onSubmit={handleSubmit(onSubmit)} style={formStyle}>
         <Box style={formLogoContainer}>
           <LogoColored link={"/admin"} />
           <Typography style={formLabelStyle}>Admin Login</Typography>
@@ -60,6 +70,7 @@ const LoginForm = () => {
             </InputLabel>
             <Box style={inputBox}>
               <Input
+                {...register}
                 id={"email"}
                 className={""}
                 type={"email"}
@@ -68,12 +79,10 @@ const LoginForm = () => {
                 onChange={(e) => {
                   setAdmin(e.target.value);
                 }}
-                autoFocus
-                required
               />
               <Box style={inputIconStyle}>
                 <IconButton>
-                  <EmailOutlinedIcon />
+                  <EmailIcon sx={{ width: "22px", height: "22px" }} />
                 </IconButton>
               </Box>
             </Box>
@@ -82,19 +91,19 @@ const LoginForm = () => {
             </InputLabel>
             <Box style={inputBox}>
               <Input
+                {...register("password")}
                 id={"password"}
                 className={""}
                 type={`${isVisible}`}
                 placeholder={"Enter your password"}
                 name={"password"}
-                required
               />
               <Box style={inputIconStyle}>
                 <IconButton onClick={handlePasswordVisibility}>
                   {isVisible === "password" ? (
-                    <PasswordOutlinedIcon />
+                    <VisibilityOffIcon sx={{ width: "22px", height: "22px" }} />
                   ) : (
-                    <EmailOutlinedIcon />
+                    <VisibilityIcon sx={{ width: "22px", height: "22px" }} />
                   )}
                 </IconButton>
               </Box>
