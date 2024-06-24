@@ -70,7 +70,7 @@ const LoginForm = () => {
             </InputLabel>
             <Box style={inputBox}>
               <Input
-                {...register}
+                {...register("email")}
                 id={"email"}
                 className={""}
                 type={"email"}
